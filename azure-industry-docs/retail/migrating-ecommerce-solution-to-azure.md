@@ -6,12 +6,12 @@ ms.date: 07/16/2018
 ms.topic: article
 ms.service: industry
 description: 이 문서에서는 전자상거래 인프라를 온-프레미스에서 Azure로 마이그레이션하는 단계에 대해 설명합니다.
-ms.openlocfilehash: 847950673475f7f59a0c8c8c8bfc821414b2cc77
-ms.sourcegitcommit: 76f2862adbec59311b5888e043a120f89dc862af
+ms.openlocfilehash: a440eabad6a1367ed8219c01424d21d22e441b16
+ms.sourcegitcommit: 20b001b9fb51b944ae82bf55d2d670aa852fa64b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "51654270"
+ms.lasthandoff: 11/26/2018
+ms.locfileid: "52297956"
 ---
 # <a name="migrating-your-e-commerce-solution-to-azure-overview"></a>Azure로 전자상거래 솔루션 마이그레이션 개요
 
@@ -33,7 +33,7 @@ ms.locfileid: "51654270"
 
  ![](./assets/migrating-ecommerce-solution-to-azure/ecommerce-system-sketch.png)
 
-클라우드는 조직이 기술을 확보, 사용 및 관리하는 방법을 전환할 수 있는 기회를 제공합니다.  기타 혜택에는 데이터 센터 유지 관리 비용 절감, 안정성 및 성능 향상, 다른 서비스를 추가할 수 있는 유연성 등이 있습니다. 이 사용 사례에서는 소매업체가 기존 인프라를 Azure로 마이그레이션하는 데사용할 수 있는 경로를 살펴보겠습니다. 또한 다시 호스트, 리팩터링, 다시 빌드의 단계별 접근 방법을 사용하여 새로운 환경을 활용합니다. 이러한 일련의 현대화 경로를 따르는 조직도 많지만, 대부분의 경우 조직이 임의 단계를 시작점으로 선택할 수 있습니다.  조직이 Azure에서 현재 애플리케이션을 다시 호스트하지 않고 리팩터링 또는 다시 빌드로 바로 이동할 수 있습니다.  이 결정은 현대화 요구를 가장 잘 충족하기 위한 애플리케이션 및 조직의 고유 결정입니다.
+클라우드는 조직이 기술을 확보, 사용 및 관리하는 방법을 전환할 수 있는 기회를 제공합니다.  기타 혜택에는 데이터 센터 유지 관리 비용 절감, 안정성 및 성능 향상, 다른 서비스를 추가할 수 있는 유연성 등이 있습니다. 이 사용 사례에서는 소매업체가 기존 인프라를 Azure로 마이그레이션하는 데사용할 수 있는 경로를 살펴보겠습니다. 또한 다시 호스트, 리팩터링, 다시 빌드의 단계별 접근 방법을 사용하여 새로운 환경을 활용합니다. 이러한 일련의 현대화 경로를 따르는 조직도 많지만, 대부분의 경우 조직이 모든 단계를 시작점으로 선택할 수 있습니다.  조직이 Azure에서 현재 애플리케이션을 다시 호스트하지 않고 리팩터링 또는 다시 빌드로 바로 이동할 수 있습니다.  이 결정은 현대화 요구를 가장 잘 충족하기 위한 애플리케이션 및 조직의 고유 결정입니다.
 
 ## <a name="rehost"></a>다시 호스트
 

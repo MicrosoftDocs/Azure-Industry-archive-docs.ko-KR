@@ -7,12 +7,12 @@ manager: gmarchet
 ms.service: industry
 ms.topic: article
 ms.date: 09/26/2018
-ms.openlocfilehash: 79f6829d80bea2cf05bc11b613476f64dad900ef
-ms.sourcegitcommit: 76f2862adbec59311b5888e043a120f89dc862af
+ms.openlocfilehash: e3a2f19fa584cfefa72a6b8bf3eabfe1c3af3521
+ms.sourcegitcommit: c4eb2665df40d0449bd037e7500222fc38bc53ef
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "51654410"
+ms.lasthandoff: 12/03/2018
+ms.locfileid: "52820771"
 ---
 # <a name="extracting-actionable-insights-from-iot-data"></a>IoT 데이터에서 작업 가능한 인사이트 추출
 
@@ -85,7 +85,7 @@ IoT 데이터는 시계열 데이터로, 시간 경과에 따라 더 유의미�
 - [App Service](https://docs.microsoft.com/azure/app-service/?WT.mc_id=iotinsightssoln-docs-ercenk), [AKS(Azure Kubernetes Service)](https://docs.microsoft.com/azure/aks/?WT.mc_id=iotinsightssoln-docs-ercenk), [Container Instances](https://docs.microsoft.com/azure/container-instances/?WT.mc_id=iotinsightssoln-docs-ercenk) 또는 [Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-overview?WT.mc_id=iotinsightssoln-docs-ercenk) 등, 다양한 Azure 계산 서비스에 배포된 사용자 지정 코드
 -   [Azure Logic Apps](https://docs.microsoft.com/azure/logic-apps/?WT.mc_id=iotinsightssoln-docs-ercenk)
 -   [Azure Data Factory 작업](https://docs.microsoft.com/azure/data-factory/?WT.mc_id=iotinsightssoln-docs-ercenk)
--   [Azure 기능](https://docs.microsoft.com/azure/azure-functions/functions-overview?WT.mc_id=iotinsightssoln-docs-ercenk)
+-   [Azure Functions](https://docs.microsoft.com/azure/azure-functions/functions-overview?WT.mc_id=iotinsightssoln-docs-ercenk)
 -   [BizTalk Services](https://azure.microsoft.com/services/biztalk-services/)
 
 위의 서비스는 각각 시나리오에 따라 고유의 장단점이 있습니다. 예를 들어 Logic Apps는 [XML 문서 변환](https://docs.microsoft.com/azure/logic-apps/logic-apps-enterprise-integration-transform?WT.mc_id=iotinsightssoln-docs-ercenk)을 위한 방법을 제공합니다. 그러나 데이터가 과하게 복잡한 XML 문서가 될 수 있으므로 데이터 변환을 위해 대형 XSLT 스크립트를 개발하는 것은 실용적이지 못할 수 있습니다. 이 경우 다른 Azure 서비스에서 여러 마이크로 서비스를 사용하여 하이브리드 솔루션을 개발할 수 있습니다. 예를 들어 Azure Logic Apps로 구현된 마이크로 서비스는 HTTP 엔드포인트를 폴링하고, 원시 결과를 임시 저장하며 다른 마이크로 서비스에게 알릴 수 있습니다. 메시지를 변환하는 다른 마이크로 서비스는 [Azure Functions 호스트](https://github.com/Azure/azure-functions-host)에서 호스팅되는 사용자 지정 코드가 될 수 있습니다.  
@@ -119,8 +119,7 @@ Microsoft Azure IoT 참조 아키텍처는 람다 아키텍처를 사용하여 I
 -   일괄 처리 계층은 쿼리에 응답하는 “서비스 계층”에 공급됩니다. 일괄 처리 계층은 효율적인 쿼리를 위해 일괄 처리 보기를 인덱싱합니다. 빠른 계층은 가장 최근 데이터를 기준으로 하는 증분 업데이트로 서비스 계층을 업데이트합니다.
 
 다음 이미지는 변환 단계를 나타내는 5개의 블록을 보여 줍니다. 첫 번째 블록은 속도 계층 및 일괄 처리 계층에 모두 병렬로 공급하는 데이터 스트림입니다. 두 계층 모두 서비스 계층에 공급하며 빠른 계층과 서비스 계층 모두 분석 클라이언트에 공급합니다.
-
-![람다 아키텍처 구조] (assets/extracting-insights-from-iot/lambda-schematic.png)
+![람다 아키텍처](assets/extracting-insights-from-iot/lambda-schematic.png)
 
  Azure 플랫폼은 아키텍처 구현에 사용할 수 있는 여러 서비스를 제공합니다. 다음 다이어그램은 이러한 서비스를 매핑하여 구현하는 방법을 보여 줍니다. 이 그림은 변환의 5단계를 보여 주며 각 단계는 관련 Azure 기술을 포함하고 있습니다. 더 어두운 색의 상자가 해당 작업 수행을 위한 여러 옵션의 가용성을 나타냅니다.
 

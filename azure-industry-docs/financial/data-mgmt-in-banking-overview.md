@@ -147,7 +147,7 @@ Data Factory 파이프라인은 데이터 세트를 가져와서 출력하는 �
 
 ### <a name="azure-databricks"></a>Azure Databricks
 
-[Azure Databricks](/azure/azure-databricks/?WT.mc_id=bankdm-docs-dastarr)는 Azure의 관리되는 Apache Spark 기반 분석 플랫폼입니다. 확장성이 크며, 필요한 만큼 큰 머신 클러스터에서 Spark 작업이 실행됩니다. Databricks는 데이터 과학자, 데이터 엔지니어 및 비즈니스 분석가 간의 단일 공동 작업 공간을 제공하는 Notebook에서 작동합니다.
+[Azure Databricks](/azure/azure-databricks/?WT.mc_id=bankdm-docs-dastarr)는 Azure의 관리되는 Apache Spark 기반 분석 플랫폼입니다. 확장성이 크며, 필요한 만큼 큰 머신 클러스터에서 Spark 작업이 실행됩니다. Databricks는 데이터 과학자, 데이터 엔지니어 및 비즈니스 분석가 간의 단일 협업 공간을 제공하는 Notebook에서 작동합니다.
 
 Databricks는 데이터 변환 또는 분석이 필요한 경우 논리적 처리 파이프라인입니다. 인사이트 생성 시간이 중요한 기계 학습 시나리오나 간단한 파일 변환을 위해 Data Factory에서 직접 피드할 수 있습니다.
 

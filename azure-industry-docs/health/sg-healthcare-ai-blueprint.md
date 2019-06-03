@@ -319,7 +319,7 @@ Azure에 시스템을 빌드하는 고객은 클라우드 환경에서 보안 �
 - [Azure 건강 데이터 및 AI 청사진](/azure/security/blueprints/azure-health?WT.mc_id=ms-docs-dastarr)에 대해 자세히 알아보세요.
 - [여기에서 GitHub 리포지토리](https://github.com/Azure/Health-Data-and-AI-Blueprint/blob/master/deployment.md)를 다운로드, 복제 또는 포크합니다.
 - [Machine Learning Studio](/azure/machine-learning/studio/?WT.mc_id=ms-docs-dastarr)는 데이터 과학자가 Machine Learning 실험을 만드는 데 사용하는 작업 영역 및 도구입니다. 기본 제공 알고리즘, 특수 목적 위젯, Python 및 R 스크립트를 사용할 수 있습니다.
-- 비밀, 인증서 및 기타 개인 데이터는 [Azure Key Vault](/azure/key-vault/key-vault-whatis?WT.mc_id=ms-docs-dastarr)에 보관됩니다.
+- 비밀, 인증서 및 기타 프라이빗 데이터는 [Azure Key Vault](/azure/key-vault/key-vault-whatis?WT.mc_id=ms-docs-dastarr)에 보관됩니다.
 - 필요한 명령은 설치 지침에 제공되지만, 스크립팅 언어 PowerShell이 청사진 설정에 중요합니다.
 - [Azure AI Gallery](https://docs.microsoft.com/en-us/powershell/scripting/powershell-scripting?WT.mc_id=ms-docs-dastarr)는 업계에서 고객에게 유용한 AI/ML 솔루션의 레시피 상자를 제공합니다. 다른 의료 전문가와 함께 데이터 과학자가 게시한 여러 가지 솔루션이 있습니다.
 - [Azure Security Center](/azure/security-center/?WT.mc_id=ms-docs-dastarr)는 애플리케이션의 동작, 취약성 및 완화 기술에 대한 인사이트를 제공합니다.

@@ -118,7 +118,7 @@ Batch 처리 클러스터에는 두 개의 처리 VM처럼 적거나, 수만 개
 
 ### <a name="burst-to-cloud"></a>클라우드로 버스트
 
-온-프레미스 그리드의 계산 리소스가 대규모 분석 작업으로 인해 느리게 실행되는 경우 “클라우드로 버스트”는 Azure에서 계산 노드를 더 추가하여 이러한 리소스를 보강할 수 있는 방법을 제공합니다. 클라우드로 버스트는 온-프레미스 리소스에 대한 수요가 높으면 사설 클라우드 또는 인프라가 자체 워크로드를 분산시키는 모델입니다.
+온-프레미스 그리드의 계산 리소스가 대규모 분석 작업으로 인해 느리게 실행되는 경우 “클라우드로 버스트”는 Azure에서 계산 노드를 더 추가하여 이러한 리소스를 보강할 수 있는 방법을 제공합니다. 클라우드로 버스트는 온-프레미스 리소스에 대한 수요가 높으면 프라이빗 클라우드 또는 인프라가 자체 워크로드를 분산시키는 모델입니다.
 
 이러한 계산 노드는 Azure의 IaaS 플랫폼에서 프로비전될 Linux 또는 Windows 가상 머신으로 사전 구성할 수 있습니다. 또한 서버를 프로비전하고 Tibco Gridserver 및 IBM Symphony와 같은 기존 투자로 실행하도록 자동 구성할 수 있습니다.
 
@@ -204,7 +204,7 @@ Azure는 현재 온-프레미스 시스템을 Azure, [Microsoft Azure ExpressRou
 
 ### <a name="expressroute"></a>ExpressRoute
 
-ExpressRoute는 현재 인터넷 서비스 공급자(ISP?WT.mc_id=gridbanksg-docs-dastarr) 등, 연결 파트너가 활성화한 비공개 연결을 통해 Azure에 온-프레미스 또는 데이터 센터 네트워크를 연결합니다. 이를 통해 두 네트워크는 동일한 네트워크 인터페이스처럼 서로 볼 수 있어 네트워크 간에 원활한 액세스를 제공합니다. 기존 온-프레미스 시스템을 Azure 네트워크와 통합하려는 경우 네트워크 통합은 중요하며, ExpressRoute는 가능한 가장 빠른 연결 속도를 제공합니다.
+ExpressRoute는 현재 인터넷 서비스 공급자(ISP?WT.mc_id=gridbanksg-docs-dastarr) 등, 연결 파트너가 활성화한 프라이빗 연결을 통해 Azure에 온-프레미스 또는 데이터 센터 네트워크를 연결합니다. 이를 통해 두 네트워크는 동일한 네트워크 인터페이스처럼 서로 볼 수 있어 네트워크 간에 원활한 액세스를 제공합니다. 기존 온-프레미스 시스템을 Azure 네트워크와 통합하려는 경우 네트워크 통합은 중요하며, ExpressRoute는 가능한 가장 빠른 연결 속도를 제공합니다.
 
 Azure ExpressRoute에 대한 추가 가격 정보는 [여기를 참조](https://azure.microsoft.com/en-us/pricing/details/expressroute/?WT.mc_id=gridbanksg-docs-dastarr)하세요.
 

@@ -147,7 +147,7 @@ Azure 플랫폼은 이벤트 허브에서 이벤트를 처리하는 여러 옵�
 
 Stream Analytics는 대규모의 복잡한 분석을 실행할 수 있습니다. 범위 연속/슬라이드/도약, 스트림 집계, 외부 데이터 원본 조인 등을 예로 들 수 있습니다. 더 복잡한 처리를 위해 다음 그림에서처럼 Event Hubs, Stream Analytics 작업 및 Azure Functions의 여러 인스턴스를 연결하여 성능을 증대할 수 있습니다.
 
-![Event Hubs - Power BI 분석 ](assets/extracting-insights-from-iot/event-hubs-to-power-bi.png)
+![Event Hubs - Power BI 분석](assets/extracting-insights-from-iot/event-hubs-to-power-bi.png)
   
 Azure SQL Database와 같은 Azure 플랫폼에서 다양한 서비스를 사용하여 웜 스토리지를 구현할 수 있습니다. [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/introduction?WT.mc_id=iotinsightssoln-docs-ercenk)를 권장합니다. 전 세계에 배포된 Microsoft의 멀티모델 데이터베이스입니다. 유연하며 스키마 독립적이고 자동 인덱싱이 적용되며 쿼리가 풍성한 인터페이스를 사용할 수 있어 데이터 세트에 가장 적합합니다. Cosmos DB에서는 다중 지역, 읽기/쓰기가 가능하며 자동 장애 조치(Failover)뿐 아니라 수동 장애 조치도 지원합니다. 또한 Cosmos DB를 사용하여 데이터에 TTL(Time to Live)을 설정하여 구 데이터가 자동으로 만료되게 할 수 있습니다. 레코드가 데이터베이스에 머무는 시간을 제어하여 결과적으로 데이터베이스 크기를 관리할 수 있도록 이 기능을 사용하는 것이 좋습니다.
 
@@ -216,7 +216,7 @@ Time Series Insights에는 REST 쿼리 API뿐만 아니라 데이터를 시각�
   - [Azure Functions에서 다양한 바인딩 사용](https://docs.microsoft.com/azure/azure-functions/functions-triggers-bindings?WT.mc_id=iotinsightssoln-docs-ercenk)
 
 - 핫 경로
-  - Event Hubs, Azure Stream Analytics 및 Power BI의 사용을 보여 주는 포괄적 자습서입니다. [자습서: Azure Event Hubs로 전송되는 실시간 이벤트에서 데이터 변칙 시각화](https://docs.microsoft.com/azure/event-hubs/event-hubs-tutorial-visualize-anomalies?WT.mc_id=iotinsightssoln-docs-ercenk) 및 [전화 통화 데이터를 분석하기 위한 Stream Analytics 작업 만들기](https://docs.microsoft.com/azure/stream-analytics/stream-analytics-manage-job?WT.mc_id=iotinsightssoln-docs-ercenk) 및 Power BI 대시보드에서 결과 시각화를 참조하세요.
+  - Event Hubs, Azure Stream Analytics 및 Power BI의 사용을 보여 주는 엔드투엔드 자습서입니다. [자습서: Azure Event Hubs로 전송되는 실시간 이벤트에서 데이터 변칙 시각화](https://docs.microsoft.com/azure/event-hubs/event-hubs-tutorial-visualize-anomalies?WT.mc_id=iotinsightssoln-docs-ercenk) 및 [전화 통화 데이터를 분석하기 위한 Stream Analytics 작업 만들기](https://docs.microsoft.com/azure/stream-analytics/stream-analytics-manage-job?WT.mc_id=iotinsightssoln-docs-ercenk) 및 Power BI 대시보드에서 결과 시각화를 참조하세요.
   -[.NET에 Azure Cosmos DB 사용](https://docs.microsoft.com/azure/cosmos-db/sql-api-get-started?WT.mc_id=iotinsightssoln-docs-ercenk)
 - 콜드 경로
   - [Azure Data Factory에서 Spark 작업을 사용하여 클라우드의 데이터 변환](https://docs.microsoft.com/azure/data-factory/tutorial-transform-data-spark-portal?WT.mc_id=iotinsightssoln-docs-ercenk)

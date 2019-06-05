@@ -200,7 +200,7 @@ rxGetInfo (input_data, getVarInfo = TRUE)
 ## <a name="conclusion"></a>결론
 
 Microsoft Machine Learning Server에 기본적으로 제공된 MicrosoftML 및 RevoScaleR 라이브러리의 병렬 처리를 활용하여 수백 명의 구독자에 대한 개별 분류 모델의 개발, 배포 및 점수 매기기가 가속화되었습니다. 모델 정확도가 향상되었고, 기존의 R 코드베이스를 최소한으로 변경하여 학습 및 재학습 시간이 단축되었습니다.
-모델 파이프라인을 지원하고 기술 구성 요소가 종단 간에 올바르게 구성되도록 인프라를 구현하는 것은 복잡할 수 있습니다. 사용자 고유의 방법을 시작하기 위한 몇 가지 참고 자료는 다음과 같습니다.
+모델 파이프라인을 지원하고 기술 구성 요소가 엔드투엔드에 올바르게 구성되도록 인프라를 구현하는 것은 복잡할 수 있습니다. 사용자 고유의 방법을 시작하기 위한 몇 가지 참고 자료는 다음과 같습니다.
 
 - [Machine Learning Server 설명서](https://docs.microsoft.com/machine-learning-server/)
 - [Machine Learning Server용 R 자습서](https://docs.microsoft.com/advanced-analytics/tutorials/sql-server-r-tutorials?view=sql-server-2017)

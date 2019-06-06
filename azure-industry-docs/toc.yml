@@ -1,364 +1,346 @@
-items:
 - name: 산업
   href: index.md
   items:
-  - name: 금융 서비스
-    href: financial/index.md
-    items:
-    - name: 금융의 위험 그리드 컴퓨팅
+    - name: 금융 서비스
+      href: financial/index.md
       items:
-      - name: 개요
-        href: financial/risk-grid-banking-overview.md
-      - name: 솔루션 가이드
-        href: financial/risk-grid-banking-solution-guide.md
-    - name: 모바일 은행 사기 개요
-      href: financial/mobile-bank-fraud-overview.md
-    - name: 보험 통계 위험 분석 및 금융 모델링
-      items:
-      - name: 개요
-        href: financial/actuarial-risk-analysis-and-financial-modeling-overview.md
-      - name: 솔루션 가이드
-        href: financial/actuarial-risk-analysis-and-financial-modeling-solution-guide.md
-    - name: 아키텍처
-      items:
-      - name: Azure Data Architecture 가이드
-        href: /azure/architecture/data-guide
-    - name: 교육
-      href: https://www.pluralsight.com/role-iq/microsoft-azure-solution-architect
-      items:
-      - name: Azure 솔루션 설계자 교육
-      maintainContext: true
-    - name: 금융의 데이터 관리 개요
-      href: financial/data-mgmt-in-banking-overview.md
-    - name: Azure 및 R을 사용하여 금융 서비스 위험 수명 주기 구현
-      href: financial/fsi-risk-modeling.md
-    - name: 추가 리소스
-      items:
-      - name: Azure AI 플랫폼
-        href: https://azure.microsoft.com/en-us/overview/ai-platform/#platform
-        maintainContext: true
-      - name: Azure AI 서비스
-        href: https://azure.microsoft.com/en-us/overview/ai-platform/#services
-        maintainContext: true
-      - name: Azure Batch 설명서
-        href: /azure/batch/
-        maintainContext: true
-      - name: Azure 기능
-        href: https://azure.microsoft.com/en-us/services/functions/
-        maintainContext: true
-      - name: 금융용 Azure
-        href: https://azure.microsoft.com/en-us/industries/financial/banking
-        maintainContext: true
-      - name: IoT Hub용 Azure
-        href: https://azure.microsoft.com/en-us/services/iot-hub/
-        maintainContext: true
-      - name: Azure IoT Suite
-        href: https://azure.microsoft.com/en-us/features/iot-accelerators/
-        maintainContext: true
-      - name: Azure Key Vault
-        href: https://azure.microsoft.com/en-us/services/key-vault/
-        maintainContext: true
-      - name: Azure Machine Learning
-        href: https://azure.microsoft.com/en-us/overview/machine-learning/
-        maintainContext: true
-      - name: 예측에 대한 Azure Machine Learning 패키지
-        href: /python/api/overview/azure-machine-learning/forecasting-overview
-        maintainContext: true
-      - name: Azure SQL Database
-        href: https://azure.microsoft.com/en-us/services/sql-database/
-        maintainContext: true
-      - name: Azure Stack
-        href: https://azure.microsoft.com/en-us/overview/azure-stack/
-        maintainContext: true
-      - name: Azure Stream Analytics
-        href: https://azure.microsoft.com/en-us/services/stream-analytics/
-        maintainContext: true
-      - name: 금융 산업 뉴스
-        href: https://azure.microsoft.com/en-us/blog/author/hbush/
-        maintainContext: true
-      - name: Batch 코드 샘플
-        href: https://azure.microsoft.com/en-us/resources/samples/
-        maintainContext: true
-      - name: Batch 코드 샘플 리포지토리
-        href: https://github.com/Azure-Samples/azure-batch-samples
-        maintainContext: true
-      - name: 규제된 워크로드를 위한 FFIEC
-        href: /azure/security/blueprints/financial-services-regulated-workloads
-        maintainContext: true
-      - name: Logic Apps
-        href: https://azure.microsoft.com/en-us/services/logic-apps/
-        maintainContext: true
-      - name: 온-프레미스 연결
-        href: /azure/networking/networking-overview#connectivity
-        maintainContext: true
-      - name: 자습서 - Asset Bank와 AAD 통합
-        href: /azure/active-directory/active-directory-saas-assetbank-tutorial
-        maintainContext: true
-  - name: 의료 및 생명 과학
-    href: health/index.md
-    items:
-    - name: AI용 Azure Blueprint 구현
-      items:
-      - name: 개요
-        href: health/overview-healthcare-ai-blueprint.md
-      - name: 솔루션 가이드
-        href: health/sg-healthcare-ai-blueprint.md
-    - name: 생명 공학 엔터티 인식
-      href: /azure/machine-learning/desktop-workbench/scenario-tdsp-biomedical-recognition
-      maintainContext: true
-    - name: HL7 FHIR 의료 서비스 레코드 변경
-      href: /azure/cosmos-db/change-feed-hl7-fhir-logic-apps
-      maintainContext: true
-    - name: Azure Blueprints
-      items:
-      - name: Azure 보안 및 규정 준수 - HIPAA/HITRUST 의료 데이터 및 AI
-        href: /azure/security/blueprints/azure-health
-        maintainContext: true
-      - name: Azure 보안 및 규정 준수 - UK NHS의 데이터 분석
-        href: /azure/security/blueprints/uknhs-analytics-overview
-        maintainContext: true
-      - name: Azure 보안 및 규정 준수 - UK NHS의 데이터 웨어하우스
-        href: /azure/security/blueprints/uknhs-datawarehouse-overview
-        maintainContext: true
-      - name: Azure 보안 및 규정 준수 - UK NHS의 IaaS 웹 애플리케이션
-        href: /azure/security/blueprints/uknhs-iaaswa-overview
-        maintainContext: true
-      - name: Azure 보안 및 규정 준수 - UK NHS의 PaaS 웹 애플리케이션
-        href: /azure/security/blueprints/uknhs-paaswa-overview
-        maintainContext: true
-    - name: 추가 리소스
-      items:
-      - name: 빠른 시작 - Microsoft Genomics 서비스
-        href: /azure/genomics/quickstart-run-genomics-workflow-portal
-        maintainContext: true
-      - name: Microsoft Azure GxP 지침
-        href: https://gallery.technet.microsoft.com/Azure-GxP-Guidelines-ab1b98d9
-      - name: Azure를 사용하여 보안 의료 솔루션 설계
-        href: https://gallery.technet.microsoft.com/Azure-A-Practical-Guide-to-5ebdc8bd
-      - name: Health Bot 개요
-        href: /healthbot/
-        maintainContext: true
-  - name: 제조
-    href: manufacturing/index.md
-    items:
-    - name: 고성능 컴퓨팅
-      items:
-      - name: 개요
-        href: manufacturing/compute-in-manufacturing-overview.md
-    - name: 예측 유지 관리
-      items:
-      - name: 개요
-        href: manufacturing/predictive-maintenance-overview.md
-      - name: 솔루션 가이드
-        href: manufacturing/predictive-maintenance-solution.md
-      - name: 추가 리소스
-        items:
-        - name: Azure Machine Learning 설명서
-          href: /azure/machine-learning
-        - name: 예측 유지 관리 실제 시나리오에 대한 딥 러닝
-          href: /azure/machine-learning/desktop-workbench/scenario-deep-learning-for-predictive-maintenance
+        - name: 금융의 위험 그리드 컴퓨팅
+          items:
+            - name: 개요
+              href: financial/risk-grid-banking-overview.md
+            - name: 솔루션 가이드
+              href: financial/risk-grid-banking-solution-guide.md
+        - name: 모바일 은행 사기 개요
+          href: financial/mobile-bank-fraud-overview.md
+        - name: 보험 위험 분석 및 재무 모델링
+          items:
+            - name: 개요
+              href: financial/actuarial-risk-analysis-and-financial-modeling-overview.md
+            - name: 솔루션 가이드
+              href: financial/actuarial-risk-analysis-and-financial-modeling-solution-guide.md
+        - name: 아키텍처
+          items:
+            - name: Azure Data Architecture 가이드
+              href: /azure/architecture/data-guide
+        - name: 교육
+          items:
+            - name: Azure 솔루션 설계자 교육
+          href: 'https://www.pluralsight.com/role-iq/microsoft-azure-solution-architect'
           maintainContext: true
-        - name: Microsoft IoT 솔루션 아키텍처
-          href: /azure/iot-suite/iot-suite-what-is-azure-iot
-        - name: 소프트웨어 품질 핵심 요소
-          href: /azure/architecture/guide/pillars
-    - name: IoT 데이터에서 인사이트 추출
+        - name: 금융의 데이터 관리 개요
+          href: financial/data-mgmt-in-banking-overview.md
+        - name: Azure 및 R을 통한 금융 서비스 위험 수명 주기 사용
+          href: financial/fsi-risk-modeling.md
+        - name: 추가 리소스
+          items:
+            - name: Azure AI 플랫폼
+              href: 'https://azure.microsoft.com/en-us/overview/ai-platform/#platform'
+              maintainContext: true
+            - name: Azure AI 서비스
+              href: 'https://azure.microsoft.com/en-us/overview/ai-platform/#services'
+              maintainContext: true
+            - name: Azure Batch 설명서
+              href: /azure/batch/
+              maintainContext: true
+            - name: Azure 기능
+              href: 'https://azure.microsoft.com/en-us/services/functions/'
+              maintainContext: true
+            - name: 금융용 Azure
+              href: 'https://azure.microsoft.com/en-us/industries/financial/banking'
+              maintainContext: true
+            - name: IoT Hub용 Azure
+              href: 'https://azure.microsoft.com/en-us/services/iot-hub/'
+              maintainContext: true
+            - name: Azure IoT Suite
+              href: 'https://azure.microsoft.com/en-us/features/iot-accelerators/'
+              maintainContext: true
+            - name: Azure Key Vault
+              href: 'https://azure.microsoft.com/en-us/services/key-vault/'
+              maintainContext: true
+            - name: Azure Machine Learning
+              href: 'https://azure.microsoft.com/en-us/overview/machine-learning/'
+              maintainContext: true
+            - name: Azure SQL Database
+              href: 'https://azure.microsoft.com/en-us/services/sql-database/'
+              maintainContext: true
+            - name: Azure Stack
+              href: 'https://azure.microsoft.com/en-us/overview/azure-stack/'
+              maintainContext: true
+            - name: Azure Stream Analytics
+              href: 'https://azure.microsoft.com/en-us/services/stream-analytics/'
+              maintainContext: true
+            - name: 금융 산업 뉴스
+              href: 'https://azure.microsoft.com/en-us/blog/author/hbush/'
+              maintainContext: true
+            - name: Batch 코드 샘플
+              href: 'https://azure.microsoft.com/en-us/resources/samples/'
+              maintainContext: true
+            - name: Batch 코드 샘플 리포지토리
+              href: 'https://github.com/Azure-Samples/azure-batch-samples'
+              maintainContext: true
+            - name: 규제된 워크로드를 위한 FFIEC
+              href: /azure/security/blueprints/financial-services-regulated-workloads
+              maintainContext: true
+            - name: Logic Apps
+              href: 'https://azure.microsoft.com/en-us/services/logic-apps/'
+              maintainContext: true
+            - name: 온-프레미스 연결
+              href: '/azure/networking/networking-overview#connectivity'
+              maintainContext: true
+            - name: 자습서 - Asset Bank와 AAD 통합
+              href: /azure/active-directory/active-directory-saas-assetbank-tutorial
+              maintainContext: true
+    - name: 의료 및 생명 과학
+      href: health/index.md
       items:
-      - name: 개요
-        href: manufacturing/extracting-insights-from-iot-data-overview.md
-      - name: 솔루션 가이드
-        href: manufacturing/extracting-insights-from-iot-data.md
-    - name: 아키텍처
+        - name: AI용 Azure 청사진 구현
+          items:
+            - name: 개요
+              href: health/overview-healthcare-ai-blueprint.md
+            - name: 솔루션 가이드
+              href: health/sg-healthcare-ai-blueprint.md
+        - name: HL7 FHIR 의료 서비스 레코드 변경
+          href: /azure/cosmos-db/change-feed-hl7-fhir-logic-apps
+          maintainContext: true
+        - name: Azure Blueprints
+          items:
+            - name: Azure 보안 및 규정 준수 - HIPAA/HITRUST 의료 데이터 및 AI
+              href: /azure/security/blueprints/azure-health
+              maintainContext: true
+            - name: Azure 보안 및 규정 준수 - UK NHS의 데이터 분석
+              href: /azure/security/blueprints/uknhs-analytics-overview
+              maintainContext: true
+            - name: Azure 보안 및 규정 준수 - UK NHS의 데이터 웨어하우스
+              href: /azure/security/blueprints/uknhs-datawarehouse-overview
+              maintainContext: true
+            - name: Azure 보안 및 규정 준수 - UK NHS의 IaaS 웹 애플리케이션
+              href: /azure/security/blueprints/uknhs-iaaswa-overview
+              maintainContext: true
+            - name: Azure 보안 및 규정 준수 - UK NHS의 PaaS 웹 애플리케이션
+              href: /azure/security/blueprints/uknhs-paaswa-overview
+              maintainContext: true
+        - name: 추가 리소스
+          items:
+            - name: 빠른 시작 - Microsoft Genomics 서비스
+              href: /azure/genomics/quickstart-run-genomics-workflow-portal
+              maintainContext: true
+            - name: Microsoft Azure GxP 지침
+              href: 'https://gallery.technet.microsoft.com/Azure-GxP-Guidelines-ab1b98d9'
+            - name: Azure를 사용하여 보안 의료 솔루션 설계
+              href: 'https://gallery.technet.microsoft.com/Azure-A-Practical-Guide-to-5ebdc8bd'
+            - name: Health Bot 개요
+              href: /healthbot/
+              maintainContext: true
+    - name: 제조
+      href: manufacturing/index.md
       items:
-      - name: Azure Data Architecture 가이드
-        href: /azure/architecture/data-guide
-    - name: 교육
+        - name: 고성능 컴퓨팅
+          items:
+            - name: 개요
+              href: manufacturing/compute-in-manufacturing-overview.md
+        - name: 예측 유지 관리
+          items:
+            - name: 개요
+              href: manufacturing/predictive-maintenance-overview.md
+            - name: 솔루션 가이드
+              href: manufacturing/predictive-maintenance-solution.md
+            - name: 추가 리소스
+              items:
+                - name: Azure Machine Learning 설명서
+                  href: /azure/machine-learning
+                - name: Microsoft IoT 솔루션 아키텍처
+                  href: /azure/iot-suite/iot-suite-what-is-azure-iot
+                - name: 소프트웨어 품질 핵심 요소
+                  href: /azure/architecture/guide/pillars
+        - name: IoT 데이터에서 인사이트 추출
+          items:
+            - name: 개요
+              href: manufacturing/extracting-insights-from-iot-data-overview.md
+            - name: 솔루션 가이드
+              href: manufacturing/extracting-insights-from-iot-data.md
+        - name: 아키텍처
+          items:
+            - name: Azure Data Architecture 가이드
+              href: /azure/architecture/data-guide
+        - name: 교육
+          items:
+            - name: Azure 솔루션 설계자 교육
+              href: 'https://www.pluralsight.com/role-iq/microsoft-azure-solution-architect'
+            - name: Azure Logic Apps로 일정에 따른 트래픽 확인
+              href: /azure/logic-apps/tutorial-build-schedule-recurring-logic-app-workflow.md
+            - name: Logic Apps의 데이터 작업에 대한 코드 예제
+              href: /azure/logic-apps/logic-apps-data-operations-code-samples.md
+            - name: 컨테이너에서 Azure Functions 실행
+              href: /azure/azure-functions/functions-create-function-linux-custom-image
+            - name: Azure Functions에서 다양한 바인딩 사용
+              href: /azure/azure-functions/functions-triggers-bindings
+            - name: Event Hubs 데이터 스트림에서 잘못된 데이터 시각화
+              href: /azure/event-hubs/event-hubs-tutorial-visualize-anomalies
+            - name: 전화 통화 데이터를 분석하기 위한 Stream Analytics 작업 만들기
+              href: /azure/stream-analytics/stream-analytics-manage-job
+            - name: Spark 작업을 사용하여 클라우드에서 데이터 변환
+              href: /azure/event-hubs/event-hubs-tutorial-visualize-anomalies
+            - name: Time Series Insights에서 시뮬레이션된 디바이스 데이터 분석
+              href: /azure/time-series-insights/tutorial-create-populate-tsi-environment
+            - name: Power BI 살펴보기
+              href: /power-bi/guided-learning
+            - name: Time Series Insights SPA 만들기
+              href: /power-bi/guided-learning
+            - name: Time Series Insights Java Script 클라이언트 라이브러리 살펴보기
+              href: /azure/time-series-insights/tutorial-create-tsi-sample-spa
+            - name: TSI 데모
+              href: 'https://insights.timeseries.azure.com/demo'
+            - name: Power BI 데모
+              href: 'https://microsoft.github.io/PowerBI-JavaScript/demo/v2-demo/index.html'
+        - name: 추가 리소스
+          items:
+            - name: HDInsight의 Apache Kafka
+              href: /azure/hdinsight/kafka/apache-kafka-introduction
+            - name: App Service
+              href: /azure/app-service
+            - name: Azure Blob Storage
+              href: /azure/storage/blobs/storage-blobs-introduction
+            - name: Azure Blob Storage 계층
+              href: /azure/storage/blobs/storage-blob-storage-tiers
+            - name: Azure Blob Storage 계층
+              href: /azure/storage/blobs/storage-blob-storage-tiers
+            - name: Azure Container Instances
+              href: /azure/container-instances
+            - name: Azure Cosmos DB
+              href: /azure/cosmos-db/introduction
+            - name: Azure Cosmos DB - 요청 단위
+              href: /azure/cosmos-db/request-units
+            - name: Azure Databricks
+              href: /azure/azure-databricks
+            - name: Azure Databricks Notebook
+              href: /azure/data-factory/transform-data-using-databricks-notebook
+            - name: Azure 데이터 팩터리
+              href: /azure/data-factory
+            - name: Azure Data Factory 파이프라인 및 활동
+              href: /azure/data-factory/concepts-pipelines-activities
+            - name: Azure Data Lake 스토리지
+              href: /azure/storage/data-lake-storage/introduction
+            - name: Azure Event Hubs
+              href: /azure/event-hubs/event-hubs-about
+            - name: Azure 파일
+              href: /azure/storage/files/storage-files-introduction
+            - name: Azure 기능
+              href: /azure/azure-functions/functions-overview
+            - name: Azure Functions 호스트
+              href: 'https://github.com/Azure/azure-functions-host'
+            - name: Azure HDInsight
+              href: /azure/hdinsight
+            - name: Azure IoT Edge
+              href: /azure/iot-edge
+            - name: Azure IoT Hub
+              href: /azure/iot-hub
+            - name: Azure IoT Hub Device Provisioning Service
+              href: /azure/iot-dps
+            - name: AKS(Azure Kubernetes Service)
+              href: /azure/aks
+            - name: Azure Logic Apps
+              href: /azure/logic-apps
+            - name: Azure Service Fabric
+              href: /azure/service-fabric/service-fabric-overview
+            - name: Azure SQL Database
+              href: /azure/sql-database
+            - name: Azure SQL Data Warehouse
+              href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
+            - name: Azure Storage
+              href: /azure/storage
+            - name: Azure Storage 권한 부여
+              href: /azure/storage/common/storage-auth
+            - name: Azure Storage 복제
+              href: /azure/storage/common/storage-redundancy
+            - name: Azure Stream Analytics
+              href: /azure/stream-analytics
+            - name: Azure Table Storage
+              href: /azure/cosmos-db/table-storage-overview
+            - name: Azure Time Series Insights
+              href: /azure/time-series-insights
+            - name: Azure TSI(Time Series Insights) Java Script 클라이언트 라이브러리
+              href: /azure/time-series-insights/tutorial-explore-js-client-lib
+            - name: BizTalk Services
+              href: /services/biztalk-services
+            - name: IoT Edge 디바이스를 게이트웨이로
+              href: /azure/iot-edge/iot-edge-as-gateway
+            - name: Microsoft Power BI
+              href: /power-bi/power-bi-overview
+            - name: Microsoft Power BI 설명서
+              href: /power-bi
+            - name: Microsoft PowerBI - 실시간 스트리밍
+              href: /power-bi/service-real-time-streaming
+            - name: Power BI Desktop
+              href: 'https://powerbi.microsoft.com/en-us/desktop'
+            - name: Power BI JavaScript SDK
+              href: 'https://github.com/Microsoft/PowerBI-JavaScript'
+            - name: Power BI REST API
+              href: /rest/api/power-bi
+            - name: REST 쿼리 API
+              href: /rest/api/time-series-insights/time-series-insights-reference-queryapi
+            - name: Table service 데이터 모델
+              href: /rest/api/storageservices/Understanding-the-Table-Service-Data-Model
+            - name: XML 변환
+              href: /azure/logic-apps/logic-apps-enterprise-integration-transform
+    - name: 소매
+      href: retail/index.md
       items:
-      - name: Azure 솔루션 설계자 교육
-        href: https://www.pluralsight.com/role-iq/microsoft-azure-solution-architect
-      - name: Azure Logic Apps로 일정에 따른 트래픽 확인
-        href: /azure/logic-apps/tutorial-build-schedule-recurring-logic-app-workflow.md
-      - name: Logic Apps의 데이터 작업에 대한 코드 예제
-        href: /azure/logic-apps/logic-apps-data-operations-code-samples.md
-      - name: 컨테이너에서 Azure Functions 실행
-        href: /azure/azure-functions/functions-create-function-linux-custom-image
-      - name: Azure Functions에서 다양한 바인딩 사용
-        href: /azure/azure-functions/functions-triggers-bindings
-      - name: Event Hubs 데이터 스트림에서 잘못된 데이터 시각화
-        href: /azure/event-hubs/event-hubs-tutorial-visualize-anomalies
-      - name: 전화 통화 데이터를 분석하기 위한 Stream Analytics 작업 만들기
-        href: /azure/stream-analytics/stream-analytics-manage-job
-      - name: Spark 작업을 사용하여 클라우드에서 데이터 변환
-        href: /azure/event-hubs/event-hubs-tutorial-visualize-anomalies
-      - name: Time Series Insights에서 시뮬레이션된 디바이스 데이터 분석
-        href: /azure/time-series-insights/tutorial-create-populate-tsi-environment
-      - name: Power BI 살펴보기
-        href: /power-bi/guided-learning
-      - name: Time Series Insights SPA 만들기
-        href: /power-bi/guided-learning
-      - name: Time Series Insights Java Script 클라이언트 라이브러리 살펴보기
-        href: /azure/time-series-insights/tutorial-create-tsi-sample-spa
-      - name: TSI 데모
-        href: https://insights.timeseries.azure.com/demo
-      - name: Power BI 데모
-        href: https://microsoft.github.io/PowerBI-JavaScript/demo/v2-demo/index.html
-    - name: 추가 리소스
-      items:
-      - name: HDInsight의 Apache Kafka
-        href: /azure/hdinsight/kafka/apache-kafka-introduction
-      - name: App Service
-        href: /azure/app-service
-      - name: Azure Blob Storage
-        href: /azure/storage/blobs/storage-blobs-introduction
-      - name: Azure Blob Storage 계층
-        href: /azure/storage/blobs/storage-blob-storage-tiers
-      - name: Azure Blob Storage 계층
-        href: /azure/storage/blobs/storage-blob-storage-tiers
-      - name: Azure Container Instances
-        href: /azure/container-instances
-      - name: Azure Cosmos DB
-        href: /azure/cosmos-db/introduction
-      - name: Azure Cosmos DB - 요청 단위
-        href: /azure/cosmos-db/request-units
-      - name: Azure Databricks
-        href: /azure/azure-databricks
-      - name: Azure Databricks Notebook
-        href: /azure/data-factory/transform-data-using-databricks-notebook
-      - name: Azure 데이터 팩터리
-        href: /azure/data-factory
-      - name: Azure Data Factory 파이프라인 및 활동
-        href: /azure/data-factory/concepts-pipelines-activities
-      - name: Azure Data Lake 저장소
-        href: /azure/storage/data-lake-storage/introduction
-      - name: Azure Event Hubs
-        href: /azure/event-hubs/event-hubs-about
-      - name: Azure 파일
-        href: /azure/storage/files/storage-files-introduction
-      - name: Azure 기능
-        href: /azure/azure-functions/functions-overview
-      - name: Azure Functions 호스트
-        href: https://github.com/Azure/azure-functions-host
-      - name: Azure HDInsight
-        href: /azure/hdinsight
-      - name: Azure IoT Edge
-        href: /azure/iot-edge
-      - name: Azure IoT Hub
-        href: /azure/iot-hub
-      - name: Azure IoT Hub Device Provisioning Service
-        href: /azure/iot-dps
-      - name: AKS(Azure Kubernetes Service)
-        href: /azure/aks
-      - name: Azure Logic Apps
-        href: /azure/logic-apps
-      - name: Azure Service Fabric
-        href: /azure/service-fabric/service-fabric-overview
-      - name: Azure SQL Database
-        href: /azure/sql-database
-      - name: Azure SQL Data Warehouse
-        href: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is
-      - name: Azure Storage
-        href: /azure/storage
-      - name: Azure Storage 권한 부여
-        href: /azure/storage/common/storage-auth
-      - name: Azure Storage 복제
-        href: /azure/storage/common/storage-redundancy
-      - name: Azure Stream Analytics
-        href: /azure/stream-analytics
-      - name: Azure Table Storage
-        href: /azure/cosmos-db/table-storage-overview
-      - name: Azure Time Series Insights
-        href: /azure/time-series-insights
-      - name: Azure TSI(Time Series Insights) Java Script 클라이언트 라이브러리
-        href: /azure/time-series-insights/tutorial-explore-js-client-lib
-      - name: BizTalk Services
-        href: /services/biztalk-services
-      - name: IoT Edge 장치를 게이트웨이로
-        href: /azure/iot-edge/iot-edge-as-gateway
-      - name: Microsoft Power BI
-        href: /power-bi/power-bi-overview
-      - name: Microsoft Power BI 설명서
-        href: /power-bi
-      - name: Microsoft PowerBI - 실시간 스트리밍
-        href: /power-bi/service-real-time-streaming
-      - name: Power BI Desktop
-        href: https://powerbi.microsoft.com/en-us/desktop
-      - name: Power BI JavaScript SDK
-        href: https://github.com/Microsoft/PowerBI-JavaScript
-      - name: Power BI REST API
-        href: /rest/api/power-bi
-      - name: REST 쿼리 API
-        href: /rest/api/time-series-insights/time-series-insights-reference-queryapi
-      - name: Table service 데이터 모델
-        href: /rest/api/storageservices/Understanding-the-Table-Service-Data-Model
-      - name: XML 변환
-        href: /azure/logic-apps/logic-apps-enterprise-integration-transform
-  - name: 소매
-    href: retail/index.md
-    items:
-    - name: 아키텍처
-      items:
-      - name: Azure Data Architecture 가이드
-        href: /azure/architecture/data-guide/
-    - name: 교육
-      items:
-      - name: Azure 솔루션 설계자 교육
-        href: /training/learning-paths/azure-solution-architect/
-    - name: Neal Analytics SKU Max 솔루션 시험 사용
-      href: https://appsource.microsoft.com/en-us/product/web-apps/neal_analytics.8066ad01-1e61-40cd-bd33-9b86c65fa73a
-    - name: 추가 리소스
-      items:
-      - name: Neal Analytics로 SKU 최적화 가속화
-        href: https://nealanalytics.com/solutions/sku-max/
-      - name: Azure Active Directory
-        href: /azure/active-directory/
-      - name: Neal Analytics로 SKU 최적화 가속화
-        href: /services/analysis-services
-      - name: Azure Blob Storage
-        href: /services/storage/blobs
-      - name: Azure Databricks
-        href: /services/databricks
-      - name: Azure 데이터 팩터리
-        href: /services/data-factory
-      - name: Neal Analytics로 SKU 최적화 가속화
-        href: /azure/machine-learning/service/overview-what-is-azure-ml
-      - name: Azure Machine Learning Workbench
-        href: /azure/machine-learning/service/overview-what-happened-to-workbench
-      - name: Azure SQL Data Warehouse
-        href: /services/sql-data-warehouse
-      - name: HDInsight
-        href: /services/hdinsight
-      - name: Power BI
-        href: https://powerbi.microsoft.com/en-us/
-        maintainContext: true
-    - name: 소매의 데이터 관리 개요
-      href: retail/retail-data-management-overview.md
-    - name: Azure로 전자상거래 솔루션 마이그레이션 개요
-      href: retail/migrating-ecommerce-solution-to-azure.md
-    - name: 기존 추천 시스템 최적화 및 재사용
-      href: retail/recommendation-engine-optimization.md
-    - name: PCI DSS 규격 결제 처리
-      href: /azure/security/blueprints/payment-processing-blueprint
-      maintainContext: true
-    - name: Visual Search 개요
-      href: retail/visual-search-use-case-overview.md
-    - name: 소비자 브랜드에 대한 SKU 최적화
-      items:
-      - name: 개요
-        href: retail/sku-optimization-overview.md
-      - name: 솔루션 가이드
-        href: retail/sku-optimization-solution-guide.md
-    - name: 추가 리소스
-      items:
-      - name: 소매 및 마케팅의 Azure Cosmos DB
-        href: /azure/cosmos-db/use-cases#retail-and-marketing
-        maintainContext: true
-      - name: 수요 예측 및 가격 최적화
-        href: https://gallery.azure.ai/Solution/Demand-Forecasting-and-Price-Optimization
-      - name: Azure AI를 사용한 인벤토리 최적화 솔루션
-        href: https://blogs.technet.microsoft.com/machinelearning/2018/04/05/inventory-optimization-solution-in-the-azure-ai-gallery
-ms.openlocfilehash: 3ec59f998e9f2660cbcbe6a6d691f8c36b7de982
-ms.sourcegitcommit: 76f2862adbec59311b5888e043a120f89dc862af
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "51654730"
+        - name: 아키텍처
+          items:
+            - name: Azure Data Architecture 가이드
+              href: /azure/architecture/data-guide/
+        - name: 교육
+          items:
+            - name: Azure 솔루션 설계자 교육
+              href: /training/learning-paths/azure-solution-architect/
+        - name: Neal Analytics SKU Max 솔루션 시험 사용
+          href: 'https://appsource.microsoft.com/en-us/product/web-apps/neal_analytics.8066ad01-1e61-40cd-bd33-9b86c65fa73a'
+        - name: 추가 리소스
+          items:
+            - name: Neal Analytics로 SKU 최적화 가속화
+              href: 'https://nealanalytics.com/solutions/sku-max/'
+            - name: Azure Active Directory
+              href: /azure/active-directory/
+            - name: Neal Analytics로 SKU 최적화 가속화
+              href: /services/analysis-services
+            - name: Azure Blob Storage
+              href: /services/storage/blobs
+            - name: Azure Databricks
+              href: /services/databricks
+            - name: Azure 데이터 팩터리
+              href: /services/data-factory
+            - name: Neal Analytics로 SKU 최적화 가속화
+              href: /azure/machine-learning/service/overview-what-is-azure-ml
+            - name: Azure SQL Data Warehouse
+              href: /services/sql-data-warehouse
+            - name: HDInsight
+              href: /services/hdinsight
+            - name: Power BI
+              href: 'https://powerbi.microsoft.com/en-us/'
+              maintainContext: true
+        - name: 소매의 데이터 관리 개요
+          href: retail/retail-data-management-overview.md
+        - name: Azure로 전자상거래 솔루션 마이그레이션 개요
+          href: retail/migrating-ecommerce-solution-to-azure.md
+        - name: 기존 추천 시스템 최적화 및 재사용
+          href: retail/recommendation-engine-optimization.md
+        - name: PCI DSS 규격 결제 처리
+          href: /azure/security/blueprints/payment-processing-blueprint
+          maintainContext: true
+        - name: Visual Search 개요
+          href: retail/visual-search-use-case-overview.md
+        - name: 소비자 브랜드에 대한 SKU 최적화
+          items:
+            - name: 개요
+              href: retail/sku-optimization-overview.md
+            - name: 솔루션 가이드
+              href: retail/sku-optimization-solution-guide.md
+        - name: 추가 리소스
+          items:
+            - name: 소매 및 마케팅의 Azure Cosmos DB
+              href: '/azure/cosmos-db/use-cases#retail-and-marketing'
+              maintainContext: true
+            - name: 수요 예측 및 가격 최적화
+              href: 'https://gallery.azure.ai/Solution/Demand-Forecasting-and-Price-Optimization'
+            - name: Azure AI를 사용한 인벤토리 최적화 솔루션
+              href: 'https://blogs.technet.microsoft.com/machinelearning/2018/04/05/inventory-optimization-solution-in-the-azure-ai-gallery'

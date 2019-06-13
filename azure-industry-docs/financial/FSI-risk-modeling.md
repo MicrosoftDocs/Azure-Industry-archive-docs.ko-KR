@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: cff221055e76d7334793782d19eadd0960712a1f
+ms.sourcegitcommit: 461c520509d53bae1021eebf9733a98edbf71e4d
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66716843"
+---
 # <a name="enabling-the-financial-services-risk-lifecycle-with-azure-and-r"></a>Azure 및 R을 통한 금융 서비스 위험 수명 주기 사용
 
 
@@ -12,7 +20,7 @@
 이러한 프로세스를 통해 위험 모델링과 관련된 일반적인 요구 사항은 다음과 같습니다.
 
 1.  위험 분석가, 즉 보험 회사의 보험 회계사 또는 자본 시장 회사의 금융 시장 분석가의 임시 위험 관련 실험에 대한 요구 사항.
-    이러한 분석가는 일반적으로 자신의 도메인에서 인기 있는 R 및 Python과 같은 코드와 모델링 도구를 사용합니다. 많은 대학 교육 과정의 수학 재무 및 MBA 과정에는 R 또는 Python 학습이 포함됩니다.
+    이러한 분석가는 일반적으로 자신의 도메인에서 인기 있는 다음과 같은 코드와 모델링 도구를 사용합니다. R 및 Python. 많은 대학 교육 과정의 수학 재무 및 MBA 과정에는 R 또는 Python 학습이 포함됩니다.
     두 언어는 모두 인기 있는 위험 계산을 지원하는 광범위한 오픈 소스 라이브러리를 제공합니다. 분석가에게는 적절한 도구와 함께 다음에 대한 액세스 권한이 필요한 경우가 많습니다.
 
     a.  정확한 시장 가격 데이터
@@ -56,9 +64,9 @@ Microsoft는 [Azure Marketplace](https://azuremarketplace.microsoft.com/?WT.mc_i
 
 5.  max(0,주식 가치)를 도표로 구성하여 PFE의 의미, 즉 VaR(Value at Risk, 최대 손실 금액)에 대한 차이를 보여 줍니다.
 
-    a.  명확히 하면 PFE = 주가(T) - 선물 계약 가격 K입니다.
+    a.  명확히 하기: PFE = 주가(T) - 선물 계약 가격 K
 
-6.  0.95 변위치(Quantile)를 사용하여 시뮬레이션 기간 동안 각 시간 단계 및 종료의 PFE 값을 얻습니다.
+6.  0\.95 변위치(Quantile)를 사용하여 시뮬레이션 기간 동안 각 시간 단계 및 종료의 PFE 값을 얻습니다.
 
 MSFT 주식에 기반하여 주식 선물에 대한 PFE(잠재적 미래 위험 노출)를 계산할 것입니다. 위에서 설명한 대로 주식 가격을 모델링하려면 모델을 과거 데이터로 보정할 수 있도록 MSFT 주식에 대한 과거 가격이 필요합니다. 과거 주가를 얻는 여러 가지 방법이 있습니다. 이 예제에서는 [Quandl](https://www.quandl.com/) 외부 서비스 공급자의 주가 서비스 무료 버전을 사용합니다.
 
@@ -423,7 +431,7 @@ plot(as.numeric(df$term[df$statistic == 'PFE']) / 365, df$result[df$statistic ==
 
 -   R 개발자: [Azure Batch를 사용하여 병렬 R 시뮬레이션 실행](https://docs.microsoft.com/azure/batch/tutorial-r-doazureparallel?WT.mc_id=fsiriskmodelr-docs-scseely)
 
--   [기본 R 명령 및 RevoScaleR 함수: 25개 일반적 예제](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler?WT.mc_id=fsiriskmodelr-docs-scseely)
+-   [기본 R 명령 및 RevoScaleR 함수: 25가지 일반적인 예제](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler?WT.mc_id=fsiriskmodelr-docs-scseely)
 
 -   [RevoScaleR을 사용하여 데이터 시각화 및 분석](https://docs.microsoft.com/machine-learning-server/r/tutorial-revoscaler-data-model-analysis?WT.mc_id=fsiriskmodelr-docs-scseely)
 

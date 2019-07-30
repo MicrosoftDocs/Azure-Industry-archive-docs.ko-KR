@@ -64,7 +64,7 @@ Bing은 다음과 같은 기능도 제공합니다.
 
  ![](./assets/visual-search-use-case-overview/visual-search-pipeline.png)
 
-그림 1: Visual Search 파이프라인 예제
+그림 1: Visual Search 파이프라인 예제 
 
 ### <a name="sourcing-the-pictures"></a>그림 소싱
 
@@ -72,7 +72,7 @@ Bing은 다음과 같은 기능도 제공합니다.
 
  ![](./assets/visual-search-use-case-overview/deep-fashion-dataset.png)
 
-그림 2: Deep Fashion 데이터 세트 예제
+그림 2: Deep Fashion 데이터 세트 예제 
 
 ### <a name="filtering-the-images"></a>이미지 필터링
 
@@ -100,7 +100,7 @@ Bing은 다음과 같은 기능도 제공합니다.
 
  ![](./assets/visual-search-use-case-overview/cosmosdb-data-model.png)
 
-그림 3: CosmosDB 계층적 리소스 모델
+그림 3: CosmosDB 계층적 리소스 모델 
 
 Cosmos DB의 전 세계 배포를 활용하려는 경우 문서 및 첨부 파일을 복제하지만 연결된 파일은 복제하지 않는다는 것에 유의하세요. 연결된 파일에는 콘텐츠 배포 네트워크를 사용하는 것이 좋습니다.
 
@@ -122,7 +122,7 @@ Cosmos DB의 전 세계 배포를 활용하려는 경우 문서 및 첨부 파�
 
  ![](./assets/visual-search-use-case-overview/resnet-modifications.png)
 
-그림 4: Visual Search용 ResNet에 대한 수정 사항 - F. Yang et al., 2017
+그림 4: Visual Search용 ResNet에 대한 수정 사항 - F. Yang et al., 2017 
 
 미리 학습된 모델을 선택하든, 사용자 고유의 모델을 개발하든 간에 모델 자체의 피처화 및/또는 학습을 실행할 위치를 결정해야 합니다.
 
@@ -132,7 +132,7 @@ Azure는 VM, Azure Batch, [Batch AI](https://azure.microsoft.com/en-us/services/
 
 ### <a name="similarity-measure-or-distance"></a>유사성 측정값 또는 거리
 
-이미지가 피처 벡터 공간에 표시될 때 유사성을 찾으려면 해당 공간의 요소 간 거리 측정값을 정의해야 합니다. 거리가 정의되고 나면 유사한 이미지 클러스터를 계산하고 유사성 매트릭스를 정의할 수 있습니다. 선택한 거리 메트릭에 따라 결과가 달라질 수 있습니다. 예를 들어 실수 벡터에 대한 가장 일반적인 유클리드 거리 측정값은 거리의 크기를 캡처하므로 이해하기 쉽습니다. 그러나 계산 측면에서는 다소 비효율적입니다.
+이미지가 피처 벡터 공간에 표시될 때 유사성을 찾으려면 해당 공간의 요소 간 거리 측정값을 정의해야 합니다. 거리가 정의되고 나면 유사한 이미지 클러스터를 컴퓨팅하고 유사성 매트릭스를 정의할 수 있습니다. 선택한 거리 메트릭에 따라 결과가 달라질 수 있습니다. 예를 들어 실수 벡터에 대한 가장 일반적인 유클리드 거리 측정값은 거리의 크기를 캡처하므로 이해하기 쉽습니다. 그러나 계산 측면에서는 다소 비효율적입니다.
 
 [코사인](https://en.wikipedia.org/wiki/Cosine_similarity) 거리는 주로 크기가 아닌 벡터의 방향을 캡처하는 데 사용됩니다.
 
@@ -142,7 +142,7 @@ Azure는 VM, Azure Batch, [Batch AI](https://azure.microsoft.com/en-us/services/
 
 ### <a name="search-amp-ranking"></a>검색 및 순위
 
-유사성이 정의되고 나면, 입력으로 전달된 값에 가장 가까운 N개 항목을 검색하고 식별자 목록을 반환하는 효율적인 방법을 고안해야 합니다. 이를 “이미지 순위 지정”이라고도 합니다. 큰 데이터 세트에서는 모든 거리를 계산하는 데 오랜 시간이 걸리므로 ANN(Approximate Nearest Neighbor) 알고리즘을 사용합니다. 해당 알고리즘에 대한 여러 오픈 소스 라이브러리가 있으므로 알고리즘을 처음부터 코딩할 필요는 없습니다.
+유사성이 정의되고 나면, 입력으로 전달된 값에 가장 가까운 N개 항목을 검색하고 식별자 목록을 반환하는 효율적인 방법을 고안해야 합니다. 이를 “이미지 순위 지정”이라고도 합니다. 큰 데이터 세트에서는 모든 거리를 계산하는 데 오랜 시간이 걸리므로 근사치 인접 알고리즘을 사용합니다. 해당 알고리즘에 대한 여러 오픈 소스 라이브러리가 있으므로 알고리즘을 처음부터 코딩할 필요는 없습니다.
 
 마지막으로, 메모리 및 계산 요구 사항에 따라 학습된 모델에 대해 선택할 배포 기술과 고가용성이 결정됩니다. 일반적으로 검색 공간은 분할되며, 순위 지정 알고리즘의 여러 인스턴스가 병렬로 실행됩니다. 확장성 및 가용성을 허용하는 한 가지 옵션은 [Azure Kubernetes](https://azure.microsoft.com/en-us/services/container-service/kubernetes/?WT.mc_id=vsearchgio-article-gmarchet) 클러스터입니다. 이 경우 여러 컨테이너(각각 검색 공간의 한 파티션 처리) 및 여러 노드(고가용성에 사용)에 순위 지정 모델을 배포하는 것이 좋습니다.
 

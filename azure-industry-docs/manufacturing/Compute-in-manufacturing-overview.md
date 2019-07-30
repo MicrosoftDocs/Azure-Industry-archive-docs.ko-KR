@@ -1,11 +1,11 @@
 ---
-title: 확장성 있는 주문형 고성능 계산
+title: 확장성 있는 주문형 고성능 컴퓨팅
 author: ercenk
 ms.author: ercenk
 ms.date: 07/11/2018
 ms.topic: article
 ms.service: industry
-description: 제조 산업에 필요한 고성능 계산에 대한 개요입니다.
+description: 제조 산업에 필요한 고성능 컴퓨팅에 대한 개요입니다.
 ms.openlocfilehash: b34f2dd3930a2f663382a20f195e147aae66f90d
 ms.sourcegitcommit: 76f2862adbec59311b5888e043a120f89dc862af
 ms.translationtype: HT
@@ -13,7 +13,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 11/03/2018
 ms.locfileid: "51654220"
 ---
-# <a name="on-demand-scalable-high-power-compute"></a>확장성 있는 주문형 고성능 계산
+# <a name="on-demand-scalable-high-power-compute"></a>확장성 있는 주문형 고성능 컴퓨팅
 
 ## <a name="introduction"></a>소개
 
@@ -53,7 +53,7 @@ Azure 플랫폼을 사용하면 솔루션을 강화하거나 확장할 수 있�
 
 ![https://azurecomcdn.azureedge.net/mediahandler/acomblog/media/Default/blog/77129585-f25c-4c29-b22b-80c627d03daa.png](assets/bigcompute-assets/fluent.png)
 
-로컬 계산 클러스터에 투자하는 대신 병렬 실행이 필요한 소프트웨어 패키지는 모든 클라우드 솔루션에 대해 [HPC 및 GPU VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-hpc?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Ftoc.json?WT.mc_id=computeinmanufacturing-docs-ercenk) 제품군을 사용하여 Azure 가상 머신 또는 [VMSS(가상 머신 확장 세트)](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview?WT.mc_id=computeinmanufacturing-docs-ercenk)에 배포할 수 있습니다.
+로컬 컴퓨팅 클러스터에 투자하는 대신 병렬 실행이 필요한 소프트웨어 패키지는 모든 클라우드 솔루션에 대해 [HPC 및 GPU VM](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/sizes-hpc?toc=%2Fazure%2Fvirtual-machines%2Fwindows%2Ftoc.json?WT.mc_id=computeinmanufacturing-docs-ercenk) 제품군을 사용하여 Azure 가상 머신 또는 [VMSS(가상 머신 확장 집합)](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview?WT.mc_id=computeinmanufacturing-docs-ercenk)에 배포할 수 있습니다.
 
 ### <a name="burst-to-azure"></a>Azure로 버스트
 
@@ -68,7 +68,7 @@ Azure 플랫폼을 사용하면 솔루션을 강화하거나 확장할 수 있�
 생성 설계에는 토폴로지 최적화, 격자 최적화, 표면 최적화 및 양식 합성과 같은 몇 가지 방법이 있습니다. 이러한 방법에 대한 자세한 내용은 이 문서의 범위를 벗어납니다. 그러나 이러한 방법 전반에 걸친 공통적인 패턴은 계산 집약적 환경에 액세스해야 한다는 것입니다.
 
 생성 설계의 시작점은 알고리즘에서 반복해야 하는 설계 매개 변수를 적절한 증가 및 값 범위와 함께 정의하는 것입니다. 그런 다음, 알고리즘에서 이러한 매개 변수의 유효한 조합 각각에 대한 설계 대안을 만듭니다. 이렇게 하면 수많은 설계 대안이 만들어집니다. 이러한 대안을 만들려면 많은 컴퓨팅 리소스가 필요합니다.
-또한 각 설계 대안에 대해 모든 시뮬레이션 및 분석 작업을 실행해야 합니다. 결과적으로 대규모 계산 환경이 필요합니다.
+또한 각 설계 대안에 대해 모든 시뮬레이션 및 분석 작업을 실행해야 합니다. 결과적으로 대규모 컴퓨팅 환경이 필요합니다.
 
 [Azure Batch](https://docs.microsoft.com/en-us/azure/batch/batch-technical-overview?WT.mc_id=computeinmanufacturing-docs-ercenk) 및 [VMSS](https://docs.microsoft.com/en-us/azure/virtual-machine-scale-sets/overview?WT.mc_id=computeinmanufacturing-docs-ercenk)를 통해 계산 요구 사항에 따라 필요할 때 강화할 수 있는 Azure의 여러 옵션은 이러한 워크로드에 대한 자연스러운 대상입니다.
 
@@ -92,7 +92,7 @@ AI(인공 지능)과 ML(기계 학습)을 사용하는 고급 분석 기능을 �
 
 ![](assets/bigcompute-assets/vmsizes.png)
 
-결정의 주요 동인은 비즈니스 문제입니다. 문제로 인해 대규모 데이터 세트를 적절한 알고리즘으로 처리해야 하는 경우 중요한 요소는 알고리즘을 학습하기 위한 클라우드 규모의 계산 리소스입니다.
+결정의 주요 동인은 비즈니스 문제입니다. 문제로 인해 대규모 데이터 세트를 적절한 알고리즘으로 처리해야 하는 경우 중요한 요소는 알고리즘을 학습하기 위한 클라우드 규모의 컴퓨팅 리소스입니다.
 [Azure Batch AI](https://azure.microsoft.com/en-us/services/batch-ai/?WT.mc_id=computeinmanufacturing-docs-ercenk)는 AI 모델을 대규모로 병렬로 학습하는 서비스입니다.
 
 Azure Batch AI를 사용하면 데이터 과학자는 [Azure DSVM(Data Science Virtual Machine)](https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/overview?WT.mc_id=computeinmanufacturing-docs-ercenk) 또는 [Azure DLVM(Deep Learning Virtual Machine)](https://docs.microsoft.com/en-us/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview?WT.mc_id=computeinmanufacturing-docs-ercenk)을 사용하여 워크스테이션에서 솔루션을 개발하고 학습을 클러스터로 푸시할 수 있습니다. DSVM 및 DLVM은 사전 설치된 일단의 다양한 도구와 샘플이 있는 특별히 구성된 VM 이미지입니다.

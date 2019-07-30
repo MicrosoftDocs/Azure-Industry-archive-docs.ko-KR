@@ -23,13 +23,13 @@ ms.locfileid: "51654180"
 
 포트폴리오에 영향을 주는 많은 벡터에 대한 위험 분석은 매우 복잡하므로 컴퓨터 모델링이 필요합니다. 대부분의 분석가는 컴퓨터 모델 작업에 많은 시간을 할애하여 재무 상황이 어떻게 변화하는지를 시뮬레이션하고 예측합니다. 투자 위험(시장 위험, 신용 위험 및 운영 위험)을 평가할 때 데이터의 볼륨 및 다양성으로 인해 예측 모델을 처리하는 계산 부하가 상당히 클 수 있습니다.
 
-클라우드 컴퓨팅은 분석가가 자본 비용을 발생시키거나 인프라를 관리하지 않고도 요청 시 방대한 계산 리소스에 액세스할 수 있으므로 위험 그리드 컴퓨팅 또는 위험 모델링에 상당한 혜택을 제공합니다. 이 문서에서는 Microsoft Azure를 활용하여 현재 위험 그리드 컴퓨팅 리소스를 보강하고 위험 그리드 컴퓨팅 워크로드의 비용과 속도를 최적화하는 방법을 살펴보겠습니다. 다루는 주제는 안전하고 신뢰할 수 있는 연결, 일괄 처리, 온-프레미스 서버가 용량에 도달한 경우 수요에 따라 계산 리소스 보강 등입니다.
+클라우드 컴퓨팅은 분석가가 자본 비용을 발생시키거나 인프라를 관리하지 않고도 요청 시 방대한 계산 리소스에 액세스할 수 있으므로 위험 그리드 컴퓨팅 또는 위험 모델링에 상당한 혜택을 제공합니다. 이 문서에서는 Microsoft Azure를 활용하여 현재 위험 그리드 컴퓨팅 리소스를 보강하고 위험 그리드 컴퓨팅 워크로드의 비용과 속도를 최적화하는 방법을 살펴보겠습니다. 안전하고 신뢰할 수 있는 연결, 일괄 처리, 온-프레미스 서버의 용량에 대한 수요에 따라 컴퓨팅 리소스 증대 등의 주제가 다루어집니다.
 
 ## <a name="grid-computing-services"></a>그리드 컴퓨팅 서비스
 
 분석가는 데이터 수집을 시작하고 데이터 처리를 통해 분석으로 진행하여 결과 데이터에서 인사이트를 얻을 수 있는 일괄 처리 파이프라인에 모델을 제공하는 간단하고 신뢰할 수 있는 방법이 필요합니다.
 
-위험 모델 입력 데이터는 여러 형태로 제공되며, 가장 일반적인 형태는 Excel 파일 또는 .csv 파일입니다. 이러한 파일은 위험 계산 파이프라인의 이후 단계에서 위험 모델을 처리하는 데 보다 적합한 형식으로 재구성되는 경우가 많습니다. 해당 파일을 구문 분석하고 처리하는 일반적인 기술은 일괄 처리로, VM(가상 머신?WT.mc_id=gridbank-docs-dastarr) 그리드가 공통 목표에 도달하기 위해 함께 작동합니다.
+위험 모델 입력 데이터는 여러 형태로 제공되며, 가장 일반적인 형태는 Excel 파일 또는 .csv 파일입니다. 이러한 파일은 위험 컴퓨팅 파이프라인의 이후 단계에서 위험 모델을 처리하는 데 보다 적합한 형식으로 재구성되는 경우가 많습니다. 해당 파일을 구문 분석하고 처리하는 일반적인 기술은 일괄 처리로, VM(가상 머신?WT.mc_id=gridbank-docs-dastarr) 그리드가 공통 목표에 도달하기 위해 함께 작동합니다.
 
 [Azure Batch](/azure/batch/?WT.mc_id=gridbank-docs-dastarr)는 아래와 같이 여러 작업자 VM이 병렬로 실행될 수 있도록 하는 Azure 서비스입니다. 데이터 파일을 처리하고 결과를 기계 학습 시스템 또는 데이터 저장소에 제출하는 것이 작업자 노드의 일반적인 작업입니다. 작업자 노드에서 실행하는 애플리케이션 코드는 고객이 만들기 때문에 일괄 작업에서 거의 모든 작업을 수행할 수 있습니다.
 
@@ -84,7 +84,7 @@ Azure Batch 처리 모델은 위험 그리드 컴퓨팅과 관련해서 여러 �
 
 효율적인 리소스 사용과 더불어, 이 방식은 다른 혜택도 제공합니다. 독립 작업의 경우 더 많은 작업자를 추가하면 부하의 선형 확장이 가능합니다. Azure는 매우 큰 VM 인스턴스나 여러 개의 GPU 카드가 있는 머신을 시도할 수 있는 유연성도 제공합니다. 이 유연성을 통해 실험과 혁신을 시도할 수 있습니다.
 
-분기별 가치 평가와 같이 더 많은 계산 용량이 필요한 경우 Azure Batch 자동 크기 조정을 통해 추가 용량을 얻을 수도 있습니다. 자동 크기 조정은 Batch 솔루션에 탄력성을 제공합니다. 필요한 부하와 일치하도록 리소스 크기를 조정함으로써 Azure는 하드웨어를 소유하는 것보다 저렴한 비용으로 훨씬 더 큰 용량을 제공합니다.
+분기별 가치 평가와 같이 더 많은 컴퓨팅 용량이 필요한 경우 Azure Batch 자동 크기 조정을 통해 추가 용량을 얻을 수도 있습니다. 자동 크기 조정은 Batch 솔루션에 탄력성을 제공합니다. 필요한 부하와 일치하도록 리소스 크기를 조정함으로써 Azure는 하드웨어를 소유하는 것보다 저렴한 비용으로 훨씬 더 큰 용량을 제공합니다.
 
 대부분의 상용 그리드 제품은 어떤 형태로든 클라우드로 확장 기능을 지원하므로 위험 분석 부하에 대한 개념 증명이 보다 용이합니다. 예를 들어 [Microsoft HPC Pack](/azure/virtual-machines/windows/hpcpack-cluster-options?WT.mc_id=gridbank-docs-dastarr)은 TIBCO, Univa 등의 회사 제품과 마찬가지로 Azure에서 실행될 수 있습니다. 이러한 타사 도구 또는 시스템은 대부분 [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/?WT.mc_id=gridbank-docs-dastarr)를 통해 제공됩니다.
 
@@ -96,7 +96,7 @@ Azure Batch 처리 모델은 위험 그리드 컴퓨팅과 관련해서 여러 �
 
 온-프레미스 머신의 수명이 끝나면 클라우드에 작업자 노드를 더 배포할 수 있습니다. Batch 헤드 노드의 경우도 마찬가지입니다. 이 경우 온-프레미스 네트워크와 Azure 간의 관계가 반전되며, Azure ExpressRoute와 같은 네트워크 간 제품과 나머지 온-프레미스 작업자 노드를 해제하여 비용을 줄일 수 있습니다.
 
-이 변경의 일부로 다양한 파일 수신 기술을 사용하여 Azure에 데이터를 제공할 수 있습니다. Azure는 계산 작업이 온-프레미스 네트워크에서 픽업하도록 하는 대신 데이터를 직접 업로드할 수 있는 REST 엔드포인트를 포함하여, 선택할 수 있는 다양한 스토리지 옵션을 제공합니다.
+이 변경의 일부로 다양한 파일 수신 기술을 사용하여 Azure에 데이터를 제공할 수 있습니다. Azure는 컴퓨팅 작업이 온-프레미스 네트워크에서 픽업하도록 하는 대신 데이터를 직접 업로드할 수 있는 REST 엔드포인트를 포함하여, 선택할 수 있는 다양한 스토리지 옵션을 제공합니다.
 
  ![온-프레미스 일괄 처리](./assets/risk-grid-compute-assets/04-batch-process.png)
 
@@ -106,9 +106,9 @@ Azure Batch 처리 모델은 위험 그리드 컴퓨팅과 관련해서 여러 �
 
 계산 데이터에는 PII(개인 식별 정보?WT.mc_id=gridbank-docs-dastarr)가 없는 경우가 많지만, 대부분의 은행은 여전히 워크로드를 클라우드에 배치하기 전에 보안 위험 평가를 수행할 가능성이 높습니다. 이 평가에는 Microsoft의 입력이 필요할 수 있으며, 보안 권장 사항이 발생할 수 있습니다.
 
-위험 그리드 컴퓨팅과 관련해서 주목할 만한 고려 사항은 [Azure VNet 내에서 일괄 처리 프로세스를 실행](/azure/batch/batch-virtual-network?WT.mc_id=gridbank-docs-dastarr)하는 것입니다. 이렇게 하면 풀 계산 노드가 다른 계산 노드 또는 온-프레미스 네트워크와 안전하게 통신할 수 있습니다. 일괄 처리 계산 노드에서 적절한 서비스 계정 및 NSG(네트워크 보안 그룹)를 만들고 사용해야 합니다. [Azure에는 전송 중인 데이터와 Azure Storage에 저장된 데이터의 암호화를 위한 솔루션도 있습니다](/azure/security/blueprints/financial-services-regulated-workloads?WT.mc_id=gridbank-docs-dastarr).
+위험 그리드 컴퓨팅과 관련해서 주목할 만한 고려 사항은 [Azure VNet 내에서 일괄 처리 프로세스를 실행](/azure/batch/batch-virtual-network?WT.mc_id=gridbank-docs-dastarr)하는 것입니다. 이렇게 하면 풀 컴퓨팅 노드가 다른 컴퓨팅 노드 또는 온-프레미스 네트워크와 안전하게 통신할 수 있습니다. 일괄 처리 컴퓨팅 노드에서 적절한 서비스 계정 및 NSG(네트워크 보안 그룹)를 만들고 사용해야 합니다. [Azure에는 전송 중인 데이터와 Azure Storage에 저장된 데이터의 암호화를 위한 솔루션도 있습니다](/azure/security/blueprints/financial-services-regulated-workloads?WT.mc_id=gridbank-docs-dastarr).
 
-고려해야 하는 일부 영역은 AD(Active Directory) 또는 AD에 연결되지 않은 계산 노드(Windows Server 노드?WT.mc_id=gridbank-docs-dastarr), [VM 디스크 암호화](/azure/security/azure-security-disk-encryption?WT.mc_id=gridbank-docs-dastarr), 저장되었거나 전송 중인 계산 입력 및 출력 데이터의 보안, Azure 네트워크 구성, 사용 권한 등입니다. 인증은 비밀 키를 통해 REST API 수준에서 처리할 수도 있습니다.
+고려해야 하는 일부 영역은 AD(Active Directory) 또는 AD에 연결되지 않은 컴퓨팅 노드(Windows Server nodes?WT.mc_id=gridbank-docs-dastarr), [VM 디스크 암호화](/azure/security/azure-security-disk-encryption?WT.mc_id=gridbank-docs-dastarr), 저장되었거나 전송 중인 컴퓨팅 입력 및 미사용 데이터의 출력 보안, Azure 네트워크 구성, 사용 권한 등입니다. 인증은 비밀 키를 통해 REST API 수준에서 처리할 수도 있습니다.
 
 ## <a name="getting-started"></a>시작하기
 
@@ -116,7 +116,7 @@ Azure Batch 처리 모델은 위험 그리드 컴퓨팅과 관련해서 여러 �
 
 보안, 속도 및 연결 안정성에 대한 염려를 완화하려면 Azure ExpressRoute 또는 VPN Gateway를 사용하여 온-프레미스 네트워크를 Azure에 연결하는 것이 좋습니다. 여기서 온-프레미스 헤드 노드가 Azure 기반 작업자 노드 클러스터를 프로비전하여 필요에 따라 확장 및 축소되도록 할 수 있습니다.
 
-마지막으로, 위험 계산 인프라 전체를 Azure로 마이그레이션할 준비가 되었을 수 있습니다. 이 경우 [여기에 제공된 문서](/azure/batch/?WT.mc_id=gridbank-docs-dastarr)를 참조하여 지금 시작하세요.
+마지막으로, 위험 컴퓨팅 인프라 전체를 Azure로 마이그레이션할 준비가 되었을 수 있습니다. 이 경우 [여기에 제공된 문서](/azure/batch/?WT.mc_id=gridbank-docs-dastarr)를 참조하여 지금 시작하세요.
 
 ## <a name="technologies-presented"></a>제공되는 기술
 
@@ -138,10 +138,10 @@ Azure Batch 처리 모델은 위험 그리드 컴퓨팅과 관련해서 여러 �
 
 이 문서에서 다루는 솔루션은 금융의 위험 그리드 컴퓨팅에 대한 접근 방식입니다. Azure 제품 및 서비스의 풍부한 기능과 다양한 기존 클라이언트 시스템 아키텍처를 감안할 때 다른 아키텍처를 사용할 수도 있습니다. 이 경우에도 Batch는 이 문서에서 설명한 장점이 있는, 합리적인 위험 그리드 컴퓨팅 모델을 제공합니다.
 
-[온-프레미스 네트워크를 Azure로 확장](/azure/architecture/reference-architectures/hybrid-networking/?WT.mc_id=gridbank-docs-dastarr)하면 Azure가 네트워크 리소스 및 온-프레미스 네트워크에 이미 있는 기타 처리 시스템에 쉽게 액세스할 수 있습니다. 온-프레미스 머신의 수명이 끝나면 하이브리드 모델을 지원하는 대신 완전히 Azure에서 Batch 계산을 사용하는 것이 더 타당할 수 있습니다.
+[온-프레미스 네트워크를 Azure로 확장](/azure/architecture/reference-architectures/hybrid-networking/?WT.mc_id=gridbank-docs-dastarr)하면 Azure가 네트워크 리소스 및 온-프레미스 네트워크에 이미 있는 기타 처리 시스템에 쉽게 액세스할 수 있습니다. 온-프레미스 머신의 수명이 끝나면 하이브리드 모델을 지원하는 대신 완전히 Azure에서 Batch 컴퓨팅을 사용하는 것이 더 타당할 수 있습니다.
 
 Batch 작업이 시작되기 전에 파일을 Azure Storage로 업로드하는 것도 하이브리드 네트워크 없이 Batch를 활용하는 또 다른 방법입니다. 이 작업은 증분 방식으로 수행하거나 Batch 실행에 대한 시작 프로세스로 수행할 수 있습니다.
 
-연결 전략을 선택한 후, 위험 계산을 시작할 논리적 지점은 Azure 계산 작업자 노드에 기존 작업을 배치하고 테스트 환경에서 실행하여 코드를 변경해야 하는지 확인하는 것입니다. [이 문서에서는 선택한 언어 또는 도구에서 Azure Batch를 시작하기 위한 시작점을 제공](/azure/batch/batch-virtual-network?WT.mc_id=gridbank-docs-dastarr)합니다.
+연결 전략을 선택한 후, 위험 컴퓨팅을 시작할 논리적 지점은 Azure 컴퓨팅 작업자 노드에 기존 작업을 배치하고 테스트 환경에서 실행하여 코드를 변경해야 하는지 확인하는 것입니다. [이 문서에서는 선택한 언어 또는 도구에서 Azure Batch를 시작하기 위한 시작점을 제공](/azure/batch/batch-virtual-network?WT.mc_id=gridbank-docs-dastarr)합니다.
 
 [금융의 위험 그리드 컴퓨팅 솔루션 가이드](/azure/industry/financial/risk-grid-banking-solution-guide?WT.mc_id=banking-docs-dastarr)

@@ -78,7 +78,7 @@ Microsoft는 시스템을 분석하고 카탈로그를 작성하기 위한 몇 �
 
 ### <a name="optimize"></a>최적화
 
-이 시점에는 환경을 계속 모니터링하고, 환경이 변경됨에 따라 기본 계산 옵션을 워크로드에 맞게 변경합니다. 환경 상태를 모니터링하는 사람은 사용되는 각 리소스의 양을 감시해야 합니다. 목표는 대부분의 VM에서 사용률을 75-90%로 유지하는 것이어야 합니다. 사용률이 매우 낮은 VM에서는 더 많은 애플리케이션을 채우거나, Azure에서 적절한 수준의 성능을 유지하는 최저 비용 VM으로 마이그레이션하는 것이 좋습니다.
+이 시점에는 환경을 계속 모니터링하고, 환경이 변경됨에 따라 기본 컴퓨팅 옵션을 워크로드에 맞게 변경합니다. 환경 상태를 모니터링하는 사람은 사용되는 각 리소스의 양을 감시해야 합니다. 목표는 대부분의 VM에서 사용률을 75-90%로 유지하는 것이어야 합니다. 사용률이 매우 낮은 VM에서는 더 많은 애플리케이션을 채우거나, Azure에서 적절한 수준의 성능을 유지하는 최저 비용 VM으로 마이그레이션하는 것이 좋습니다.
 
 Azure는 환경을 최적화하는 도구도 제공합니다. [Azure Advisor](/azure/advisor/advisor-overview?WT.mc_id=retailecomm-docs-scseely)는 환경 구성 요소를 모니터링하고 모범 사례를 기반으로 하여 개인 설정된 권장 사항을 제공합니다. 권장 사항은 애플리케이션에서 사용되는 리소스의 성능, 보안 및 가용성을 개선하는 데 도움이 됩니다. Azure Portal에도 애플리케이션 상태에 대한 정보가 표시됩니다. VM은 [Linux 및 Windows용 Azure 가상 머신 확장](/azure/virtual-machines/extensions/overview?WT.mc_id=retailecomm-docs-scseely)을 활용해야 합니다. 이러한 확장은 배포 후 구성, 바이러스 백신, 앱 모니터링 등을 제공합니다. [Network Watcher](/azure/network-watcher/network-watcher-monitoring-overview?WT.mc_id=retailecomm-docs-scseely), [서비스 맵](/azure/monitoring/monitoring-walkthrough-servicemap?WT.mc_id=retailecomm-docs-scseely), [Application Insights](/azure/application-insights/app-insights-overview?WT.mc_id=retailecomm-docs-scseely) 및 [Log Analytics](/azure/log-analytics/log-analytics-overview?WT.mc_id=retailecomm-docs-scseely)와 같은 서비스를 통해 다양한 Azure 서비스를 네트워크 진단, 서비스 사용 및 경고에 활용할 수도 있습니다.
 

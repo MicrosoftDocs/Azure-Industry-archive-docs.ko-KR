@@ -138,13 +138,13 @@ ML 모델이 실행되는 위치에 대해 로컬로 또는 클라우드에서�
 
 ## <a name="local-execution"></a>로컬 실행
 
-ML 모델은 로컬에서 사용되지만, 데이터는 수집, 저장 및 추가 처리를 위해 클라우드로 전송됩니다. 이 옵션은 초기 검색이 중요한 시나리오에 매우 적합합니다.
+ML 모델은 로컬에서 사용되지만, 데이터는 수집, 스토리지 및 추가 처리를 위해 클라우드로 전송됩니다. 이 옵션은 초기 검색이 중요한 시나리오에 매우 적합합니다.
 
 ![로컬 실행](assets/pdm-assets/localandcloud.png)
 
 ## <a name="cloud-execution"></a>클라우드 실행
 
-ML 모델의 수집, 처리, 저장 및 실행은 모두 Azure 클라우드에서 수행할 수 있습니다. 이 옵션은 다중 테넌트 또는 지역 간에 ML 모델의 실행 결과를 공유하는 경우에 더 적합할 수 있습니다(대기 시간은 중요하지 않음). 종종 "에지 게이트웨이"라고 하는 선택적 구성 요소는 ["특사(Ambassador)" 패턴](https://docs.microsoft.com/en-us/azure/architecture/patterns/ambassador?WT.mc_id=pdmsolution-docs-ercenk)으로 알려진 패턴에 따라 데이터 집계 및 프로젝션, 스트림 분석 등과 같은 일부 작업을 수행하기 위해 로컬로 추가할 수 있습니다.
+ML 모델의 수집, 처리, 스토리지 및 실행은 모두 Azure 클라우드에서 수행할 수 있습니다. 이 옵션은 다중 테넌트 또는 지역 간에 ML 모델의 실행 결과를 공유하는 경우에 더 적합할 수 있습니다(대기 시간은 중요하지 않음). 종종 "에지 게이트웨이"라고 하는 선택적 구성 요소는 ["특사(Ambassador)" 패턴](https://docs.microsoft.com/en-us/azure/architecture/patterns/ambassador?WT.mc_id=pdmsolution-docs-ercenk)으로 알려진 패턴에 따라 데이터 집계 및 프로젝션, 스트림 분석 등과 같은 일부 작업을 수행하기 위해 로컬로 추가할 수 있습니다.
 
 Azure에서 모델을 사용하는 방법은 여러 가지가 있습니다. [Azure Machine Learning 웹 서비스](https://docs.microsoft.com/en-us/azure/machine-learning/studio/consume-web-services?WT.mc_id=pdmsolution-docs-ercenk)가 가장 간단하며, [Azure Machine Learning Studio](https://docs.microsoft.com/en-us/azure/machine-learning/studio/what-is-ml-studio?WT.mc_id=pdmsolution-docs-ercenk)는 모델을 만들기 위한 옵션으로 사용합니다. 또한 모델 관리를 위한 포괄적인 서비스 세트를 제공하는 [Azure Machine Learning 모델 관리](https://docs.microsoft.com/en-us/azure/machine-learning/preview/model-management-overview?WT.mc_id=pdmsolution-docs-ercenk)를 선택할 수 있으며, 이는 인증, 부하 분산, 자동 확장 및 암호화 기능이 포함된 REST API 엔드포인트를 제공합니다. 모델은 단일 머신(예: Data Science Virtual Machine, IoT 디바이스, 로컬 PC) 또는 [Azure Container Service](https://docs.microsoft.com/en-us/azure/aks/intro-kubernetes?WT.mc_id=pdmsolution-docs-ercenk)에 배포할 수 있습니다. 모델이 REST API를 통해 공개되면 사용자 지정 애플리케이션에서 엔터프라이즈 솔루션 통합에 이르기까지 무한하게 사용할 수 있습니다.
 

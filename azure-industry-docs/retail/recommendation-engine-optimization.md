@@ -86,7 +86,7 @@ R 스크립트를 호출하고 웹 사이트를 보호하기 위한 웹 인터�
 3. [SQL 가져오기/내보내기 마법사](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard?view=sql-server-2017)를 선택했습니다(시간 제한이 있는 경우 성능이 더 뛰어난 데이터 가져오기 옵션이 있음). 가져오기/내보내기 마법사는 데이터 형식을 데이터 원본에서 대상으로 매핑하며, 이 시나리오에서는 모든 데이터 요소가 허용되는 varchar(max) 데이터 형식에 매핑되었습니다. 시나리오에 다른 매핑이 필요하면 마법사에서 데이터 형식을 수정할 수 있습니다([참고 자료](https://docs.microsoft.com/sql/integration-services/import-export-data/data-type-mapping-in-the-sql-server-import-and-export-wizard?view=sql-server-2017)).  
 4. 데이터베이스에 제출된 대부분의 쿼리는 *subscriber_id* 필드를 필터링하므로 해당 필드에 대한 인덱스를 만들었습니다.
 
-### <a name="web-application"></a>웹 응용 프로그램
+### <a name="web-application"></a>웹 애플리케이션
 
 웹 애플리케이션은 다음 세 가지 함수를 수행해야 합니다.
 

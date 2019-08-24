@@ -137,7 +137,7 @@ Stream Analytics 쿼리는 Azure Event Hub, Azure IoT Hub로 수집된 스트리
 
 이 문서의 예제 시나리오는 기계 사용률 KPI(가이드 앞부분에서 소개)입니다. 데이터의 원시 해석을 선택했고, 기계가 데이터를 보내면 이를 사용한다고 가정해 보겠습니다. 그러나 기계는 유휴 또는 유지 보수 상황 등, 실제 아무 것도 생산하지 않는 동안에도 데이터를 보낼 수 있습니다. 여기서 IoT 데이터에서 인사이트를 추출할 때 가장 일반적인 과제가 드러납니다. 즉 확보한 데이터에서 찾고자 하는 데이터를 제공하지 않는 것입니다. 따라서 이 예제에서는 기계가 생산 중인지 여부에 대해서 명확하게 알려 주는 데이터를 가져오지 않게 됩니다.  이 때문에 확보한 데이터를 다른 데이터 원본과 결합하고 기계가 생산 중인지 여부를 판단하기 위한 규칙을 적용하여 사용률을 추론해야 합니다. 또한 회사마다 “생산”에 대한 해석이 다르기 때문에 이러한 규칙도 달라질 수 있습니다. 웜 경로는 데이터가 시스템을 통해 흘러가는 상황을 분석하는 것입니다. 이 스트림을 거의 실시간으로 처리하고 웜 스토리지에 저장하여 분석 클라이언트에 푸시합니다.
 
-Azure Event Hubs는 초당 수백만 개의 이벤트를 수신하여 처리할 수 있는 빅 데이터 스트리밍 플랫폼이자 이벤트 수집 서비스입니다. Event Hubs는 분산된 소프트웨어와 장치에서 생성된 이벤트, 데이터 또는 원격 분석을 처리하고 저장할 수 있습니다. Event Hub로 전송된 데이터는 실시간 분석 공급자 또는 일괄 처리/저장소 어댑터를 사용하여 변환하고 저장할 수 있습니다. Event Hubs는 데이터 흐름에 대한 웜 경로의 첫 단계에 아주 잘 맞습니다.
+Azure Event Hubs는 초당 수백만 개의 이벤트를 수신하여 처리할 수 있는 빅 데이터 스트리밍 플랫폼이자 이벤트 수집 서비스입니다. Event Hubs는 분산된 소프트웨어와 디바이스에서 생성된 이벤트, 데이터 또는 원격 분석을 처리하고 저장할 수 있습니다. Event Hub로 전송된 데이터는 실시간 분석 공급자 또는 일괄 처리/스토리지 어댑터를 사용하여 변환하고 저장할 수 있습니다. Event Hubs는 데이터 흐름에 대한 웜 경로의 첫 단계에 아주 잘 맞습니다.
 
 아래 그림은 빠른 계층 단계를 보여 줍니다. 이벤트 허브, Stream Analytics 인스턴스 및 웜 스토리지에 대한 데이터 저장소로 구성되어 있습니다.
 
@@ -269,7 +269,7 @@ Cosmos DB를 사용할 경우 RU 사용을 통해 저장소의 최적 사용을 
 
 **확장성**: Azure TSI(Time Series Insights)는 수신 속도, 스토리지 용량 및 SKU 관련 비용에 적용되는 승수인 이름이 “capacity”인 메트릭을 통해 확장됩니다. 
 
-Azure Time Series Insights는 수직 규모 조정에도 직접적인 영향이 있는 여러 SKU를 갖습니다. 확장에 대한 자세한 내용은 [Azure Time Series Insights 환경 계획](https://docs.microsoft.com/azure/time-series-insights/time-series-insights-environment-planning?WT.mc_id=iotinsightssoln-docs-ercenk) 문서를 참조하세요. 다른 많은 Azure 서비스처럼 TSI도 “시끄러운 이웃” 문제를 방지하기 위해 제한의 대상이 될 수 있습니다. 시끄러운 이웃은 공유 환경 https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers-vcore?WT.mc_id=iotinsightssoln-docs-ercenk에서 리소스를 독점하고 다른 사용자를 저해하는 애플리케이션입니다. 제한 관리는 [TSI 설명서](https://docs.microsoft.com/azure/time-series-insights/time-series-insights-environment-mitigate-latency?WT.mc_id=iotinsightssoln-docs-ercenk)를 참조하세요. 
+Azure Time Series Insights는 수직 규모 조정에도 직접적인 영향이 있는 여러 SKU를 갖습니다. 확장에 대한 자세한 내용은 [Azure Time Series Insights 환경 계획](https://docs.microsoft.com/azure/time-series-insights/time-series-insights-environment-planning?WT.mc_id=iotinsightssoln-docs-ercenk) 문서를 참조하세요. 다른 많은 Azure 서비스처럼 TSI도 “시끄러운 이웃” 문제를 방지하기 위해 제한의 대상이 될 수 있습니다. 시끄러운 이웃은 공유 환경 https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers-vcore?WT.mc_id=iotinsightssoln-docs-ercenk 에서 리소스를 독점하고 다른 사용자를 저해하는 애플리케이션입니다. 제한 관리는 [TSI 설명서](https://docs.microsoft.com/azure/time-series-insights/time-series-insights-environment-mitigate-latency?WT.mc_id=iotinsightssoln-docs-ercenk)를 참조하세요. 
 
 스토리지 계정의 확장성 목표는 [Azure Storage 확장성 및 성능 목표](https://docs.microsoft.com/azure/storage/common/storage-scalability-targets?WT.mc_id=iotinsightssoln-docs-ercenk)에서 설명합니다. 단일 스토리지 계정의 용량보다 많은 데이터를 저장하기 위한 일반적인 방법은 여러 스토리지 계정에 걸쳐 분할하는 것입니다.
 

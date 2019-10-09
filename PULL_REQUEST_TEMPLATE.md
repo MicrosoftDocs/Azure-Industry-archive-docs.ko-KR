@@ -1,3 +1,3 @@
-提案を送信するための役立つ情報:
-1.[ローカライズ スタイル ガイドのクイック スタート](https://docs.microsoft.com/globalization/localization/styleguides) に移動して、Microsoft スタイル ガイドの **最も重要なルール上位 10 個** をご確認ください。
-2.[Microsoft ランゲージ ポータル](https://www.microsoft.com/language) に移動して、Microsoft 製品間での **標準化された用語の翻訳** をご確認ください。
+제안하는 데 유용한 정보:
+1. [빠른 시작 지역화 스타일 가이드](https://docs.microsoft.com/globalization/localization/styleguides)로 이동하여 Microsoft 스타일 가이드에서 **상위 10개의 가장 중요한 규칙**을 확인합니다.
+2. [Microsoft 언어 포털](https://www.microsoft.com/language)로 이동하여 Microsoft 제품에서 **표준화된 용어 번역**을 확인합니다.

@@ -1,17 +1,17 @@
 ---
 title: AI용 Azure 청사진 구현
-author: dastarr
+author: dstarr
 ms.author: dastarr
-ms.date: 08/24/2018
+ms.date: 11/07/2019
 ms.topic: article
 ms.service: industry
 description: 이 문서에서는 AI용 Microsoft Azure 청사진에 대한 지침을 제공합니다.
-ms.openlocfilehash: f7c9290e6bbc0d500a9f7774c2020f78b5e94aca
-ms.sourcegitcommit: 76f2862adbec59311b5888e043a120f89dc862af
+ms.openlocfilehash: 845ec2a1da335336375d90c789e0fa89bc70d23a
+ms.sourcegitcommit: 385e99900bc20950f02a63c885facc1cf62c49df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "51654350"
+ms.lasthandoff: 11/08/2019
+ms.locfileid: "73845625"
 ---
 # <a name="implementing-the-azure-blueprint-for-ai"></a>AI용 Azure 청사진 구현
 
@@ -61,7 +61,7 @@ IaaS 모델은 청사진의 PaaS 배포에 중점을 두는 이 문서의 범위
 
 주요 리소스는 다음과 같습니다.
 
-1. 배포, 구성 및 기타 작업용 [PowerShell](https://docs.microsoft.com/en-us/powershell/scripting/powershell-scripting?WT.mc_id=ms-docs-dastarr) 스크립트.
+1. 배포, 구성 및 기타 작업용 [PowerShell](https://docs.microsoft.com/powershell/scripting/powershell-scripting?WT.mc_id=ms-docs-dastarr) 스크립트.
 2. 설치 스크립트 사용 방법을 포함하는 [자세한 설치 지침](https://github.com/Azure/Health-Data-and-AI-Blueprint/blob/master/deployment.md).
 3. [종합적인 FAQ](https://github.com/Azure/Health-Data-and-AI-Blueprint/blob/master/faq.md).
 
@@ -81,7 +81,7 @@ IaaS 모델은 청사진의 PaaS 배포에 중점을 두는 이 문서의 범위
 
 청사진은 기술 직원을 위한 뛰어난 안내와 지침을 제공하며, 완벽하게 작동하는 설치를 만드는 데 도움이 되는 아티팩트도 포함합니다. 이러한 기타 아티팩트는 다음과 같습니다.
 
-1. [Microsoft Threat Modeling Tool](https://www.microsoft.com/en-us/download/details.aspx?id=49168&WT.mc_id=ms-docs-dastarr)과 함께 사용하기 위한 [위협 모델](https://servicetrust.microsoft.com/ViewPage/HIPAABlueprint?command=Download&downloadType=Document&downloadId=01828de2-9555-4bac-a2a0-44e9ed2eeeaf&docTab=d7c399a0-2b92-11e8-9910-13dc07d708f7_Data_Analytics&WT.mc_id=ms-docs-dastarr). 이 위협 모델은 솔루션의 구성 요소, 구성 요소 간의 데이터 흐름 및 신뢰 경계를 보여 줍니다. 이 도구는 기본 청사진을 확장하려는 사용자가 위협 모델링에 사용하거나 보안 관점에서 시스템 아키텍처에 대해 알아보는 데 사용할 수 있습니다.
+1. [Microsoft Threat Modeling Tool](https://www.microsoft.com/download/details.aspx?id=49168&WT.mc_id=ms-docs-dastarr)과 함께 사용하기 위한 [위협 모델](https://servicetrust.microsoft.com/ViewPage/HIPAABlueprint?command=Download&downloadType=Document&downloadId=01828de2-9555-4bac-a2a0-44e9ed2eeeaf&docTab=d7c399a0-2b92-11e8-9910-13dc07d708f7_Data_Analytics&WT.mc_id=ms-docs-dastarr). 이 위협 모델은 솔루션의 구성 요소, 구성 요소 간의 데이터 흐름 및 신뢰 경계를 보여 줍니다. 이 도구는 기본 청사진을 확장하려는 사용자가 위협 모델링에 사용하거나 보안 관점에서 시스템 아키텍처에 대해 알아보는 데 사용할 수 있습니다.
 
 2. Excel 통합 문서의 [HITRUST 고객 책임 매트릭스](https://servicetrust.microsoft.com/ViewPage/HIPAABlueprint?command=Download&downloadType=Document&downloadId=eab85244-b9ab-490a-9e2a-611153f7d3af&docTab=d7c399a0-2b92-11e8-9910-13dc07d708f7_Data_Analytics&WT.mc_id=ms-docs-dastarr).  이 매트릭스는 매트릭스의 각 요구 사항에 대해 Microsoft가 제공하는 사항과 고객이 제공해야 하는 사항을 비교해서 보여 줍니다. 이 책임 매트릭스에 대한 자세한 정보는 이 문서의 보안 및 준수 > 청사진 책임 매트릭스 섹션에 포함되어 있습니다.
 
@@ -123,7 +123,7 @@ Azure 사용 경험이 거의 없는 기술 직원도 30분에서 1시간 이내
 
 1. 변경 사항 없이 설치 스크립트를 다시 실행합니다. 설치 관리자가 이미 할당된 리소스를 확인하고 필요한 리소스만 설치합니다. 이 기술이 작동할 수도 있지만, 설치 스크립트가 이미 설치된 리소스를 할당하려고 시도할 위험이 있습니다. 이 경우 오류가 발생할 수 있으며 설치에 실패합니다.
 
-2. 청사진 서비스를 제거하려는 경우 여전히 deploy.ps1 스크립트를 실행하지만 다른 인수를 전달합니다. 
+2. 청사진 서비스를 제거하려는 경우 여전히 deploy.ps1 스크립트를 실행하지만 다른 인수를 전달합니다.
 
 ```powershell
 .\deploy.ps1 -clearDeploymentPrefix <prefix> `
@@ -154,7 +154,7 @@ Key Vault는 “소프트 삭제”로 유지되며 포털에는 표시되지 �
 
 ![청사진 설치 관리자](assets/sg-healthcare-ai-blueprint-assets/blueprint-installer.png)
 
-또한 이 설치는 AAD와의 긴밀한 통합으로 인해 MSDN 구독에서 작동하도록 설계되지 않았습니다. 표준 Azure 계정을 사용해야 합니다. 필요한 경우, 청사진 솔루션을 설치하고 해당 데모를 실행하는 데 사용할 크레딧을 포함하는 [평가판을 다운로드](https://azure.microsoft.com/en-us/free/?WT.mc_id=ms-docs-dastarr)합니다.
+또한 이 설치는 AAD와의 긴밀한 통합으로 인해 MSDN 구독에서 작동하도록 설계되지 않았습니다. 표준 Azure 계정을 사용해야 합니다. 필요한 경우, 청사진 솔루션을 설치하고 해당 데모를 실행하는 데 사용할 크레딧을 포함하는 [평가판을 다운로드](https://azure.microsoft.com/free/?WT.mc_id=ms-docs-dastarr)합니다.
 
 ## <a name="adding-other-resources"></a>다른 리소스 추가
 
@@ -162,7 +162,7 @@ Azure 청사진 설치에는 AI/ML 사용 사례 구현에 필요한 것보다 �
 
 더 많은 Azure 기능이 필요할 경우 [Cosmos DB](/azure/cosmos-db/introduction?WT.mc_id=ms-docs-dastarr)와 같은 새 리소스나 새 [Azure Functions](/azure/azure-functions/functions-overview?WT.mc_id=ms-docs-dastarr)를 솔루션에 추가할 수 있습니다. 새 리소스 또는 서비스를 추가하는 경우 보안 및 개인 정보 보호 정책이 규정 및 정책을 준수하도록 구성되었는지 확인합니다.
 
-[Azure REST API](https://docs.microsoft.com/en-us/rest/api/?view=Azure&WT.mc_id=ms-docs-dastarr), [Azure PowerShell 스크립팅](https://docs.microsoft.com/en-us/powershell/azure/get-started-azureps?view=azurermps-6.6.0&WT.mc_id=ms-docs-dastarr) 또는 [Azure Portal](http://portal.azure.com/?WT.mc_id=ms-docs-dastarr)을 사용하여 새 리소스와 서비스를 만들 수도 있습니다.
+[Azure REST API](https://docs.microsoft.com/rest/api/?view=Azure&WT.mc_id=ms-docs-dastarr), [Azure PowerShell 스크립팅](https://docs.microsoft.com/powershell/azure/get-started-azureps?view=azurermps-6.6.0&WT.mc_id=ms-docs-dastarr) 또는 [Azure Portal](http://portal.azure.com/?WT.mc_id=ms-docs-dastarr)을 사용하여 새 리소스와 서비스를 만들 수도 있습니다.
 
 ## <a name="using-machine-learning-with-the-blueprint"></a>청사진과 함께 기계 학습 사용
 
@@ -176,7 +176,7 @@ Azure 청사진 설치에는 AI/ML 사용 사례 구현에 필요한 것보다 �
 
 청사진에는 MLS(Machine Learning Studio)에서 ML 작업을 실행하는 데 필요한 데이터와 실험이 포함되어 있습니다. 예제에서는 학습된 모델을 실험에 사용하여 많은 변수를 기준으로 환자의 입원 기간을 예측합니다.
 
-이 데모 환경에서 Azure SQL Database에 수집된 데이터에는 결함이나 누락된 데이터 요소가 없습니다. 이 데이터는 정리되었습니다. 정리되지 않은 데이터가 수집되는 경우도 많으며, 이러한 데이터는 “정리”해야 기계 학습의 학습 알고리즘 피드에 사용하거나 ML 작업에 사용할 수 있습니다. 누락된 데이터 또는 데이터의 잘못된 값은 ML 분석 결과에 부정적인 영향을 줍니다.
+이 데모 환경에서 Azure SQL 데이터베이스에 수집된 데이터에는 결함이나 누락된 데이터 요소가 없습니다. 이 데이터는 정리되었습니다. 정리되지 않은 데이터가 수집되는 경우도 많으며, 이러한 데이터는 “정리”해야 기계 학습의 학습 알고리즘 피드에 사용하거나 ML 작업에 사용할 수 있습니다. 누락된 데이터 또는 데이터의 잘못된 값은 ML 분석 결과에 부정적인 영향을 줍니다.
 
 ## <a name="azure-machine-learning-studio"></a>Azure Machine Learning Studio
 
@@ -216,9 +216,9 @@ MLS에서는 학습 모델을 [만들고 사용](/azure/machine-learning/studio-
 
 ### <a name="azure-key-vault"></a>Azure Key Vault
 
-Azure Key Vault 서비스는 비밀, 인증서 및 애플리케이션에서 사용하는 기타 데이터를 저장하는 데 사용되는 컨테이너(자격 증명 모음)입니다. 여기에는 데이터베이스 문자열, REST 엔드포인트 URL, API 키 및 개발자가 애플리케이션에 하드 코드하거나 .config 파일에서 배포하지 않으려는 기타 항목이 포함됩니다.
+Azure Key Vault 서비스는 비밀, 인증서 및 애플리케이션에서 사용하는 기타 데이터를 저장하는 데 사용되는 컨테이너(자격 증명 모음)입니다. 여기에는 데이터베이스 문자열, 나머지 엔드포인트 URL, API 키 및 개발자가 애플리케이션에 하드 코드하거나 .config 파일에서 배포하지 않으려는 기타 항목이 포함됩니다.
 
-또한 자격 증명 모음은 애플리케이션 서비스 ID 또는 AAD 사용 권한이 있는 다른 계정에서 액세스할 수 있습니다. 이 경우 자격 증명 모음의 콘텐츠가 필요한 애플리케이션이 런타임에 비밀에 액세스할 수 있습니다.
+또한 자격 증명 모음은 애플리케이션 서비스 ID 또는 AAD 사용 권한이 있는 다른 계정에서 액세스할 수 있습니다. 이 경우 자격 증명 모음의 콘텐츠가 필요한 애플리케이션이 런타임 시 비밀에 액세스할 수 있습니다.
 
 자격 증명 모음에 저장된 키를 암호화 또는 서명할 수 있으며, 모든 보안 문제에 대해 키 사용을 모니터링할 수 있습니다.
 
@@ -318,12 +318,11 @@ Azure에 시스템을 빌드하는 고객은 클라우드 환경에서 보안 �
 
 - [Azure 건강 데이터 및 AI 청사진](/azure/security/blueprints/azure-health?WT.mc_id=ms-docs-dastarr)에 대해 자세히 알아보세요.
 - [여기에서 GitHub 리포지토리](https://github.com/Azure/Health-Data-and-AI-Blueprint/blob/master/deployment.md)를 다운로드, 복제 또는 포크합니다.
-- [Machine Learning Studio](/azure/machine-learning/studio/?WT.mc_id=ms-docs-dastarr)는 데이터 과학자가 Machine Learning 실험을 만드는 데 사용하는 작업 영역 및 도구입니다. 기본 제공 알고리즘, 특수 목적 위젯, Python 및 R 스크립트를 사용할 수 있습니다.
+- [Machine Learning Studio](/azure/machine-learning/?WT.mc_id=ms-docs-dastarr)는 데이터 과학자가 Machine Learning 실험을 만드는 데 사용하는 작업 영역 및 도구입니다. 기본 제공 알고리즘, 특수 목적 위젯, Python 및 R 스크립트를 사용할 수 있습니다.
 - 비밀, 인증서 및 기타 프라이빗 데이터는 [Azure Key Vault](/azure/key-vault/key-vault-whatis?WT.mc_id=ms-docs-dastarr)에 보관됩니다.
 - 필요한 명령은 설치 지침에 제공되지만, 스크립팅 언어 PowerShell이 청사진 설정에 중요합니다.
-- [Azure AI Gallery](https://docs.microsoft.com/en-us/powershell/scripting/powershell-scripting?WT.mc_id=ms-docs-dastarr)는 업계에서 고객에게 유용한 AI/ML 솔루션의 레시피 상자를 제공합니다. 다른 의료 전문가와 함께 데이터 과학자가 게시한 여러 가지 솔루션이 있습니다.
+- [Azure AI Gallery](https://gallery.azure.ai/)는 업계에서 고객에게 유용한 AI/ML 솔루션의 레시피 상자를 제공합니다. 다른 의료 전문가와 함께 데이터 과학자가 게시한 여러 가지 솔루션이 있습니다.
 - [Azure Security Center](/azure/security-center/?WT.mc_id=ms-docs-dastarr)는 애플리케이션의 동작, 취약성 및 완화 기술에 대한 인사이트를 제공합니다.
-- [Microsoft Threat Modeling Tool](/azure/security/blueprints/azure-health?WT.mc_id=ms-docs-dastarr)은 시스템 환경에 대한 위협을 계획하고 예측하는 데 사용됩니다. 청사진에 포함된 위협 모델을 검토해야 합니다.
 
 ## <a name="wrapping-up"></a>요약
 

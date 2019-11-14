@@ -2,16 +2,16 @@
 title: 금융의 데이터 관리 개요
 author: dstarr
 ms.author: dastarr
-ms.date: 05/21/2018
+ms.date: 10/30/2019
 ms.topic: article
 ms.service: industry
 description: Microsoft Azure를 사용하여 규제가 엄격한 금융 환경에서 데이터를 관리하는 기술을 설명합니다.
-ms.openlocfilehash: 69b0abfc4908431397e47752bcbe56a440703406
-ms.sourcegitcommit: 76f2862adbec59311b5888e043a120f89dc862af
+ms.openlocfilehash: 1314054018c04e45b6450604febbf0142ead380d
+ms.sourcegitcommit: f42a60539bec2a7769b42b6574f09eed4d1b6c79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "51654250"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73750539"
 ---
 # <a name="data-management-in-banking-overview"></a>금융의 데이터 관리 개요
 
@@ -49,7 +49,7 @@ ms.locfileid: "51654250"
 
 ## <a name="data-ingest"></a>데이터 수집
 
-금융 기관에는 이미 수집되어 현재 애플리케이션에서 사용 중인 데이터가 있습니다. 이 데이터를 Azure로 이동하는 몇 가지 옵션이 있습니다. 대부분의 경우 기존 애플리케이션에 대한 변경을 최소화하여 기존 애플리케이션이 온-프레미스에 있는 것처럼 Azure의 데이터에 연결할 수 있습니다. 이 내용은 특히 Microsoft [Azure SQL Database](/azure/sql-database/?WT.mc_id=bankdm-docs-dastarr)를 사용하는 경우에 해당되지만, [Azure Marketplace](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?WT.mc_id=bankdm-docs-dastarr)를 통해 Oracle, TeraData MongoDB 등의 솔루션을 찾을 수 있습니다.
+금융 기관에는 이미 수집되어 현재 애플리케이션에서 사용 중인 데이터가 있습니다. 이 데이터를 Azure로 이동하는 몇 가지 옵션이 있습니다. 대부분의 경우 기존 애플리케이션에 대한 변경을 최소화하여 기존 애플리케이션이 온-프레미스에 있는 것처럼 Azure의 데이터에 연결할 수 있습니다. 이 내용은 특히 Microsoft [Azure SQL Database](/azure/sql-database/?WT.mc_id=bankdm-docs-dastarr)를 사용하는 경우에 해당되지만, [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps/category/databases?WT.mc_id=bankdm-docs-dastarr)를 통해 Oracle, TeraData MongoDB 등의 솔루션을 찾을 수 있습니다.
 
 온-프레미스에서 Azure로 데이터를 이동하기 위한 다양한 데이터 마이그레이션 전략이 있으며, 각기 대기 시간이 다릅니다. 아래에 참조된 모든 기술은 데이터 투명성 및 안정적인 보안을 제공합니다.
 
@@ -78,11 +78,11 @@ VNet는 제한된 VNet 안에 Azure 리소스를 포함하기 위해 Azure에서
 
 ### <a name="azure-database-migration-service"></a>Azure Database Migration Service
 
-SQL Server 데이터베이스를 리프트 앤 시프트하는 경우 [Microsoft Azure Database Migration Service](/azure/dms/dms-overview?WT.mc_id=bankdm-docs-dastarr)를 사용하여 데이터베이스를 Azure로 이동할 수 있습니다. 서비스는 [Data Migration Assistant](https://docs.microsoft.com/en-us/sql/dma/dma-overview?WT.mc_id=bankdm-docs-dastarr)를 사용하여 온-프레미스 데이터베이스가 Azure SQL에 제공된 기능과 호환되는지 확인합니다. 데이터베이스를 마이그레이션하기 전에 필요한 변경 작업은 사용자 책임입니다. 또한 서비스를 사용하려면 온-프레미스 네트워크와 Azure 간에 사이트 간 인터넷 연결이 필요합니다.
+SQL Server 데이터베이스를 리프트 앤 시프트하는 경우 [Microsoft Azure Database Migration Service](/azure/dms/dms-overview?WT.mc_id=bankdm-docs-dastarr)를 사용하여 데이터베이스를 Azure로 이동할 수 있습니다. 서비스는 [Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview?WT.mc_id=bankdm-docs-dastarr)를 사용하여 온-프레미스 데이터베이스가 Azure SQL에 제공된 기능과 호환되는지 확인합니다. 데이터베이스를 마이그레이션하기 전에 필요한 변경 작업은 사용자 책임입니다. 또한 서비스를 사용하려면 온-프레미스 네트워크와 Azure 간에 사이트 간 인터넷 연결이 필요합니다.
 
 ### <a name="bulk-copy-program-for-sql-server"></a>SQL Server에 대한 대량 복사 프로그램
 
-현재 SQL Server가 온-프레미스에 있고 SQL Azure로 이동하려는 경우 또 다른 뛰어난 기술은 SQL Server Management Studio와 [BCP 유틸리티를 사용하여 데이터를 SQL Azure로 이동](https://azure.microsoft.com/en-us/blog/bcp-and-sql-azure/?WT.mc_id=bankdm-docs-dastarr)하는 것입니다. 원본 온-프레미스 서버에서 Azure SQL 데이터베이스를 스크립팅하고 만든 후 BCP를 사용하여 데이터를 SQL Azure로 신속하게 전송할 수 있습니다.
+현재 SQL Server가 온-프레미스에 있고 SQL Azure로 이동하려는 경우 또 다른 뛰어난 기술은 SQL Server Management Studio와 [BCP 유틸리티를 사용하여 데이터를 SQL Azure로 이동](https://azure.microsoft.com/blog/bcp-and-sql-azure/?WT.mc_id=bankdm-docs-dastarr)하는 것입니다. 원본 온-프레미스 서버에서 Azure SQL 데이터베이스를 스크립팅하고 만든 후 BCP를 사용하여 데이터를 SQL Azure로 신속하게 전송할 수 있습니다.
 
 ### <a name="blob-and-file-storage"></a>Blob 및 File Storage
 
@@ -116,7 +116,7 @@ Files 스토리지로 이동할 경우의 또 다른 장점은 데이터 관리 
 
 대체로 은행은 페타바이트는 아니라 해도 테라바이트 단위의 정보를 Azure로 가져와야 합니다. 다행히, Azure의 데이터 저장소는 매우 탄력적이며 확장성이 큽니다.
 
-대량의 데이터를 Azure로 마이그레이션하는 데 중점을 두는 서비스는 [Azure Data Box](https://azure.microsoft.com/en-us/services/storage/databox/?WT.mc_id=bankdm-docs-dastarr)입니다. 이 서비스는 Azure 연결을 통해 데이터 또는 백업을 전송하지 않고 데이터를 마이그레이션하도록 설계되었습니다. 테라바이트 단위의 데이터에 적합한 Azure Data Box는 Azure Portal에서 주문할 수 있는 어플라이언스입니다. 사용자 위치로 배송되며, 여기서 사용자 네트워크에 연결하고 표준 NAS 프로토콜을 통해 데이터를 로드하고 표준 256-AES 암호화를 통해 보호할 수 있습니다. 데이터가 어플라이언스에 배치되고 나면 Azure 데이터 센터로 다시 배송되며, 여기서 데이터가 Azure에 하이드레이션됩니다.
+대량의 데이터를 Azure로 마이그레이션하는 데 중점을 두는 서비스는 [Azure Data Box](https://azure.microsoft.com/services/storage/databox/?WT.mc_id=bankdm-docs-dastarr)입니다. 이 서비스는 Azure 연결을 통해 데이터 또는 백업을 전송하지 않고 데이터를 마이그레이션하도록 설계되었습니다. 테라바이트 단위의 데이터에 적합한 Azure Data Box는 Azure Portal에서 주문할 수 있는 어플라이언스입니다. 사용자 위치로 배송되며, 여기서 사용자 네트워크에 연결하고 표준 NAS 프로토콜을 통해 데이터를 로드하고 표준 256-AES 암호화를 통해 보호할 수 있습니다. 데이터가 어플라이언스에 배치되고 나면 Azure 데이터 센터로 다시 배송되며, 여기서 데이터가 Azure에 하이드레이션됩니다.
 그런 다음 디바이스는 안전하게 지워집니다.
 
 ## <a name="azure-information-protection"></a>Azure Information Protection
@@ -137,7 +137,7 @@ Data Factory를 사용하면 Azure로 들어오거나 다른 Azure 서비스 간
 
 예를 들어 데이터를 분석 파이프라인이나 도구에 피드하여 작업 가능한 인사이트를 생성할 수 있습니다. 데이터가 기계 학습 솔루션으로 전달하거나 이후의 다운스트림 처리를 위해 다른 형식으로 변환할 수도 있습니다. 예를 들어 .csv 파일을 기계 학습 시스템에 더 적합한 parquet 파일로 변환하고 해당 parquet 파일을 Blob Storage에 저장할 수 있습니다.
 
-[Azure HDInsight](/azure/hdinsight/hadoop/apache-hadoop-introduction?WT.mc_id=bankdm-docs-dastarr), [Spark](/azure/hdinsight/spark/apache-spark-overview?WT.mc_id=bankdm-docs-dastarr), [Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-overview?WT.mc_id=bankdm-docs-dastarr) 및 [Azure Machine Learning](/azure/machine-learning/?WT.mc_id=bankdm-docs-dastarr)과 같은 다운스트림 계산 서비스에 데이터를 전송할 수도 있습니다. 이렇게 하면 시스템에 직접 피드하여 분석 및 지능형 보고를 수행할 수 있습니다. 데이터 수신의 일반적인 모델 중 하나가 아래 그림 2에 나와 있습니다. 데이터는 다운스트림 분석 서비스에서 사용하도록 일반적인 [Data Lake](/azure/data-lake-store/data-lake-store-overview?WT.mc_id=bankdm-docs-dastarr)에 보관됩니다.
+[Azure HDInsight](/azure/hdinsight/hadoop/apache-hadoop-introduction?WT.mc_id=bankdm-docs-dastarr), [Spark](/azure/hdinsight/spark/apache-spark-overview?WT.mc_id=bankdm-docs-dastarr), [Azure Data Lake Analytics](/azure/data-lake-analytics/data-lake-analytics-overview?WT.mc_id=bankdm-docs-dastarr) 및 [Azure Machine Learning](/azure/machine-learning/?WT.mc_id=bankdm-docs-dastarr)과 같은 다운스트림 컴퓨팅 서비스에 데이터를 전송할 수도 있습니다. 이렇게 하면 시스템에 직접 피드하여 분석 및 지능형 보고를 수행할 수 있습니다. 데이터 수신의 일반적인 모델 중 하나가 아래 그림 2에 나와 있습니다. 데이터는 다운스트림 분석 서비스에서 사용하도록 일반적인 [Data Lake](/azure/data-lake-store/data-lake-store-overview?WT.mc_id=bankdm-docs-dastarr)에 보관됩니다.
 
 ![Data Lake 수집 모델](./assets/data-mgmt-in-banking-overview/data-mgmt-02.png)
 
@@ -185,7 +185,7 @@ Azure SQL을 사용하는 경우 최대 10년까지 백업을 저장하기 위�
 
 새로운 데이터 모델에 익숙해지면 데이터 수집 전략을 결정합니다. 어떤 데이터 원본이 있나요? Azure에서 데이터는 어디에 배치되나요? 어떻게, 그리고 언제 Azure로 이동되나요? 콘텐츠 형식, 크기 등에 따라 마이그레이션에 도움이 되는 많은 리소스를 여기서 사용할 수 있습니다. Azure 데이터 마이그레이션 서비스는 이러한 예 중 하나입니다.
 
-데이터가 Azure에 호스트되고 나면, 더 이상 유용하지 않거나 수명이 끝난 데이터에 대한 데이터 제거 계획을 만듭니다. 장기(콜드) 스토리지는 항상 효율적인 보관 옵션이지만, 만료된 데이터를 정리하면 공간과 전반적인 스토리지 비용이 절감됩니다. 백업 및 보관 [Azure 솔루션 아키텍처](https://azure.microsoft.com/en-us/solutions/architecture/?solution=backup-archive?WT.mc_id=bankdm-docs-dastarr)는 전반적인 전략을 계획하는 데 도움이 되는 좋은 리소스입니다.
+데이터가 Azure에 호스트되고 나면, 더 이상 유용하지 않거나 수명이 끝난 데이터에 대한 데이터 제거 계획을 만듭니다. 장기(콜드) 스토리지는 항상 효율적인 보관 옵션이지만, 만료된 데이터를 정리하면 공간과 전반적인 스토리지 비용이 절감됩니다. 백업 및 보관 [Azure 솔루션 아키텍처](https://azure.microsoft.com/solutions/architecture/?solution=backup-archive?WT.mc_id=bankdm-docs-dastarr)는 전반적인 전략을 계획하는 데 도움이 되는 좋은 리소스입니다.
 
 ## <a name="relevant-technologies"></a>관련 기술
 
@@ -207,6 +207,6 @@ Azure는 여러 기술과 전략을 사용하여 데이터 수집, 처리, 보�
 
 Databricks 및 Data Factory와 같은 Azure 서비스를 사용하여 간단하게 해당 데이터를 조작하고 데이터에 따라 조치를 취할 수 있습니다. 거의 액세스하지 않는 데이터의 장기 스토리지를 위해 보관 스토리지를 사용할 수 있으며, 필요에 따라 롤링 주기로 삭제할 수 있습니다.
 
-데이터 관리 계획의 설계를 시작하려면 [백업 및 보관 스토리지](https://azure.microsoft.com/en-us/solutions/architecture/?solution=backup-archive?WT.mc_id=bankdm-docs-dastarr)용 Azure 솔루션 라이브러리를 방문하세요.
+데이터 관리 계획의 설계를 시작하려면 [백업 및 보관 스토리지](https://azure.microsoft.com/solutions/architecture/?solution=backup-archive?WT.mc_id=bankdm-docs-dastarr)용 Azure 솔루션 라이브러리를 방문하세요.
 
 **문서 작성자**: Howard Bush 및 David Starr

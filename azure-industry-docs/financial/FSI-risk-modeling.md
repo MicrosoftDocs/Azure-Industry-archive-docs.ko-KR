@@ -1,10 +1,17 @@
 ---
-ms.openlocfilehash: cff221055e76d7334793782d19eadd0960712a1f
-ms.sourcegitcommit: 461c520509d53bae1021eebf9733a98edbf71e4d
+title: 모바일 은행 사기 솔루션 가이드
+description: 2초 내에 사기성 트랜잭션을 감지하는 방법을 설명합니다.
+author: mauiguitar
+ms.author: sihiga
+ms.service: industry
+ms.topic: overview
+ms.date: 10/31/2019
+ms.openlocfilehash: c5ea4384d02548e4d681b1c13fd81066a955d6a2
+ms.sourcegitcommit: f42a60539bec2a7769b42b6574f09eed4d1b6c79
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66716843"
+ms.lasthandoff: 11/07/2019
+ms.locfileid: "73750522"
 ---
 # <a name="enabling-the-financial-services-risk-lifecycle-with-azure-and-r"></a>Azure 및 R을 통한 금융 서비스 위험 수명 주기 사용
 
@@ -19,7 +26,7 @@ ms.locfileid: "66716843"
 
 이러한 프로세스를 통해 위험 모델링과 관련된 일반적인 요구 사항은 다음과 같습니다.
 
-1.  위험 분석가, 즉 보험 회사의 보험 회계사 또는 자본 시장 회사의 금융 시장 분석가의 임시 위험 관련 실험에 대한 요구 사항.
+1. 위험 분석가, 즉 보험 회사의 보험 회계사 또는 자본 시장 회사의 금융 시장 분석가의 임시 위험 관련 실험에 대한 요구 사항.
     이러한 분석가는 일반적으로 자신의 도메인에서 인기 있는 다음과 같은 코드와 모델링 도구를 사용합니다. R 및 Python. 많은 대학 교육 과정의 수학 재무 및 MBA 과정에는 R 또는 Python 학습이 포함됩니다.
     두 언어는 모두 인기 있는 위험 계산을 지원하는 광범위한 오픈 소스 라이브러리를 제공합니다. 분석가에게는 적절한 도구와 함께 다음에 대한 액세스 권한이 필요한 경우가 많습니다.
 
@@ -33,40 +40,40 @@ ms.locfileid: "66716843"
 
     e.  빠른 대화형 데이터 조사를 가능하게 하는 계산 용량
 
-2.  가격 책정 또는 시장 전략 결정에 임시 기계 학습 알고리즘을 사용할 수도 있습니다.
+2. 가격 책정 또는 시장 전략 결정에 임시 기계 학습 알고리즘을 사용할 수도 있습니다.
 
-3.  제품 계획, 거래 전략 및 이와 비슷한 논의에 사용할 데이터의 시각화 및 제시에 대한 요구 사항
+3. 제품 계획, 거래 전략 및 이와 비슷한 논의에 사용할 데이터의 시각화 및 제시에 대한 요구 사항
 
-4.  분석가가 가격, 가치 평가 및 시장 위험에 대해 구성하여 정의한 모델의 빠른 실행. 가치 평가는 전용 위험 모델링, 시장 위험 도구 및 사용자 지정 코드의 조합을 사용합니다. 분석은 워크로드에서 급증하는 다양한 매일 밤, 매주, 매월, 분기별 및 연간 계산을 통해 일괄적으로 실행됩니다.
+4. 분석가가 가격, 가치 평가 및 시장 위험에 대해 구성하여 정의한 모델의 빠른 실행. 가치 평가는 전용 위험 모델링, 시장 위험 도구 및 사용자 지정 코드의 조합을 사용합니다. 분석은 워크로드에서 급증하는 다양한 매일 밤, 매주, 매월, 분기별 및 연간 계산을 통해 일괄적으로 실행됩니다.
 
-5.  통합 위험 보고를 위해 다른 엔터프라이즈 규모의 위험 측정값을 통한 데이터 통합. 더 큰 조직에서는 낮은 수준의 위험 추정치를 엔터프라이즈 규모 위험 모델링 및 보고 도구로 전송할 수 있습니다.
+5. 통합 위험 보고를 위해 다른 엔터프라이즈 규모의 위험 측정값을 통한 데이터 통합. 더 큰 조직에서는 낮은 수준의 위험 추정치를 엔터프라이즈 규모 위험 모델링 및 보고 도구로 전송할 수 있습니다.
 
-6.  결과는 투자자 및 규제 요구 사항을 충족시키기 위해 필요한 간격으로 정의된 형식으로 보고해야 합니다.
+6. 결과는 투자자 및 규제 요구 사항을 충족시키기 위해 필요한 간격으로 정의된 형식으로 보고해야 합니다.
 
 Microsoft는 [Azure Marketplace](https://azuremarketplace.microsoft.com/?WT.mc_id=fsiriskmodelr-docs-scseely)의 Azure 서비스와 파트너 제안을 결합하여 위의 문제를 지원합니다. 이 문서에서는 R을 사용하여 임시 실험을 수행하는 방법에 대한 실제 예제를 보여 줍니다. 먼저 단일 머신에서 실험을 실행하는 방법을 설명한 다음, [Azure Batch](https://docs.microsoft.com/azure/batch/?WT.mc_id=fsiriskmodelr-docs-scseely)에서 동일한 실험을 실행하는 방법을 보여 주고, 모델링에서 외부 서비스를 활용하는 방법을 보여 줌으로써 마무리합니다. Azure에서 정의된 모델 실행에 대한 옵션과 고려 사항은 [은행](https://docs.microsoft.com/azure/industry/financial/risk-grid-banking-solution-guide?WT.mc_id=fsiriskmodelr-docs-scseely) 및 [보험](https://docs.microsoft.com/azure/industry/financial/actuarial-risk-analysis-and-financial-modeling-solution-guide?WT.mc_id=fsiriskmodelr-docs-scseely)에 초점을 맞춘 문서에서 설명하고 있습니다.
 
-## <a name="analyst-modelling-in-r"></a>R의 분석가 모델링 
+## <a name="analyst-modelling-in-r"></a>R의 분석가 모델링
 
 먼저 간편하고 대표적인 자본 시장 시나리오에서 분석가가 R을 사용하는 방법을 살펴보겠습니다. 계산을 위해 기존 R 라이브러리를 참조하거나 처음부터 코드를 작성하여 이를 빌드할 수 있습니다. 이 예제에서는 가격 책정 데이터도 가져와야 합니다. 예제를 간단하지만 설명적으로 유지하기 위해 주식 선물 계약의 PFE(잠재적 미래 위험 노출)를 계산합니다.
 이 예제는 복잡한 파생 상품과 같은 증권에 대한 복잡한 정량적 모델링 기법을 방지하고 위험 수명 주기에 집중하는 단일 위험 요소에 중점을 둡니다. 이 예제에서 수행하는 작업은 다음과 같습니다.
 
-1.  관심 있는 증권을 선택합니다.
+1. 관심 있는 증권을 선택합니다.
 
-2.  증권에 대한 과거 가격을 제공합니다.
+2. 증권에 대한 과거 가격을 제공합니다.
 
-3.  다음과 같이 GBM(기하학적 브라운 운동)을 사용하는 단순 MC(몬테카를로) 계산을 통해 주식 가격을 모델링합니다.
+3. 다음과 같이 GBM(기하학적 브라운 운동)을 사용하는 단순 MC(몬테카를로) 계산을 통해 주식 가격을 모델링합니다.
 
     a.  μ(뮤) 기대 수익률 및 σ(세타) 변동성을 추정합니다.
 
     b.  모델을 과거 데이터로 보정합니다.
 
-4.  다양한 경로를 시각화하여 결과를 전달합니다.
+4. 다양한 경로를 시각화하여 결과를 전달합니다.
 
-5.  max(0,주식 가치)를 도표로 구성하여 PFE의 의미, 즉 VaR(Value at Risk, 최대 손실 금액)에 대한 차이를 보여 줍니다.
+5. max(0,주식 가치)를 도표로 구성하여 PFE의 의미, 즉 VaR(Value at Risk, 최대 손실 금액)에 대한 차이를 보여 줍니다.
 
     a.  명확히 하기: PFE = 주가(T) - 선물 계약 가격 K
 
-6.  0\.95 변위치(Quantile)를 사용하여 시뮬레이션 기간 동안 각 시간 단계 및 종료의 PFE 값을 얻습니다.
+6. 0\.95 변위치(Quantile)를 사용하여 시뮬레이션 기간 동안 각 시간 단계 및 종료의 PFE 값을 얻습니다.
 
 MSFT 주식에 기반하여 주식 선물에 대한 PFE(잠재적 미래 위험 노출)를 계산할 것입니다. 위에서 설명한 대로 주식 가격을 모델링하려면 모델을 과거 데이터로 보정할 수 있도록 MSFT 주식에 대한 과거 가격이 필요합니다. 과거 주가를 얻는 여러 가지 방법이 있습니다. 이 예제에서는 [Quandl](https://www.quandl.com/) 외부 서비스 공급자의 주가 서비스 무료 버전을 사용합니다.
 
@@ -75,15 +82,15 @@ MSFT 주식에 기반하여 주식 선물에 대한 PFE(잠재적 미래 위험 
 
 데이터를 처리하고 주식과 관련된 위험을 정의하려면 다음 작업을 수행해야 합니다.
 
-1.  주식의 과거 데이터를 검색합니다.
+1. 주식의 과거 데이터를 검색합니다.
 
-2.  과거 데이터에서 μ 기대 수익률 및 σ 변동성을 결정합니다.
+2. 과거 데이터에서 μ 기대 수익률 및 σ 변동성을 결정합니다.
 
-3.  몇 가지 시뮬레이션을 사용하여 기초 주가를 모델링합니다.
+3. 몇 가지 시뮬레이션을 사용하여 기초 주가를 모델링합니다.
 
-4.  모델을 실행합니다.
+4. 모델을 실행합니다.
 
-5.  선물 주식의 미래 위험 노출을 결정합니다.
+5. 선물 주식의 미래 위험 노출을 결정합니다.
 
 Quandl 서비스에서 주식을 검색하고 지난 180일 동안의 종가 기록을 도표에 표시하는 것으로 시작합니다.
 
@@ -254,7 +261,7 @@ plot(df_pfe, t = 'l', ylab = "Potential Future Exposure in USD", xlab = "time t 
 
 ## <a name="using-azure-batch-with-r"></a>R에서 Azure Batch 사용 
 
-위에서 설명한 R 솔루션은 Azure Batch에 연결하고 클라우드를 활용하여 위험을 계산할 수 있습니다. 이와 같은 병렬 계산에는 약간의 추가 노력이 필요합니다. [Azure Batch를 사용하여 병렬 R 시뮬레이션 실행](https://docs.microsoft.com/en-us/azure/batch/tutorial-r-doazureparallel?WT.mc_id=fsiriskmodelr-docs-scseely) 자습서에서는 R을 Azure Batch에 연결하는 방법에 대해 자세히 설명하고 있습니다. 아래에는 Azure Batch에 연결하는 프로세스 및 간단한 PFE 계산에서 클라우드에 대한 확장을 활용하는 방법에 대한 코드와 요약이 나와 있습니다.
+위에서 설명한 R 솔루션은 Azure Batch에 연결하고 클라우드를 활용하여 위험을 계산할 수 있습니다. 이와 같은 병렬 계산에는 약간의 추가 노력이 필요합니다. [Azure Batch를 사용하여 병렬 R 시뮬레이션 실행](https://docs.microsoft.com/azure/batch/tutorial-r-doazureparallel?WT.mc_id=fsiriskmodelr-docs-scseely) 자습서에서는 R을 Azure Batch에 연결하는 방법에 대해 자세히 설명하고 있습니다. 아래에는 Azure Batch에 연결하는 프로세스 및 간단한 PFE 계산에서 클라우드에 대한 확장을 활용하는 방법에 대한 코드와 요약이 나와 있습니다.
 
 이 예제에서는 앞에서 설명한 것과 동일한 모델을 다룹니다. 앞에서 살펴본 대로 이 계산은 개인용 컴퓨터에서 실행할 수 있습니다. 몬테카를로 경로의 수를 늘리거나 더 작은 시간 단계를 사용하면 실행 시간이 훨씬 더 길어집니다. 거의 모든 R 코드는 변경되지 않은 채 그대로 유지됩니다. 이 섹션에서는 차이점을 강조합니다.
 
@@ -330,23 +337,23 @@ stopCluster(cluster)
 앞의 두 예제에서는 적절한 가치 평가 모델을 개발하기 위해 로컬 및 클라우드 인프라를 활용하는 방법을 보여 줍니다. 이 패러다임은 변화되기 시작했습니다. 온-프레미스 인프라가 클라우드 기반 IaaS 및 PaaS 서비스로 전환되는 것처럼 관련 위험 수치의 모델링이 서비스 지향 프로세스로 전환되고 있습니다.
 오늘날의 분석가들은 다음 두 가지 주요 문제에 직면해 있습니다.
 
-1.  규정 요구 사항은 모델링 요구 사항에 추가할 컴퓨팅 용량을 늘립니다. 규정자는 더 빈번하고 최신의 위험 수치를 요구하고 있습니다.
+1. 규정 요구 사항은 모델링 요구 사항에 추가할 컴퓨팅 용량을 늘립니다. 규정자는 더 빈번하고 최신의 위험 수치를 요구하고 있습니다.
 
 2.  기존의 위험 인프라는 시간이 지남에 따라 유기적으로 성장해 왔으며, 새로운 요구 사항 및 더 향상된 고급 위험 모델링을 민첩한 방식으로 구현할 때 문제가 발생합니다.
 
 클라우드 기반 서비스는 필요한 기능을 제공하고 위험 분석을 지원할 수 있습니다. 이러한 방법이 제공하는 몇 가지 이점은 다음과 같습니다.
 
--   규정자가 요구하는 가장 일반적인 위험 계산은 규정에 해당하는 모든 사용자가 구현해야 합니다. 분석가는 전문 서비스 공급자의 서비스를 활용하여 즉시 사용할 수 있는 규정자 준수 위험 계산의 이점을 누릴 수 있습니다. 이러한 서비스에는 시장 위험 계산, 거래 상대방 위험 계산, XVA(X-Value Adjustment, X 값 조정) 및 심지어 FRTB(Fundamental Review of Trading Book, 거래 계정에 대한 근본적 재검토) 계산도 포함될 수 있습니다.
+-  규정자가 요구하는 가장 일반적인 위험 계산은 규정에 해당하는 모든 사용자가 구현해야 합니다. 분석가는 전문 서비스 공급자의 서비스를 활용하여 즉시 사용할 수 있는 규정자 준수 위험 계산의 이점을 누릴 수 있습니다. 이러한 서비스에는 시장 위험 계산, 거래 상대방 위험 계산, XVA(X-Value Adjustment, X 값 조정) 및 심지어 FRTB(Fundamental Review of Trading Book, 거래 계정에 대한 근본적 재검토) 계산도 포함될 수 있습니다.
 
--   이러한 서비스는 웹 서비스를 통해 해당 인터페이스를 표시합니다. 기존의 위험 인프라는 이러한 다른 서비스를 통해 향상될 수 있습니다.
+- 이러한 서비스는 웹 서비스를 통해 해당 인터페이스를 표시합니다. 기존의 위험 인프라는 이러한 다른 서비스를 통해 향상될 수 있습니다.
 
 이 예제에서는 FRTB 계산을 위해 클라우드 기반 서비스를 호출하려고 합니다. 다음 중 일부는 [AppSource](https://appsource.microsoft.com/?WT.mc_id=fsiriskmodelr-docs-scseely)에서 찾을 수 있습니다. 이 문서에서는 [벡터 위험](http://www.vectorrisk.com/)의 평가판 옵션을 선택했습니다. 시스템은 계속 수정됩니다. 이번에는 관심 있는 위험 수치를 계산하기 위해 서비스를 사용합니다. 이 프로세스는 다음 단계로 구성됩니다.
 
-1.  적절한 매개 변수를 사용하여 관련 위험 서비스를 호출합니다.
+1. 적절한 매개 변수를 사용하여 관련 위험 서비스를 호출합니다.
 
-2.  서비스에서 계산이 완료될 때까지 기다립니다.
+2. 서비스에서 계산이 완료될 때까지 기다립니다.
 
-3.  결과를 검색하여 위험 분석에 통합합니다.
+3. 결과를 검색하여 위험 분석에 통합합니다.
 
 R로 변환된 코드(R 코드)는 준비된 입력 템플릿에서 필요한 입력 값을 정의하여 향상시킬 수 있습니다.
 
@@ -428,13 +435,12 @@ plot(as.numeric(df$term[df$statistic == 'PFE']) / 365, df$result[df$statistic ==
 
 ### <a name="tutorials"></a>자습서
 
+- R 개발자: [Azure Batch를 사용하여 병렬 R 시뮬레이션 실행](https://docs.microsoft.com/azure/batch/tutorial-r-doazureparallel?WT.mc_id=fsiriskmodelr-docs-scseely)
 
--   R 개발자: [Azure Batch를 사용하여 병렬 R 시뮬레이션 실행](https://docs.microsoft.com/azure/batch/tutorial-r-doazureparallel?WT.mc_id=fsiriskmodelr-docs-scseely)
+- [기본 R 명령 및 RevoScaleR 함수: 25가지 일반적인 예제](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler?WT.mc_id=fsiriskmodelr-docs-scseely)
 
--   [기본 R 명령 및 RevoScaleR 함수: 25가지 일반적인 예제](https://docs.microsoft.com/machine-learning-server/r/tutorial-r-to-revoscaler?WT.mc_id=fsiriskmodelr-docs-scseely)
+- [RevoScaleR을 사용하여 데이터 시각화 및 분석](https://docs.microsoft.com/machine-learning-server/r/tutorial-revoscaler-data-model-analysis?WT.mc_id=fsiriskmodelr-docs-scseely)
 
--   [RevoScaleR을 사용하여 데이터 시각화 및 분석](https://docs.microsoft.com/machine-learning-server/r/tutorial-revoscaler-data-model-analysis?WT.mc_id=fsiriskmodelr-docs-scseely)
-
--   [HDInsight의 ML Services 및 오픈 소스 R 기능 소개](https://docs.microsoft.com/azure/hdinsight/r-server/r-server-overview?WT.mc_id=fsiriskmodelr-docs-scseely)
+- [HDInsight의 ML Services 및 오픈 소스 R 기능 소개](https://docs.microsoft.com/azure/hdinsight/r-server/r-server-overview?WT.mc_id=fsiriskmodelr-docs-scseely)
 
 _이 문서는 Darko Mocelj 박사와 Rupert Nicolay에 의해 작성되었습니다._

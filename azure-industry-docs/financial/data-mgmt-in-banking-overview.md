@@ -1,17 +1,17 @@
 ---
-title: 금융의 데이터 관리 개요
+title: 개요 - Azure 서비스를 사용하여 은행용 데이터 자산 관리
 author: dstarr
 ms.author: dastarr
-ms.date: 10/30/2019
+ms.date: 11/20/2019
 ms.topic: article
 ms.service: industry
 description: Microsoft Azure를 사용하여 규제가 엄격한 금융 환경에서 데이터를 관리하는 기술을 설명합니다.
-ms.openlocfilehash: 1314054018c04e45b6450604febbf0142ead380d
-ms.sourcegitcommit: f42a60539bec2a7769b42b6574f09eed4d1b6c79
+ms.openlocfilehash: cfafd5242b6da994def2fe1470db9fd86b2675e7
+ms.sourcegitcommit: f030566b177715794d2ad857b150317e72d04d64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73750539"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74234649"
 ---
 # <a name="data-management-in-banking-overview"></a>금융의 데이터 관리 개요
 

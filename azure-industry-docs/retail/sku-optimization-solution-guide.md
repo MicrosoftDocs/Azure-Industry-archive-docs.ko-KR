@@ -1,17 +1,17 @@
 ---
-title: 소비자 브랜드에 대한 SKU 최적화
+title: Azure ML 및 분석을 통한 소비자 브랜드의 SKU 최적화
 author: scseely
-ms.author: scseely, mazoroto
-ms.date: 10/10/2018
+ms.author: scseely
+ms.date: 11/20/2019
 ms.topic: article
 ms.service: industry
 description: 소매 산업 분류 최적화. AI 및 ML의 인사이트를 통한 SKU 최적화.
-ms.openlocfilehash: 2a87425faa322f190cb0b106b5daa2a9c8ef03fe
-ms.sourcegitcommit: 76f2862adbec59311b5888e043a120f89dc862af
+ms.openlocfilehash: 22411776e830bb3c71f8c1277b30ec4331a3ef17
+ms.sourcegitcommit: 2714a77488c413f01beb169a18acab45663bcfd7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "51654280"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74308494"
 ---
 # <a name="sku-optimization-for-consumer-brands-solution-guide"></a>소비자 브랜드에 대한 SKU 최적화 솔루션 가이드
 
@@ -63,7 +63,7 @@ SKU 분류 솔루션은 판매 데이터를 의미 있는 상세 비교로 분�
 
 **트랜잭션 데이터**는 재무 목적을 위해 정기적으로 수집됩니다. 
 
-**분류 데이터**에는 SKU와 관련될 수 있는 다음과 같은 모든 사항이 포함됩니다. 
+**분류 데이터**에는 SKU와 관련된 모든 항목이 포함됩니다. 원하는 항목의 예제는 다음과 같습니다. 
 
 - SKU 수
 - SKU 설명
@@ -156,7 +156,7 @@ $$min_\lambda|\Lambda\lambda - v|$$
 
 위의 공식에서 유추할 수 있듯이 최적화 모델은 데이터 기반인 동시에 계산을 많이 사용합니다.
 
-Neal Analytics와 같은 Microsoft 파트너는 이러한 조건을 충족하기 위해 강력한 아키텍처를 개발했습니다. [SKU Max](https://appsource.microsoft.com/en-us/product/web-apps/neal_analytics.8066ad01-1e61-40cd-bd33-9b86c65fa73a?tab=Overview?WT.mc_id=invopt-article-gmarchet)(SKU 최댓값)를 참조하세요. 이러한 아키텍처를 예제로 사용하고 몇 가지 고려 사항을 제공합니다.
+Neal Analytics와 같은 Microsoft 파트너는 이러한 조건을 충족하기 위해 강력한 아키텍처를 개발했습니다. [SKU Max](https://appsource.microsoft.com/product/web-apps/neal_analytics.8066ad01-1e61-40cd-bd33-9b86c65fa73a?tab=Overview?WT.mc_id=invopt-article-gmarchet)(SKU 최댓값)를 참조하세요. 이러한 아키텍처를 예제로 사용하고 몇 가지 고려 사항을 제공합니다.
 
 - 첫째, 해당 아키텍처는 (1) 강력하고 확장 가능한 데이터 파이프라인을 사용하여 모델을 피드하고 (2) 강력하고 확장 가능한 실행 인프라를 사용하여 모델을 실행합니다.
 - 둘째, 계획자가 대시보드를 통해 결과를 쉽게 이용할 수 있습니다.
@@ -167,7 +167,7 @@ Neal Analytics와 같은 Microsoft 파트너는 이러한 조건을 충족하기
 
 ## <a name="the-data-pipeline"></a>데이터 파이프라인
 
-아키텍처는 모델의 학습 및 작업 둘 다에 사용되는 데이터 파이프라인 설정의 중요성을 강조합니다. 통합 워크플로를 설계하고 실행할 수 있는 관리되는 ETL(추출, 변환 및 로드) 서비스인 [Azure Data Factory](https://docs.microsoft.com/en-us/azure/data-factory/introduction?WT.mc_id=invopt-article-gmarchet)를 사용하여 파이프라인의 작업을 오케스트레이션합니다.
+아키텍처는 모델의 학습 및 작업 둘 다에 사용되는 데이터 파이프라인 설정의 중요성을 강조합니다. 통합 워크플로를 설계하고 실행할 수 있는 관리되는 ETL(추출, 변환 및 로드) 서비스인 [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/introduction?WT.mc_id=invopt-article-gmarchet)를 사용하여 파이프라인의 작업을 오케스트레이션합니다.
 
 Azure Data Factory는 데이터 세트를 이용 및/또는 생성하는 “작업”이라는 구성 요소가 있는 관리되는 서비스입니다.
 
@@ -180,8 +180,8 @@ Azure Data Factory는 데이터 세트를 이용 및/또는 생성하는 “작�
 
 캡처 단계에서는 복사 작업(Data Factory에 기본 제공됨)을 활용하여 다양한 원본(온-프레미스 및 클라우드)의 데이터를 Azure SQL Data Warehouse로 전송할 수 있습니다. 문서에 제공된 수행 방법의 예는 다음과 같습니다.
 
-- [Azure SQL DW에(서) 데이터 복사](https://docs.microsoft.com/en-us/azure/data-factory/connector-azure-sql-data-warehouse?WT.mc_id=invopt-article-gmarchet)
-- [Azure SQL DW에 데이터 로드](https://docs.microsoft.com/en-us/azure/data-factory/load-azure-sql-data-warehouse?WT.mc_id=invopt-article-gmarchet)
+- [Azure SQL DW에(서) 데이터 복사](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-data-warehouse?WT.mc_id=invopt-article-gmarchet)
+- [Azure SQL DW에 데이터 로드](https://docs.microsoft.com/azure/data-factory/load-azure-sql-data-warehouse?WT.mc_id=invopt-article-gmarchet)
 
 아래 그림은 파이프라인의 정의를 보여 줍니다. 균일한 크기의 연속된 블록 세 개로 구성되어 있습니다. 처음 두 블록은 데이터 세트이고 화살표로 연결된 작업이 데이터 흐름을 나타냅니다. 세 번째 블록은 “파이프라인”으로 레이블이 지정되며, 단순히 처음 두 블록을 가리켜 캡슐화를 나타냅니다. 
 
@@ -198,7 +198,7 @@ Neal Analytics 솔루션에서 사용하는 데이터 형식의 예는 Microsoft
 
 프로세스 단계에서는 SQL Data Warehouse가 기본 스토리지 엔진입니다. 따라서 이러한 변환 작업을 파이프라인의 일부로 자동 호출될 수 있는 SQL 저장 프로시저로 표현하는 것이 좋습니다. 문서에서는 다음과 같은 자세한 지침을 제공합니다.
 
-- [SQL 저장 프로시저로 데이터 변환](https://docs.microsoft.com/en-us/azure/data-factory/transform-data-using-stored-procedure?WT.mc_id=invopt-article-gmarchet)
+- [SQL 저장 프로시저로 데이터 변환](https://docs.microsoft.com/azure/data-factory/transform-data-using-stored-procedure?WT.mc_id=invopt-article-gmarchet)
 
 Data Factory는 SQL Data Warehouse 및 SQL 저장 프로시저로 제한하지 않습니다. 실제로는 다양한 플랫폼과 통합됩니다. 예를 들어 Databricks를 사용하고 변환을 위해 Python 스크립트를 실행할 수도 있습니다. 이 경우 다음 “모델” 단계에서 기계 학습 알고리즘의 스토리지, 변환 및 학습에 하나의 플랫폼을 모두 사용할 수 있기 때문에 장점이 됩니다.
 
@@ -222,17 +222,17 @@ Data Factory는 SQL Data Warehouse 및 SQL 저장 프로시저로 제한하지 �
 - 여러 코어에 계산을 분배합니다.
 - 스토리지에 “가까운” 곳에서 계산을 실행하여 데이터 이동을 제한합니다.
 
-Azure [HDInsight](https://azure.microsoft.com/en-us/services/hdinsight/?WT.mc_id=invopt-article-gmarchet) 및 [Databricks](https://azure.microsoft.com/en-us/services/databricks/?WT.mc_id=invopt-article-gmarchet)는 둘 다 이러한 요구 사항을 충족합니다. 또한 둘 다 Azure Data Factory 편집기 내에서 지원되는 실행 플랫폼입니다. 둘 다 비교적 간단하게 워크플로에 통합할 수 있습니다.
+Azure [HDInsight](https://azure.microsoft.com/services/hdinsight/?WT.mc_id=invopt-article-gmarchet) 및 [Databricks](https://azure.microsoft.com/services/databricks/?WT.mc_id=invopt-article-gmarchet)는 둘 다 이러한 요구 사항을 충족합니다. 또한 둘 다 Azure Data Factory 편집기 내에서 지원되는 실행 플랫폼입니다. 둘 다 비교적 간단하게 워크플로에 통합할 수 있습니다.
 
 ML Server 및 해당 라이브러리를 HDInsight에 배포할 수 있지만, 플랫폼 기능을 최대한 활용하려면 SparkML, Python의 Microsoft ML Spark 라이브러리 또는 기타 전문가 선형 프로그래밍 해결기(예: TFoCS, Spark-LP 또는 SolveDF)를 사용하여 선택한 ML 알고리즘을 구현하는 것이 좋습니다. 
 
-그러면 Data Factory 워크플로에서 적절한 pySpark 스크립트 또는 Notebook을 호출하여 학습 프로세스를 시작할 수 있습니다. 이 기능은 그래픽 편집기에서 완전히 지원됩니다. 자세한 내용은 [Azure Data Factory에서 Databricks Notebook 작업으로 Databricks Notebook 실행](https://docs.microsoft.com/en-us/azure/data-factory/transform-data-using-databricks-notebook?WT.mc_id=invopt-article-gmarchet)을 참조하세요.
+그러면 Data Factory 워크플로에서 적절한 pySpark 스크립트 또는 Notebook을 호출하여 학습 프로세스를 시작할 수 있습니다. 이 기능은 그래픽 편집기에서 완전히 지원됩니다. 자세한 내용은 [Azure Data Factory에서 Databricks Notebook 작업으로 Databricks Notebook 실행](https://docs.microsoft.com/azure/data-factory/transform-data-using-databricks-notebook?WT.mc_id=invopt-article-gmarchet)을 참조하세요.
 
 아래 그림은 Azure Portal을 통해 액세스되는 Data Factory 사용자 인터페이스를 보여 줍니다. 워크플로의 다양한 프로세스에 대한 블록을 포함합니다. 
 
 ![Databricks Notebook 작업을 표시하는 Data Factory 인터페이스.](assets/sku-optimization-solution-guide/data-factory-pipeline-databricks.png)<center><font size="1">_그림 5: Databricks Notebook 작업을 사용한 Data Factory 파이프라인의 예_</font></center>
 
-또한 [인벤토리 최적화 솔루션](https://gallery.azure.ai/Solution/Inventory-Optimization-3?WT.mc_id=invopt-article-gmarchet)에서는 [Azure Batch](https://azure.microsoft.com/en-us/services/batch/?WT.mc_id=invopt-article-gmarchet)를 통해 확장되는 컨테이너 기반 해결기 구현을 제안합니다. [pyomo](http://www.pyomo.org/about/)와 같은 전문가 최적화 라이브러리를 사용하면 Python 프로그래밍 언어로 최적화 문제를 표시한 다음, [bonmin](https://projects.coin-or.org/Bonmin)(오픈 소스) 또는 [gurobi](http://www.gurobi.com/)(상업용)와 같은 독립 해결기를 호출하여 솔루션을 찾을 수 있습니다.
+또한 [인벤토리 최적화 솔루션](https://gallery.azure.ai/Solution/Inventory-Optimization-3?WT.mc_id=invopt-article-gmarchet)에서는 [Azure Batch](https://azure.microsoft.com/services/batch/?WT.mc_id=invopt-article-gmarchet)를 통해 확장되는 컨테이너 기반 해결기 구현을 제안합니다. [pyomo](http://www.pyomo.org/about/)와 같은 전문가 최적화 라이브러리를 사용하면 Python 프로그래밍 언어로 최적화 문제를 표시한 다음, [bonmin](https://projects.coin-or.org/Bonmin)(오픈 소스) 또는 [gurobi](http://www.gurobi.com/)(상업용)와 같은 독립 해결기를 호출하여 솔루션을 찾을 수 있습니다.
 
 인벤토리 최적화 문서는 분류 최적화가 아닌 다른 문제(주문 수량)를 다루지만, Azure의 해결기 구현은 유사하게 적용됩니다.
 
@@ -240,24 +240,24 @@ ML Server 및 해당 라이브러리를 HDInsight에 배포할 수 있지만, �
 
 ## <a name="running-the-model-operationalize"></a>모델 실행(운용)
 
-모델을 학습한 후 실행하려면 일반적으로 배포에 사용된 인프라와 다른 인프라가 필요합니다. 쉽게 이용할 수 있도록 REST 인터페이스를 사용하여 웹 서비스로 배포할 수도 있습니다. Azure ML Studio와 ML Server는 둘 다 이러한 서비스를 만드는 프로세스를 자동화합니다. ML Server의 경우 지원 인프라 배포를 위한 템플릿을 제공합니다. 관련 [문서](https://docs.microsoft.com/en-us/machine-learning-server/what-is-operationalization?WT.mc_id=invopt-article-gmarchet)를 참조하세요.
+모델을 학습한 후 실행하려면 일반적으로 배포에 사용된 인프라와 다른 인프라가 필요합니다. 쉽게 이용할 수 있도록 REST 인터페이스를 사용하여 웹 서비스로 배포할 수도 있습니다. Azure ML Studio와 ML Server는 둘 다 이러한 서비스를 만드는 프로세스를 자동화합니다. ML Server의 경우 지원 인프라 배포를 위한 템플릿을 제공합니다. 관련 [문서](https://docs.microsoft.com/machine-learning-server/what-is-operationalization?WT.mc_id=invopt-article-gmarchet)를 참조하세요.
 
 아래 그림은 배포의 아키텍처를 보여 줍니다. R 언어 및 Python을 실행하는 서버 표시를 포함합니다. 두 서버는 모두 계산을 수행하는 웹 노드의 하위 섹션과 통신합니다. 큰 데이터 저장소가 계산 블록에 연결되어 있습니다.
 
 ![ML Server 배포 다이어그램. 부하 분산 장치가 실행할 여러 노드 앞에 옵니다.](assets/sku-optimization-solution-guide/ml-server-deployment-example.png)<center><font size="1">_그림 6: ML Server 배포의 예_</font></center>
 
 
-HDInsight 또는 Databricks에 생성되어 Spark 환경(라이브러리, 병렬 기능 등)에 종속된 모델의 경우 클러스터에서 실행하는 것이 좋습니다. 이 지침은 [여기](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/spark-model-consumption?WT.mc_id=invopt-article-gmarchet)에서 제공합니다.
+HDInsight 또는 Databricks에 생성되어 Spark 환경(라이브러리, 병렬 기능 등)에 종속된 모델의 경우 클러스터에서 실행하는 것이 좋습니다. 이 지침은 [여기](https://docs.microsoft.com/azure/machine-learning/team-data-science-process/spark-model-consumption?WT.mc_id=invopt-article-gmarchet)에서 제공합니다.
 
 이 경우 운영 모델 자체가 채점을 위해 Data Factory 파이프라인 작업을 통해 호출될 수 있다는 장점이 있습니다.
 
-컨테이너를 사용하기 위해 모델을 패키지하여 Azure Kubernetes Service에 배포할 수 있습니다. 프로토타입에는 [Azure Data Science VM](https://azure.microsoft.com/en-us/services/virtual-machines/data-science-virtual-machines/?WT.mc_id=invopt-article-gmarchet)을 사용해야 합니다. Azure ML [명령줄](https://docs.microsoft.com/en-us/azure/machine-learning/desktop-workbench/model-management-service-deploy?WT.mc_id=invopt-article-gmarchet) 도구도 VM에 설치해야 합니다.
+컨테이너를 사용하기 위해 모델을 패키지하여 Azure Kubernetes Service에 배포할 수 있습니다. 프로토타입에는 [Azure Data Science VM](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/?WT.mc_id=invopt-article-gmarchet)을 사용해야 합니다. Azure ML [명령줄](https://docs.microsoft.com/azure/machine-learning/desktop-workbench/model-management-service-deploy?WT.mc_id=invopt-article-gmarchet) 도구도 VM에 설치해야 합니다.
 
 ## <a name="data-output-and-reporting"></a>데이터 출력 및 보고
 
 일단 배포되면 모델은 재무 트랜잭션 워크플로 및 재고 판독값을 처리하여 최적 분류 예측을 생성할 수 있습니다. 따라서 추가 분석을 위해 생성된 데이터를 Azure SQL Data Warehouse에 다시 저장할 수 있습니다. 특히, 다양한 SKU의 기록 성과를 연구하여 최고 매출 생성 SKU 및 손실 생성 SKU를 확인할 수 있습니다. 그런 다음, 이러한 결과를 모델에서 제안하는 분류와 비교하여 성과 및 재학습 필요성을 평가할 수 있습니다.
 
-[PowerBI](https://powerbi.microsoft.com/en-us/get-started/?&OCID=AID719832_SEM_uhlWLg3x&lnkd=Google_PowerBI_Brand&gclid=CjwKCAjw5ZPcBRBkEiwA-avvkyOLMJCrhqH8iac84aLX7EcUQIirSSqUCostzGi8y_XntJTCD73ZixoCQ4sQAvD_BwE?WT.mc_id=invopt-article-gmarchet)는 프로세스에서 생성된 데이터를 분석하고 표시하는 방법을 제공합니다. 
+[PowerBI](https://powerbi.microsoft.com/get-started/?&OCID=AID719832_SEM_uhlWLg3x&lnkd=Google_PowerBI_Brand&gclid=CjwKCAjw5ZPcBRBkEiwA-avvkyOLMJCrhqH8iac84aLX7EcUQIirSSqUCostzGi8y_XntJTCD73ZixoCQ4sQAvD_BwE?WT.mc_id=invopt-article-gmarchet)는 프로세스에서 생성된 데이터를 분석하고 표시하는 방법을 제공합니다. 
 
 아래 그림은 일반적인 Power BI 대시보드를 보여 줍니다. SKU 재고 정보를 표시하는 두 개의 그래프가 있습니다. 
 
@@ -272,22 +272,22 @@ HDInsight 또는 Databricks에 생성되어 Spark 환경(라이브러리, 병렬
 - 언급한 모든 서비스는 전송 중인 데이터와 저장된 데이터의 암호화를 지원합니다. Azure Data Lake에 데이터를 저장하도록 선택하면 기본적으로 암호화가 사용됩니다. Azure SQL Data Warehouse를 사용하는 경우 TDE(투명한 데이터 암호화)를 사용하도록 설정할 수 있습니다.
 - ML Studio를 제외하고 언급한 모든 서비스는 인증 및 권한 부여를 위해 Azure Active Directory와의 통합을 지원합니다. 고유 코드를 작성하는 경우 애플리케이션에 해당 통합을 빌드해야 합니다.
 
-GDPR에 대한 자세한 내용은 [준수](https://www.microsoft.com/en-us/trustcenter?WT.mc_id=invopt-article-gmarchet) 페이지를 참조하세요.
+GDPR에 대한 자세한 내용은 [준수](https://www.microsoft.com/trustcenter?WT.mc_id=invopt-article-gmarchet) 페이지를 참조하세요.
 
 ## <a name="technologies-mentioned"></a>언급한 기술
 
-- [Azure Batch](https://azure.microsoft.com/en-us/services/batch/?WT.mc_id=invopt-article-gmarchet)
-- [Azure Active Directory](https://azure.microsoft.com/en-us/services/active-directory/?&OCID=AID719825_SEM_w1MNAVjn&lnkd=Google_Azure_Brand&gclid=CjwKCAjw5ZPcBRBkEiwA-avvk4bGtyQo11KBY-u2skor1SydsSl1vrYUmhyGhhwyJhDlAYpnMmIcRRoCTfsQAvD_BwE&dclid=CMn6lvfRkd0CFRwBrQYdtIoJOA?WT.mc_id=invopt-article-gmarchet)
-- [Azure 데이터 팩터리](https://docs.microsoft.com/en-us/azure/data-factory/introduction?WT.mc_id=invopt-article-gmarchet)
-- [Azure Integration Runtime](https://docs.microsoft.com/en-us/azure/data-factory/concepts-integration-runtime?WT.mc_id=invopt-article-gmarchet)
-- [HDInsight](https://azure.microsoft.com/en-us/services/hdinsight/?WT.mc_id=invopt-article-gmarchet)
-- [Databricks](https://azure.microsoft.com/en-us/services/databricks/?WT.mc_id=invopt-article-gmarchet)
-- [Azure SQL Data Warehouse](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is?WT.mc_id=invopt-article-gmarchet)
+- [Azure Batch](https://azure.microsoft.com/services/batch/?WT.mc_id=invopt-article-gmarchet)
+- [Azure Active Directory](https://azure.microsoft.com/services/active-directory/?&OCID=AID719825_SEM_w1MNAVjn&lnkd=Google_Azure_Brand&gclid=CjwKCAjw5ZPcBRBkEiwA-avvk4bGtyQo11KBY-u2skor1SydsSl1vrYUmhyGhhwyJhDlAYpnMmIcRRoCTfsQAvD_BwE&dclid=CMn6lvfRkd0CFRwBrQYdtIoJOA?WT.mc_id=invopt-article-gmarchet)
+- [Azure 데이터 팩터리](https://docs.microsoft.com/azure/data-factory/introduction?WT.mc_id=invopt-article-gmarchet)
+- [Azure Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime?WT.mc_id=invopt-article-gmarchet)
+- [HDInsight](https://azure.microsoft.com/services/hdinsight/?WT.mc_id=invopt-article-gmarchet)
+- [Databricks](https://azure.microsoft.com/services/databricks/?WT.mc_id=invopt-article-gmarchet)
+- [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is?WT.mc_id=invopt-article-gmarchet)
 - [Azure ML Studio](https://studio.azureml.net/?WT.mc_id=invopt-article-gmarchet)
-- [Microsoft ML Server](https://docs.microsoft.com/en-us/machine-learning-server/what-is-machine-learning-server?WT.mc_id=invopt-article-gmarchet)
-- [Azure Data Science VM](https://azure.microsoft.com/en-us/services/virtual-machines/data-science-virtual-machines/?WT.mc_id=invopt-article-gmarchet)
-- [Azure Kubernetes Service](https://azure.microsoft.com/en-us/services/kubernetes-service/?WT.mc_id=invopt-article-gmarchet)
-- [Microsoft PowerBI](https://powerbi.microsoft.com/en-us/?WT.mc_id=invopt-article-gmarchet)
+- [Microsoft ML Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server?WT.mc_id=invopt-article-gmarchet)
+- [Azure Data Science VM](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/?WT.mc_id=invopt-article-gmarchet)
+- [Azure Kubernetes Service](https://azure.microsoft.com/services/kubernetes-service/?WT.mc_id=invopt-article-gmarchet)
+- [Microsoft PowerBI](https://powerbi.microsoft.com/?WT.mc_id=invopt-article-gmarchet)
 - [Pyomo Optimization Modelling Language](http://www.pyomo.org/)
 - [Bonmin Solver](https://projects.coin-or.org/Bonmin)
 - [TFoCS solver for Spark](https://github.com/databricks/spark-tfocs)

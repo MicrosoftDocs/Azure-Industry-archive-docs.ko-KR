@@ -1,18 +1,18 @@
 ---
-title: IoT 데이터에서 작업 가능한 인사이트 추출 개요
+title: IoT 데이터에서 작업 가능한 인사이트 추출 요약
 description: Azure 서비스를 사용하여 IoT 데이터에서 인사이트를 추출합니다. 솔루션 가이드에 대한 개요.
 author: ercenk
 ms.author: ercenk
 manager: gmarchet
 ms.service: industry
 ms.topic: article
-ms.date: 09/26/2018
-ms.openlocfilehash: 9528983a06602bd469a4d651bda8478aa758152b
-ms.sourcegitcommit: 76f2862adbec59311b5888e043a120f89dc862af
+ms.date: 11/28/2019
+ms.openlocfilehash: 8ca31501d976e0b162735b7f55e2db7fae850776
+ms.sourcegitcommit: a6eefa2a605c9e1c5015ae107c9847b18d415746
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "51654120"
+ms.lasthandoff: 11/26/2019
+ms.locfileid: "74540415"
 ---
 # <a name="extracting-actionable-insights-from-iot-data"></a>IoT 데이터에서 작업 가능한 인사이트 추출
 

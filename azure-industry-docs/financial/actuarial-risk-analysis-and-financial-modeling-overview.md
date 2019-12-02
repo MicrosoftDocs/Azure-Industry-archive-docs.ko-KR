@@ -1,17 +1,17 @@
 ---
-title: 보험 통계 위험 분석 및 모델링 솔루션 가이드
+title: 개요 - 보험 통계 위험 분석을 Azure로 이동하기 위한 가이드
 author: dstarr
 ms.author: dastarr
-ms.date: 08/29/2018
+ms.date: 11/20/2019
 ms.topic: article
 ms.service: industry
 description: 이 개요에서는 보험 통계 개발자가 기존 솔루션과 지원 인프라를 Azure로 이동할 수 있는 방법을 소개합니다.
-ms.openlocfilehash: b6bfecb27feeecf116e17f6d8eee9f1ab008576c
-ms.sourcegitcommit: 76f2862adbec59311b5888e043a120f89dc862af
+ms.openlocfilehash: cb571d996ab34da9157e9e211f354d7ce3d5f720
+ms.sourcegitcommit: b8f9ccc4e4453d6912b05cdd6cf04276e13d7244
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "51654080"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74263379"
 ---
 # <a name="actuarial-risk-analysis-and-financial-modeling"></a>보험 위험 분석 및 재무 모델링
 

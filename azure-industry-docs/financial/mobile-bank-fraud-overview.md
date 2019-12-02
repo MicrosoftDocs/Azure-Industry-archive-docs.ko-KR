@@ -1,17 +1,17 @@
 ---
-title: 모바일 은행 사기
-author: dstarr
-ms.author: dastarr
-ms.date: 10/30/2018
+title: 개요 — Azure 서비스를 통한 빠른 모바일 은행 사기 행위 솔루션 개발
+author: kbaroni
+ms.author: kbaroni
+ms.date: 11/20/2019
 ms.topic: article
 ms.service: industry
-description: 모바일 금융 사기 개요
-ms.openlocfilehash: e3e707c8f08b650b642a8a88330c90c328966ef1
-ms.sourcegitcommit: f42a60539bec2a7769b42b6574f09eed4d1b6c79
+description: 2초 내에 사기성 트랜잭션을 감지하는 방법을 설명합니다.
+ms.openlocfilehash: 17cc8cbcfe260b0925d50223e8c9d57319d19466
+ms.sourcegitcommit: f030566b177715794d2ad857b150317e72d04d64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73750559"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74234633"
 ---
 # <a name="mobile-bank-fraud"></a>모바일 은행 사기
 

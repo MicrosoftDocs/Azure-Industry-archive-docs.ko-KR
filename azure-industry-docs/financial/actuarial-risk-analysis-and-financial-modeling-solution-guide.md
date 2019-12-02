@@ -1,17 +1,17 @@
 ---
-title: 보험 통계 위험 분석 및 모델링 솔루션 가이드
+title: 보험 통계 위험 분석을 Azure로 이동하기 위한 가이드
 author: scseely
 ms.author: scseely
-ms.date: 08/23/2018
+ms.date: 11/20/2019
 ms.topic: article
 ms.service: industry
-description: 이 솔루션 가이드에서는 보험 통계 개발자가 기존 솔루션과 지원 인프라를 Azure로 이동할 수 있는 방법을 설명합니다.
-ms.openlocfilehash: 82cb53d529f6d7524ae1f9c148118b5edddc648b
-ms.sourcegitcommit: 76f2862adbec59311b5888e043a120f89dc862af
+description: 보험 통계 개발자가 기존 솔루션과 지원 인프라를 Azure로 이동할 수 있는 방법입니다.
+ms.openlocfilehash: 456c054cf3a6165f160005ba8ea2c155637faa07
+ms.sourcegitcommit: f030566b177715794d2ad857b150317e72d04d64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "51654290"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74234531"
 ---
 # <a name="actuarial-risk-analysis-and-financial-modeling-solution-guide"></a>보험 통계 위험 분석 및 금융 모델링 솔루션 가이드
 
@@ -42,7 +42,7 @@ ms.locfileid: "51654290"
 
 자, 어떻게 데이터를 준비할까요? 먼저 공통된 부분을 살펴본 다음, 데이터가 표시되는 다양한 방식을 작업하는 방법에 대해 알아보겠습니다. 먼저 지난 동기화 이후 모든 변경 내용을 확보하기 위한 메커니즘이 필요합니다. 이 메커니즘은 정렬 가능한 값을 포함해야 합니다. 최근 변경 내용에 대해 이 값은 이전 변경 내용보다 커야 합니다. 가장 일반적인 두 메커니즘은 계속 증가하는 ID 필드 또는 타임스탬프입니다. 레코드에 증가하는 ID 키가 있으나 나머지 레코드는 업데이트 가능한 필드를 포함할 경우 &quot;마지막으로 수정된&quot; 타임스탬프 같은 항목을 사용하여 변경 내용을 찾아야 합니다. 레코드를 처리한 후에는 지난 업데이트 항목의 정렬 가능한 값을 기록합니다. _lastModified_라고 하는 필드의 타임스탬프일 수 있는 이 값은 데이터 저장소에 대한 후속 쿼리에 사용되는 워터마크가 됩니다. 데이터 변경 내용은 여러 가지 방법으로 처리할 수 있습니다. 최소 리소스를 사용하는 일반적인 두 가지 메커니즘은 다음과 같습니다.
 
-1. 처리해야 할 변경 내용이 수백 또는 수천 개인 경우: 데이터를 Blob 스토리지에 업로드합니다. [Azure Data Factory](https://docs.microsoft.com/azure/data-factory?WT.mc_id=riskmodel-docs-scseely)에서 이벤트 트리거를 사용하여 변경 세트를 처리합니다.
+1. 처리해야 할 변경 내용이 수백 또는 수천 개인 경우 다음을 수행합니다. 데이터를 Blob 스토리지에 업로드합니다. [Azure Data Factory](https://docs.microsoft.com/azure/data-factory?WT.mc_id=riskmodel-docs-scseely)에서 이벤트 트리거를 사용하여 변경 세트를 처리합니다.
 2. 처리해야 할 변경 내용 세트가 소규모이거나 변경 발생 즉시 데이터를 업데이트하려는 경우 각 변경 내용을 [Service Bus](https://docs.microsoft.com/azure/service-bus-messaging?WT.mc_id=riskmodel-docs-scseely)나 [스토리지 큐](https://docs.microsoft.com/azure/storage/queues/storage-queues-introduction?WT.mc_id=riskmodel-docs-scseely)에서 호스트하는 큐 메시지에 넣습니다. [이 문서에서는](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-azure-and-service-bus-queues-compared-contrasted?WT.mc_id=riskmodel-docs-scseely) 두 큐 기술 간의 절충 문제를 잘 설명하고 있습니다. 메시지가 큐에 들어가면 Azure Functions 또는 Azure Data Factory에서 메시지를 처리하기 위해 트리거를 사용할 수 있습니다.
 
 다음 그림은 일반적인 시나리오를 보여 줍니다. 먼저 예약된 작업이 일부 데이터 세트를 수집하고 파일을 스토리지에 배치합니다. 예약된 작업은 온-프레미스에서 실행되는 CRON 작업이거나, 타이머에서 실행되는 [스케줄러 작업](https://docs.microsoft.com/azure/scheduler?WT.mc_id=riskmodel-docs-scseely), [논리 앱](https://docs.microsoft.com/azure/logic-apps/logic-apps-overview?WT.mc_id=riskmodel-docs-scseely) 또는 기타 항목이 될 수 있습니다. 파일이 업로드되면 [Azure Function](https://docs.microsoft.com/azure/azure-functions?WT.mc_id=riskmodel-docs-scseely) 또는 **Data Factory** 인스턴스를 트리거하여 데이터를 처리할 수 있습니다. 파일이 단시간에 처리될 경우 **함수**를 사용합니다. 처리가 복잡하여 AI 또는 기타 복합 스크립팅이 필요한 경우 [HDInsight](https://docs.microsoft.com/azure/hdinsight?WT.mc_id=riskmodel-docs-scseely), [Azure Databricks](https://docs.microsoft.com/azure/azure-databricks?WT.mc_id=riskmodel-docs-scseely) 또는 다른 사용자 지정 항목이 더 효율적일 수 있습니다. 마쳤으면 파일이 데이터베이스의 새 파일이나 레코드 형태의 사용 가능한 양식으로 정리됩니다.
@@ -76,7 +76,7 @@ Azure SQL을 사용하여 데이터를 중앙 집중식으로 유지한다면 �
 
 시스템을 최대한 활용하려면 모델 워크플로와, 계산이 확장 기능과 상호 작용하는 방식을 이해해야 합니다. 소프트웨어에는 작업, 임무 또는 유사한 항목에 대한 개념이 있을 수 있습니다. 이런 지식을 통해 작업을 분할할 수 있는 무언가를 설계합니다. 모델에 사용자 지정 단계가 있다면 처리를 위해 입력을 더 작은 그룹으로 분할할 수 있게 설계합니다. 종종 이를 분산-수집 패턴이라고 합니다.
 
-- 분산: 자연스러운 흐름에 따라 입력을 분할하고 별도 작업의 실행을 허용합니다.
+- 분산형: 자연스러운 흐름에 따라 입력을 분할하고 별도 작업의 실행을 허용합니다.
 - 수집: 작업이 완료되면 해당 출력을 수집합니다.
 
 분할 시 진행에 앞서 프로세스를 동기화해야 하는 위치도 인지합니다. 분할을 수행하는 공통 위치가 몇 가지 있습니다. 중첩된 통계 실행의 경우 백 가지 시나리오의 내부 루프를 실행하는 굴곡 지점 세트와 천 개의 외부 루프가 있을 수 있습니다. 각 외부 루프는 동시에 실행될 수 있습니다. 굴곡 지점에서 멈춘 다음, 내부 루프를 동시에 실행하고 정보를 다시 가져와 외부 루프에 대한 데이터를 조정하고, 다시 이어갑니다. 다음 그림은 이 워크플로를 보여 줍니다. 충분한 컴퓨팅이 있으면 100,000개 코어에서 100,000개 내부 루프를 실행할 수 있으므로 처리 시간을 다음 시간의 합계까지 단축할 수 있습니다.
@@ -109,7 +109,7 @@ Azure SQL을 사용하여 데이터를 중앙 집중식으로 유지한다면 �
 - 최종 출력의 스냅샷. 규제 당국에 제시하는 보고서 만들기에 사용되는 데이터가 포함됩니다.
 - 다른 중요한 중간 결과입니다. 감사자는 모델에서 어떤 결과가 나온 이유에 대해 질문할 것입니다. 모델이 특정 선택을 내린 이유나 특정 수치에 대한 증거를 보존해야 합니다. 많은 보험 회사는 원래 입력에서 최종 출력을 생성하는 데 사용한 바이너리를 보관합니다. 그런 다음, 질문을 받으면 중간 결과의 새 사본을 얻기 위해 모델을 다시 실행합니다. 출력이 일치하면 중간 파일에 필요한 설명이 포함될 것입니다.
 
-모델 실행 중에 보험 계리인은 실행에서 요청 로드를 처리할 수 있는 데이터 전달 메커니즘을 사용합니다. 실행이 완료되어 데이터가 더 이상 필요하지 않으면 일부 데이터를 유지합니다. 최소한 보험 회사는 재생산 가능 요구 사항에 대해 런타임 구성과 입력을 유지해야 합니다. 데이터베이스는 Azure Blob Storage에서 백업으로 유지되며 서버는 종료됩니다. 고속 스토리지의 데이터도 더 저렴한 Azure Blob Storage로 이동됩니다. Blob Storage에서는 핫, 쿨 또는 보관 등 각 Blob에 사용되는 데이터 계층을 선택할 수 있습니다. 핫 스토리지는 자주 액세스하는 파일에 적합합니다. 쿨 스토리지는 자주 발생하지 않는 데이터 액세스에 최적화되었습니다. 보관 스토리지는 감사 가능한 파일을 보관하는 데 적합하지만 대기 시간 비용에서 절약이 가능합니다. 보관 계층 데이터 대기 시간은 시간 단위로 측정됩니다. 서로 다른 스토리지 계층을 제대로 이해하려면 [Azure Blob storage: 핫, 쿨 및 보관 스토리지 계층](https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers?WT.mc_id=riskmodel-docs-scseely)을 읽어 보세요. 수명 주기 관리를 통해 만들기에서 삭제까지의 데이터를 관리할 수 있습니다. Blob에 대한 URI는 고정 상태를 유지하나 Blob 저장 위치는 점점 더 저렴해집니다. 이런 특징 때문에 많은 Azure Storage 사용자들의 비용과 고민을 크게 줄일 수 있습니다. [Azure Blob Storage 수명 주기 관리](https://docs.microsoft.com/azure/storage/common/storage-lifecycle-managment-concepts?WT.mc_id=riskmodel-docs-scseely)에서 장단점을 확인할 수 있습니다. 자동으로 파일을 삭제할 수 있다는 점이 매력적입니다. 즉 파일 자체가 자동으로 제거될 수 있기 때문에 범주 외의 파일을 참조하여 우발적으로 감사를 확대하지 않게 됩니다.
+모델 실행 중에 보험 계리인은 실행에서 요청 로드를 처리할 수 있는 데이터 전달 메커니즘을 사용합니다. 실행이 완료되어 데이터가 더 이상 필요하지 않으면 일부 데이터를 유지합니다. 최소한 보험 회사는 재생산 가능 요구 사항에 대해 런타임 구성과 입력을 유지해야 합니다. 데이터베이스는 Azure Blob Storage에서 백업으로 유지되며 서버는 종료됩니다. 고속 스토리지의 데이터도 더 저렴한 Azure Blob Storage로 이동됩니다. Blob Storage에서는 핫, 쿨 또는 보관 등 각 Blob에 사용되는 데이터 계층을 선택할 수 있습니다. 핫 스토리지는 자주 액세스하는 파일에 적합합니다. 쿨 스토리지는 자주 발생하지 않는 데이터 액세스에 최적화되었습니다. 보관 스토리지는 감사 가능한 파일을 보관하는 데 적합하지만 대기 시간 비용에서 절약이 가능합니다. 보관 계층 데이터 대기 시간은 시간 단위로 측정됩니다. [Azure Blob Storage: 핫, 쿨 및 보관 스토리지 계층](https://docs.microsoft.com/azure/storage/blobs/storage-blob-storage-tiers?WT.mc_id=riskmodel-docs-scseely)을 참조하여 서로 다른 스토리지 계층을 제대로 이해합니다. 수명 주기 관리를 통해 만들기에서 삭제까지의 데이터를 관리할 수 있습니다. Blob에 대한 URI는 고정 상태를 유지하나 Blob 저장 위치는 점점 더 저렴해집니다. 이런 특징 때문에 많은 Azure Storage 사용자들의 비용과 고민을 크게 줄일 수 있습니다. [Azure Blob Storage 수명 주기 관리](https://docs.microsoft.com/azure/storage/common/storage-lifecycle-managment-concepts?WT.mc_id=riskmodel-docs-scseely)에서 장단점을 확인할 수 있습니다. 자동으로 파일을 삭제할 수 있다는 점이 매력적입니다. 즉 파일 자체가 자동으로 제거될 수 있기 때문에 범주 외의 파일을 참조하여 우발적으로 감사를 확대하지 않게 됩니다.
 
 ## <a name="next-steps"></a>다음 단계
 
@@ -120,7 +120,7 @@ Azure SQL을 사용하여 데이터를 중앙 집중식으로 유지한다면 �
 ### <a name="tutorials"></a>자습서
 
 - R 개발자: [Azure Batch를 사용하여 병렬 R 시뮬레이션 실행](https://docs.microsoft.com/azure/batch/tutorial-r-doazureparallel?WT.mc_id=riskmodel-docs-scseely)
-- Azure Function을 사용하여 스토리지와 상호 작용하는 방법을 보여 주는 자습서: [Azure Functions를 사용하여 Blob Storage에 이미지 업로드](https://docs.microsoft.com/azure/functions/tutorial-static-website-serverless-api-with-database?tutorial-step=2&WT.mc_id=riskmodel-docs-scseely)
+- Azure 함수를 사용하여 스토리지와 상호 작용하는 방법을 보여주는 자습서: [Azure Functions를 사용하여 Blob Storage에 이미지 업로드](https://docs.microsoft.com/azure/functions/tutorial-static-website-serverless-api-with-database?tutorial-step=2&WT.mc_id=riskmodel-docs-scseely)
 - Databricks를 사용하는 ETL: [Azure Databricks를 사용하여 데이터 추출, 변환 및 로드](https://docs.microsoft.com/azure/azure-databricks/databricks-extract-load-sql-data-warehouse?WT.mc_id=riskmodel-docs-scseely)
 - HDInsight를 사용하는 ETL: [Azure HDInsight에서 Apache Hive를 사용하여 데이터 추출, 변환 및 로드](https://docs.microsoft.com/azure/hdinsight/hdinsight-analyze-flight-delay-data-linux?toc=%2Fen-us%2Fazure%2Fhdinsight%2Fhadoop%2FTOC.json&amp;bc=%2Fen-us%2Fazure%2Fbread%2Ftoc.json&WT.mc_id=riskmodel-docs-scseely)
 - 데이터 과학 VM 방법(Linux): [https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/linux-dsvm-walkthrough](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/linux-dsvm-walkthrough?WT.mc_id=riskmodel-docs-scseely)

@@ -1,17 +1,17 @@
 ---
-title: 소매의 데이터 관리 개요
+title: 소매업계의 빅 데이터 관리를 위한 입문서
 author: dstarr
 ms.author: dastarr
-ms.date: 06/22/2018
+ms.date: 11/20/2019
 ms.topic: article
 ms.service: industry
 description: 소매점에는 사용되지 않은 데이터의 대규모 데이터 저장소가 있으며, 여기서 귀중한 인사이트를 얻을 수 있습니다. 이 문서에서는 Microsoft Azure를 통해 해당 데이터를 효율적으로 사용하는 방법을 설명합니다.
-ms.openlocfilehash: 8a1a839a509155e67cf8da08d89ea9f7c758bc3b
-ms.sourcegitcommit: 76f2862adbec59311b5888e043a120f89dc862af
+ms.openlocfilehash: 198e0f609889eee86e005c5ee56090006ae2a413
+ms.sourcegitcommit: b8f9ccc4e4453d6912b05cdd6cf04276e13d7244
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "51654190"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74263510"
 ---
 # <a name="data-management-in-retail-overview"></a>소매의 데이터 관리 개요
 

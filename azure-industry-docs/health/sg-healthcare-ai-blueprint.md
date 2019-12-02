@@ -1,17 +1,17 @@
 ---
-title: AI용 Azure 청사진 구현
+title: Azure 서비스를 사용한 의료용 AI 청사진 구현
 author: dstarr
 ms.author: dastarr
-ms.date: 11/07/2019
+ms.date: 11/20/2019
 ms.topic: article
 ms.service: industry
 description: 이 문서에서는 AI용 Microsoft Azure 청사진에 대한 지침을 제공합니다.
-ms.openlocfilehash: 845ec2a1da335336375d90c789e0fa89bc70d23a
-ms.sourcegitcommit: 385e99900bc20950f02a63c885facc1cf62c49df
+ms.openlocfilehash: 40919ffde2c2cac11339b40348cba7a5e0e0e16d
+ms.sourcegitcommit: 2714a77488c413f01beb169a18acab45663bcfd7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73845625"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74308513"
 ---
 # <a name="implementing-the-azure-blueprint-for-ai"></a>AI용 Azure 청사진 구현
 
@@ -162,7 +162,7 @@ Azure 청사진 설치에는 AI/ML 사용 사례 구현에 필요한 것보다 �
 
 더 많은 Azure 기능이 필요할 경우 [Cosmos DB](/azure/cosmos-db/introduction?WT.mc_id=ms-docs-dastarr)와 같은 새 리소스나 새 [Azure Functions](/azure/azure-functions/functions-overview?WT.mc_id=ms-docs-dastarr)를 솔루션에 추가할 수 있습니다. 새 리소스 또는 서비스를 추가하는 경우 보안 및 개인 정보 보호 정책이 규정 및 정책을 준수하도록 구성되었는지 확인합니다.
 
-[Azure REST API](https://docs.microsoft.com/rest/api/?view=Azure&WT.mc_id=ms-docs-dastarr), [Azure PowerShell 스크립팅](https://docs.microsoft.com/powershell/azure/get-started-azureps?view=azurermps-6.6.0&WT.mc_id=ms-docs-dastarr) 또는 [Azure Portal](http://portal.azure.com/?WT.mc_id=ms-docs-dastarr)을 사용하여 새 리소스와 서비스를 만들 수도 있습니다.
+[Azure REST API](https://docs.microsoft.com/rest/api/?view=Azure&WT.mc_id=ms-docs-dastarr), [Azure PowerShell 스크립팅](https://docs.microsoft.com/powershell/azure/get-started-azureps?view=azurermps-6.6.0&WT.mc_id=ms-docs-dastarr) 또는 [Azure Portal](https://portal.azure.com/?WT.mc_id=ms-docs-dastarr)을 사용하여 새 리소스와 서비스를 만들 수도 있습니다.
 
 ## <a name="using-machine-learning-with-the-blueprint"></a>청사진과 함께 기계 학습 사용
 

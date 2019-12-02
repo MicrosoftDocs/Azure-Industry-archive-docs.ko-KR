@@ -1,17 +1,17 @@
 ---
-title: AI용 Azure 청사진 구현
+title: AI용 Azure 청사진 구현 요약
 author: dstarr
 ms.author: dastarr
-ms.date: 11/07/2019
+ms.date: 11/20/2019
 ms.topic: article
 ms.service: industry
 description: 이 문서에서는 AI용 Microsoft Azure 청사진을 소개합니다.
-ms.openlocfilehash: bcf8ff2f7a84f1b5d4848d6eb77ba51dec114f27
-ms.sourcegitcommit: 385e99900bc20950f02a63c885facc1cf62c49df
+ms.openlocfilehash: fb4dbce8b0cf1d39fc03708303267a0bf2906d18
+ms.sourcegitcommit: b8f9ccc4e4453d6912b05cdd6cf04276e13d7244
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/08/2019
-ms.locfileid: "73845618"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74263376"
 ---
 # <a name="implementing-the-azure-blueprint-for-ai"></a>AI용 Azure 청사진 구현
 

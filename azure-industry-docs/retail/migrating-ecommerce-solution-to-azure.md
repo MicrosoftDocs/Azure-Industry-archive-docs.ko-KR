@@ -1,17 +1,17 @@
 ---
 title: Azure로 전자상거래 솔루션 마이그레이션 개요
 author: scseely
-ms.author: scseely, mazoroto
-ms.date: 07/16/2018
+ms.author: scseely
+ms.date: 11/20/2019
 ms.topic: article
 ms.service: industry
 description: 이 문서에서는 전자상거래 인프라를 온-프레미스에서 Azure로 마이그레이션하는 단계에 대해 설명합니다.
-ms.openlocfilehash: a440eabad6a1367ed8219c01424d21d22e441b16
-ms.sourcegitcommit: 20b001b9fb51b944ae82bf55d2d670aa852fa64b
+ms.openlocfilehash: e918f1157dc2bc42a6c4d0decfef95a8daa7ccf0
+ms.sourcegitcommit: b8f9ccc4e4453d6912b05cdd6cf04276e13d7244
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/26/2018
-ms.locfileid: "52297956"
+ms.lasthandoff: 11/21/2019
+ms.locfileid: "74263353"
 ---
 # <a name="migrating-your-e-commerce-solution-to-azure-overview"></a>Azure로 전자상거래 솔루션 마이그레이션 개요
 
@@ -41,7 +41,7 @@ ms.locfileid: "52297956"
 
 Azure에서 다시 호스트하려면 다음 세 단계를 거쳐야 합니다.
 
-- **분석**: 애플리케이션, 워크로드, 네트워킹, 보안 등의 온-프레미스 리소스를 확인하고 인벤토리를 작성합니다. 이 단계가 끝나면 기존 시스템의 완벽한 문서가 작성됩니다.
+- **분석**: 애플리케이션, 워크로드, 네트워킹, 보안 등의 온-프레미스 리소스를 확인하고 인벤토리합니다. 이 단계가 끝나면 기존 시스템의 완벽한 문서가 작성됩니다.
 - **마이그레이션**: 각 하위 시스템을 온-프레미스에서 Azure로 이동합니다. 이 단계에서는 Azure를 데이터 센터의 확장으로 사용하고 애플리케이션이 계속 통신합니다.
 - **최적화**: 시스템이 Azure로 이동함에 따라 크기가 제대로 조정되었는지 확인합니다. 환경에서 일부 VM에 너무 많은 리소스가 할당되었다고 표시되는 경우 VM 유형을 CPU, 메모리 및 로컬 스토리지가 더 적절하게 조합된 VM 유형으로 변경합니다.
 
@@ -68,7 +68,7 @@ Microsoft는 시스템을 분석하고 카탈로그를 작성하기 위한 몇 �
 2. ID 시스템(Azure Active Directory)을 통합합니다.
 3. Azure에서 스토리지 영역을 프로비전합니다.
 
-마이그레이션 중에 Azure 환경은 온-프레미스 네트워크의 확장입니다. 논리 네트워크를 [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview?WT.mc_id=retailecomm-docs-scseely)에 연결할 수 있습니다. [Azure ExpressRoute](/azure/expressroute/?WT.mc_id=retailecomm-docs-scseely)를 사용하여 사용자 네트워크와 Azure 간의 통신을 인터넷에 연결되지 않는 개인 연결에 유지하도록 선택할 수 있습니다. Azure VPN Gateway가 온-프레미스 VPN 디바이스에 대화하고, Azure와 네트워크 간에 암호화된 통신을 사용하여 모든 트래픽이 안전하게 전송되는 사이트 간 VPN을 사용할 수도 있습니다. 하이브리드 네트워크를 설정하는 방법을 자세히 설명하는 참조 아키텍처가 [여기](/azure/architecture/reference-architectures/hybrid-networking/vpn?WT.mc_id=retailecomm-docs-scseely)에 게시되었습니다.
+마이그레이션 중에 Azure 환경은 온-프레미스 네트워크의 확장입니다. 논리 네트워크를 [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview?WT.mc_id=retailecomm-docs-scseely)에 연결할 수 있습니다. [Azure ExpressRoute](/azure/expressroute/?WT.mc_id=retailecomm-docs-scseely)를 사용하여 사용자 네트워크와 Azure 간의 통신을 인터넷에 연결되지 않는 프라이빗 연결에 유지하도록 선택할 수 있습니다. Azure VPN Gateway가 온-프레미스 VPN 디바이스에 대화하고, Azure와 네트워크 간에 암호화된 통신을 사용하여 모든 트래픽이 안전하게 전송되는 사이트 간 VPN을 사용할 수도 있습니다. 하이브리드 네트워크를 설정하는 방법을 자세히 설명하는 참조 아키텍처가 [여기](/azure/architecture/reference-architectures/hybrid-networking/vpn?WT.mc_id=retailecomm-docs-scseely)에 게시되었습니다.
 
 네트워크가 구성되고 나면 비즈니스 연속성을 계획합니다. 실시간 복제를 사용하여 온-프레미스 데이터를 클라우드로 이동하고 클라우드와 기존 데이터가 동일한지 확인하는 것이 좋습니다. 전자상거래 상점은 연중무휴입니다. 중복은 고객에게 미치는 영향을 최소화하여 온-프레미스에서 Azure로 전환하는 기능을 제공합니다.
 
@@ -120,7 +120,7 @@ Azure는 환경을 최적화하는 도구도 제공합니다. [Azure Advisor](/a
 
 많은 개발 팀은 기술 부채를 처리하고 용량을 보다 효율적으로 이용하기 위해 다시 호스트와 리팩터링을 동시에 수행하려고 합니다. 다음 단계로 이동하기 전에 다시 호스트할 경우의 혜택이 있습니다.  새 환경에 배포 시의 문제를 더 쉽게 진단하고 해결할 수 있습니다. 따라서 개발 및 지원 팀이 Azure를 새 환경으로 사용하여 확장할 수 있는 시간이 제공됩니다. 시스템을 리팩터링하고 다시 빌드하기 시작할 때는 안정적으로 작동하는 애플리케이션에서 빌드하게 됩니다. 이 경우 대상이 지정된 더 작은 변경과 보다 빈번한 업데이트가 가능합니다.
 
-클라우드로 마이그레이션하는 방법에 대한 보다 일반적인 백서인 [Cloud Migration Essentials](https://azure.microsoft.com/resources/cloud-migration-essentials-e-book/?_lrsc=9618a836-9f81-4087-901f-51058783c3a8&WT.mc_id=retailecomm-docs-scseely)(클라우드 마이그레이션 필수 사항)가 게시되었습니다. 마이그레이션을 계획할 때 이 백서를 읽어보는 것이 좋습니다.
+클라우드로 마이그레이션하는 방법에 대한 보다 일반적인 백서를 개시했습니다. [클라우드 마이그레이션 기본 정보](https://azure.microsoft.com/resources/cloud-migration-essentials-e-book/?_lrsc=9618a836-9f81-4087-901f-51058783c3a8&WT.mc_id=retailecomm-docs-scseely). 마이그레이션을 계획할 때 이 백서를 읽어보는 것이 좋습니다.
 
 ## <a name="technologies-presented"></a>제공되는 기술
 
@@ -130,7 +130,7 @@ Azure는 환경을 최적화하는 도구도 제공합니다. [Azure Advisor](/a
 - [Azure Migrate](/azure/migrate/migrate-overview?WT.mc_id=retailecomm-docs-scseely) 서비스는 Azure로 마이그레이션하기 위해 온-프레미스 워크로드를 평가합니다.
 - [Azure Site Recovery](/azure/site-recovery/site-recovery-overview?WT.mc_id=retailecomm-docs-scseely)는 Azure VM, 온-프레미스 VM 및 물리적 서버에 대한 재해 복구를 오케스트레이션하고 관리합니다.
 - [Azure Virtual Network](/azure/virtual-network/virtual-networks-overview?WT.mc_id=retailecomm-docs-scseely)를 사용하면 Azure VM(Virtual Machines)과 같은 다양한 형식의 Azure 리소스가 서로, 인터넷 및 특정 온-프레미스 네트워크와 안전하게 통신할 수 있습니다.
-- [Azure ExpressRoute](/azure/expressroute/?WT.mc_id=retailecomm-docs-scseely)를 사용하면 연결 공급자가 지원하는 개인 연결을 통해 온-프레미스 네트워크를 Microsoft 클라우드로 확장할 수 있습니다.
+- [Azure ExpressRoute](/azure/expressroute/?WT.mc_id=retailecomm-docs-scseely)를 사용하면 연결 공급자가 지원하는 프라이빗 연결을 통해 온-프레미스 네트워크를 Microsoft 클라우드로 확장할 수 있습니다.
 
 리팩터링 중에 사용되는 기술:
 

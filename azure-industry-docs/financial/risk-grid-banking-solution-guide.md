@@ -1,17 +1,17 @@
 ---
-title: 위험 그리드 컴퓨팅 솔루션 가이드
+title: 개요 - 그리드 컴퓨팅 위험 분석 Azure Batch, Azure Data Lake
 author: dstarr
 ms.author: dastarr
-ms.date: 5/2/2018
+ms.date: 11/20/2019
 ms.topic: article
 ms.service: industry
 description: 금융의 위험 그리드 컴퓨팅용 Azure Batch를 구현하는 기술적 측면을 소개합니다.
-ms.openlocfilehash: d3470a2e546e73f4c0f1478413ca4b1af7433a66
-ms.sourcegitcommit: 76f2862adbec59311b5888e043a120f89dc862af
+ms.openlocfilehash: 542fb820870048ac2ec2cb67c2bbf13988588ea1
+ms.sourcegitcommit: f030566b177715794d2ad857b150317e72d04d64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "51654300"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74234669"
 ---
 # <a name="risk-grid-computing-in-banking-solution-guide"></a>금융의 위험 그리드 컴퓨팅 솔루션 가이드
 
@@ -157,7 +157,7 @@ C:\> Enable-AzureBatchAutoScale -Id "RiskGridPool" -AutoScaleFormula $Formula -B
 
 ## <a name="data-storage-and-retention"></a>데이터 스토리지 및 처리
 
-계산 노드에서 데이터가 수집되어 처리되면 결과 출력 데이터를 데이터베이스에 스토리지하여 추가 처리 및 분석에 사용하거나, 스토리지하기 전에 수집 시 변환하여 다운스트림 처리에 적절한 형식을 보장할 수 있습니다. Microsoft Azure는 여러 스토리지 옵션을 제공합니다. [사용할 데이터 저장소 기술](/azure/architecture/data-guide/?WT.mc_id=gridbanksg-docs-dastarr)의 선택은 주로 다운스트림 프로세스에서의 분석 및/또는 보고 요구 사항에 따라 크게 좌우됩니다.
+컴퓨팅 노드에서 데이터가 수집되어 처리되면 결과 출력 데이터를 데이터베이스에 저장하여 추가 처리 및 분석에 사용하거나, 저장하기 전에 수집 시 변환하여 다운스트림 처리에 적절한 형식을 보장할 수 있습니다. Microsoft Azure는 여러 스토리지 옵션을 제공합니다. [사용할 데이터 저장소 기술](/azure/architecture/data-guide/?WT.mc_id=gridbanksg-docs-dastarr)의 선택은 주로 다운스트림 프로세스에서의 분석 및/또는 보고 요구 사항에 따라 크게 좌우됩니다.
 
 하이브리드 네트워크 사용 시 데이터 스토리지 대상은 온-프레미스일 수 있습니다. 하이브리드 네트워크를 통해 Batch를 사용할 경우 컴퓨팅 노드는 Azure 기반 스토리지 위치를 사용하지 않고 온-프레미스 데이터 스토어로 데이터를 다시 쓸 수 있습니다. 또는 작업자는 온-프레미스 파일과 호환되는 어떠한 프로세스를 통해서도 쉽게 액세스할 수 있도록 온-프레미스 머신의 디스크로 탑재할 수 있는 Azure File 스토리지에도 쓸 수 있습니다.
 
@@ -206,13 +206,13 @@ Azure는 현재 온-프레미스 시스템을 Azure, [Microsoft Azure ExpressRou
 
 ExpressRoute는 현재 인터넷 서비스 공급자(ISP?WT.mc_id=gridbanksg-docs-dastarr) 등, 연결 파트너가 활성화한 프라이빗 연결을 통해 Azure에 온-프레미스 또는 데이터 센터 네트워크를 연결합니다. 이를 통해 두 네트워크는 동일한 네트워크 인터페이스처럼 서로 볼 수 있어 네트워크 간에 원활한 액세스를 제공합니다. 기존 온-프레미스 시스템을 Azure 네트워크와 통합하려는 경우 네트워크 통합은 중요하며, ExpressRoute는 가능한 가장 빠른 연결 속도를 제공합니다.
 
-Azure ExpressRoute에 대한 추가 가격 정보는 [여기를 참조](https://azure.microsoft.com/en-us/pricing/details/expressroute/?WT.mc_id=gridbanksg-docs-dastarr)하세요.
+Azure ExpressRoute에 대한 추가 가격 정보는 [여기를 참조](https://azure.microsoft.com/pricing/details/expressroute/?WT.mc_id=gridbanksg-docs-dastarr)하세요.
 
 ### <a name="vpn-gateway"></a>VPN Gateway
 
 VPN Gateway는 네트워크를 Azure에 연결하는 또 다른 방법입니다. 이 모델의 단점은 인터넷을 통한 트래픽 흐름이라는 것입니다. 그결과 연결 복원력은 떨어지고 네트워크 속도는 ExpressRoute의 속도에 도달할 수 없지만, 데이터 파일을 읽는 것이 일반적으로 빠른 작업이므로 위험 그리드 컴퓨팅 시나리오에 대한 장벽이 될 수는 없습니다.
 
-VPN Gateway에 대한 추가 가격 정보는 [여기를 참조](https://azure.microsoft.com/en-us/pricing/details/expressroute/?WT.mc_id=gridbanksg-docs-dastarr)하세요.
+VPN Gateway에 대한 추가 가격 정보는 [여기를 참조](https://azure.microsoft.com/pricing/details/expressroute/?WT.mc_id=gridbanksg-docs-dastarr)하세요.
 
 ### <a name="choices-for-connectivity-details"></a>연결 세부 정보 선택
 
@@ -251,8 +251,8 @@ Azure 파트너 네트워크 공급자가 활성화한 ExpressRoute 연결은 �
 
 - VPN Gateway 구성 대안은 [이 문서를 참조](/azure/vpn-gateway/vpn-gateway-about-vpngateways?WT.mc_id=gridbanksg-docs-dastarr)하세요.
 - [ExpressRoute 연결 모델](/azure/expressroute/expressroute-connectivity-models?WT.mc_id=gridbanksg-docs-dastarr)에 대해 알아봅니다.
-- [ExpressRoute 가격](https://azure.microsoft.com/en-us/pricing/details/expressroute/?WT.mc_id=gridbanksg-docs-dastarr)을 계산합니다.
-- [VPN Gateway 가격](https://azure.microsoft.com/en-us/pricing/details/vpn-gateway/?WT.mc_id=gridbanksg-docs-dastarr)을 계산합니다.
+- [ExpressRoute 가격](https://azure.microsoft.com/pricing/details/expressroute/?WT.mc_id=gridbanksg-docs-dastarr)을 계산합니다.
+- [VPN Gateway 가격](https://azure.microsoft.com/pricing/details/vpn-gateway/?WT.mc_id=gridbanksg-docs-dastarr)을 계산합니다.
 
 ## <a name="security-considerations"></a>보안 고려 사항
 

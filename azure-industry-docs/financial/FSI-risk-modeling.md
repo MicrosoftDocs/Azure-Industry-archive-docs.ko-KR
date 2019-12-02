@@ -1,17 +1,17 @@
 ---
-title: 모바일 은행 사기 솔루션 가이드
-description: 2초 내에 사기성 트랜잭션을 감지하는 방법을 설명합니다.
-author: mauiguitar
-ms.author: sihiga
+title: Azure 및 R을 통한 Finserve 위험 수명 주기 사용
+description: ''
+author: sseely
+ms.author: sseely
 ms.service: industry
 ms.topic: overview
-ms.date: 10/31/2019
-ms.openlocfilehash: c5ea4384d02548e4d681b1c13fd81066a955d6a2
-ms.sourcegitcommit: f42a60539bec2a7769b42b6574f09eed4d1b6c79
+ms.date: 11/19/2019
+ms.openlocfilehash: 03fea3996b62782c2b65e6d2edf841b5adaebcd2
+ms.sourcegitcommit: f030566b177715794d2ad857b150317e72d04d64
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2019
-ms.locfileid: "73750522"
+ms.lasthandoff: 11/20/2019
+ms.locfileid: "74234543"
 ---
 # <a name="enabling-the-financial-services-risk-lifecycle-with-azure-and-r"></a>Azure 및 R을 통한 금융 서비스 위험 수명 주기 사용
 

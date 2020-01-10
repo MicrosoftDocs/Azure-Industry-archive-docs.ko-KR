@@ -1,87 +1,80 @@
-items:
 - name: Docs
   tocHref: /
   topicHref: /
   items:
-  - name: Azure
-    tocHref: /azure/
-    topicHref: /azure/
-    items:
-    - name: 산업
-      tocHref: /Industry/
-      topicHref: /azure/industry/
+    - name: Azure
+      tocHref: /previous-versions/azure/
+      topicHref: /previous-versions/azure/
       items:
-      - name: 금융 서비스
-        tocHref: /Financial/
-        topicHref: /azure/industry/financial/
-        items:
-        - name: 추가 리소스
+        - name: 산업
+          tocHref: /previous-versions/Industry/
+          topicHref: /previous-versions/azure/industry/
           items:
-          - name: Azure Batch 설명서
-            tocHref: /azure/batch
-          - name: Batch 코드 샘플
-            tocHref: /resources/samples/?service=batch
-          - name: Batch 코드 샘플 리포지토리
-            tocHref: https://github.com/Azure/azure-batch-samples
-          - name: 온-프레미스 연결
-            tocHref: /azure/networking/networking-overview
-          - name: 규제된 워크로드를 위한 FFIEC
-            tocHref: /azure/security/blueprints/financial-services-regulated-workloads
-          - name: 자습서 - Asset Bank와 AAD 통합
-            tocHref: /azure/active-directory/active-directory-saas-assetbank-tutorial
-      - name: 의료 및 생명 과학
-        tocHref: /Health & Life Sciences/
-        topicHref: /azure/industry/health/
-        items:
-        - name: 생명 공학 엔터티 인식
-          tocHref: /azure/machine-learning/desktop-workbench/scenario-tdsp-biomedical-recognition
-        - name: HL7 FHIR 의료 서비스 레코드 변경
-          tocHref: /azure/cosmos-db/change-feed-hl7-fhir-logic-apps
-        - name: Azure Blueprints
-          items:
-          - name: Azure 보안 및 규정 준수 - HIPAA/HITRUST 의료 데이터 및 AI
-            href: /azure/security/blueprints/azure-health
-          - name: Azure 보안 및 규정 준수 - UK NHS의 데이터 분석
-            href: /azure/security/blueprints/uknhs-analytics-overview
-          - name: Azure 보안 및 규정 준수 - UK NHS의 데이터 분석
-            href: /azure/security/blueprints/uknhs-analytics-overview
-          - name: Azure 보안 및 규정 준수 - UK NHS의 데이터 웨어하우스
-            href: /azure/security/blueprints/uknhs-datawarehouse-overview
-          - name: Azure 보안 및 규정 준수 - UK NHS의 IaaS 웹 애플리케이션
-            href: /azure/security/blueprints/uknhs-iaaswa-overview
-          - name: Azure 보안 및 규정 준수 - UK NHS의 PaaS 웹 애플리케이션
-            href: /azure/security/blueprints/uknhs-paaswa-overview
-        - name: 추가 리소스
-          items:
-          - name: 빠른 시작 - Microsoft Genomics 서비스
-            tocHref: /azure/genomics/quickstart-run-genomics-workflow-portal
-          - name: 보안 - HIPAA/HITRUST 의료 데이터 및 AI
-            tocHref: /azure/security/blueprints/azure-health
-          - name: Health Bot 개요
-            tocHref: /azure/healthbot/
-      - name: 제조
-        tocHref: /Manufacturing/
-        topicHref: /azure/industry/manufacturing/
-        items:
-        - name: PdM 실제 시나리오 딥러닝
-          tocHref: /azure/machine-learning/desktop-workbench/scenario-deep-learning-for-predictive-maintenance
-        - name: 추가 리소스
-          items:
-          - name: IoT 디바이스의 데이터를 처리하는 Azure Stream Analytics
-            tocHref: /azure/stream-analytics/
-      - name: 소매
-        tocHref: /Retail/
-        topicHref: /azure/industry/retail/
-        items:
-        - name: PCI DSS 규격 결제 처리
-          tocHref: /azure/security/blueprints/payment-processing-blueprint
-        - name: 추가 리소스
-          items:
-          - name: 소매 및 마케팅의 Azure Cosmos DB
-            tocHref: /azure/cosmos-db/use-cases
-ms.openlocfilehash: 100dfd44f54195e97a35a3f726457e4823abb4b3
-ms.sourcegitcommit: 76f2862adbec59311b5888e043a120f89dc862af
-ms.translationtype: HT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 11/03/2018
-ms.locfileid: "51654710"
+            - name: 금융 서비스
+              tocHref: /previous-versions/Financial/
+              topicHref: /previous-versions/azure/industry/financial/
+              items:
+                - name: 추가 리소스
+                  items:
+                    - name: Azure Batch 설명서
+                      tocHref: /azure/batch
+                    - name: Batch 코드 샘플
+                      tocHref: /resources/samples/?service=batch
+                    - name: Batch 코드 샘플 리포지토리
+                      tocHref: 'https://github.com/Azure/azure-batch-samples'
+                    - name: 온-프레미스 연결
+                      tocHref: /azure/networking/networking-overview
+                    - name: 규제된 워크로드를 위한 FFIEC
+                      tocHref: /azure/security/blueprints/financial-services-regulated-workloads
+                    - name: 자습서 - Asset Bank와 AAD 통합
+                      tocHref: /azure/active-directory/active-directory-saas-assetbank-tutorial
+            - name: 의료 및 생명 과학
+              tocHref: /previous-versions/Health & Life Sciences/
+              topicHref: /previous-versions/azure/industry/health/
+              items:
+                - name: 생명 공학 엔터티 인식
+                  tocHref: /azure/machine-learning/desktop-workbench/scenario-tdsp-biomedical-recognition
+                - name: HL7 FHIR 의료 서비스 레코드 변경
+                  tocHref: /azure/cosmos-db/change-feed-hl7-fhir-logic-apps
+                - name: Azure Blueprints
+                  items:
+                    - name: Azure 보안 및 규정 준수 - HIPAA/HITRUST 의료 데이터 및 AI
+                      href: /azure/security/blueprints/azure-health
+                    - name: Azure 보안 및 규정 준수 - UK NHS의 데이터 분석
+                      href: /azure/security/blueprints/uknhs-analytics-overview
+                    - name: Azure 보안 및 규정 준수 - UK NHS의 데이터 분석
+                      href: /azure/security/blueprints/uknhs-analytics-overview
+                    - name: Azure 보안 및 규정 준수 - UK NHS의 데이터 웨어하우스
+                      href: /azure/security/blueprints/uknhs-datawarehouse-overview
+                    - name: Azure 보안 및 규정 준수 - UK NHS의 IaaS 웹 애플리케이션
+                      href: /azure/security/blueprints/uknhs-iaaswa-overview
+                    - name: Azure 보안 및 규정 준수 - UK NHS의 PaaS 웹 애플리케이션
+                      href: /azure/security/blueprints/uknhs-paaswa-overview
+                - name: 추가 리소스
+                  items:
+                    - name: 빠른 시작 - Microsoft Genomics 서비스
+                      tocHref: /azure/genomics/quickstart-run-genomics-workflow-portal
+                    - name: 보안 - HIPAA/HITRUST 의료 데이터 및 AI
+                      tocHref: /azure/security/blueprints/azure-health
+                    - name: Health Bot 개요
+                      tocHref: /azure/healthbot/
+            - name: 제조
+              tocHref: /Manufacturing/
+              topicHref: /previous-versions/azure/industry/manufacturing/
+              items:
+                - name: PdM 실제 시나리오 딥러닝
+                  tocHref: /azure/machine-learning/desktop-workbench/scenario-deep-learning-for-predictive-maintenance
+                - name: 추가 리소스
+                  items:
+                    - name: IoT 디바이스의 데이터를 처리하는 Azure Stream Analytics
+                      tocHref: /azure/stream-analytics/
+            - name: 소매
+              tocHref: /Retail/
+              topicHref: /previous-versions/azure/industry/retail/
+              items:
+                - name: PCI DSS 규격 결제 처리
+                  tocHref: /azure/security/blueprints/payment-processing-blueprint
+                - name: 추가 리소스
+                  items:
+                    - name: 소매 및 마케팅의 Azure Cosmos DB
+                      tocHref: /azure/cosmos-db/use-cases

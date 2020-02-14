@@ -7,11 +7,11 @@ ms.topic: article
 ms.service: industry
 description: Microsoft Azure를 사용하여 규제가 엄격한 금융 환경에서 데이터를 관리하는 기술을 설명합니다.
 ms.openlocfilehash: cfafd5242b6da994def2fe1470db9fd86b2675e7
-ms.sourcegitcommit: f030566b177715794d2ad857b150317e72d04d64
-ms.translationtype: HT
+ms.sourcegitcommit: 3b175d73a82160c4cacec1ce00c6d804a93c765d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74234649"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77052929"
 ---
 # <a name="data-management-in-banking-overview"></a>금융의 데이터 관리 개요
 
@@ -203,7 +203,7 @@ Azure SQL을 사용하는 경우 최대 10년까지 백업을 저장하기 위�
 
 금융 및 금융 산업의 디지털 환경이 빠르게 변화하면서 느린 진입 작동 시간 없이 즉시 활용할 수 있는 솔루션과 파트너를 원하는 고객이 점점 증가하고 있습니다. 데이터 수집이 기하급수적으로 증가함에 따라 은행은 중요한 데이터를 저장, 분석 및 사용하는 빠르고 혁신적이며 안전한 방법을 요구하고 있습니다.
 
-Azure는 여러 기술과 전략을 사용하여 데이터 수집, 처리, 보관 및 삭제 요구 사항을 지원할 수 있습니다. 간단하게 데이터를 Azure에 수집할 수 있으며 데이터 형식, 구조 등에 따라 다양한 데이터 저장소를 사용하여 데이터를 저장할 수 있습니다. SQL Server 및 SQL Azure 이외의 데이터 솔루션을 사용하여 타사 데이터베이스를 포함할 수 있습니다.
+Azure는 여러 기술과 전략을 사용하여 데이터 수집, 처리, 보관 및 삭제 요구 사항을 지원할 수 있습니다. Azure에 데이터를 수집 하는 것은 간단 하며 다양 한 데이터 저장소는 해당 유형, 구조 등에 따라 데이터를 저장 하는 데 사용할 수 있습니다. 데이터 솔루션은 SQL Server 이상에서 사용할 수 있으며 타사 데이터베이스를 포함 하는 SQL Azure.
 
 Databricks 및 Data Factory와 같은 Azure 서비스를 사용하여 간단하게 해당 데이터를 조작하고 데이터에 따라 조치를 취할 수 있습니다. 거의 액세스하지 않는 데이터의 장기 스토리지를 위해 보관 스토리지를 사용할 수 있으며, 필요에 따라 롤링 주기로 삭제할 수 있습니다.
 

@@ -7,11 +7,11 @@ ms.topic: article
 ms.service: industry
 description: Azure에서 금융의 위험 그리드 컴퓨팅을 구현하는 경우의 비즈니스 고려 사항을 제공합니다.
 ms.openlocfilehash: 746b93e545aa8ff61a8fab4a021b6c5caa1889bb
-ms.sourcegitcommit: f030566b177715794d2ad857b150317e72d04d64
-ms.translationtype: HT
+ms.sourcegitcommit: 3b175d73a82160c4cacec1ce00c6d804a93c765d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74234654"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77053099"
 ---
 # <a name="risk-grid-computing-in-banking-overview"></a>금융의 위험 그리드 컴퓨팅 개요
 
@@ -57,7 +57,7 @@ Azure에서 위험 그리드 컴퓨팅 솔루션을 빌드할 때 비즈니스�
 
 ### <a name="rest-api-solution-over-internet"></a>인터넷을 통한 REST API 솔루션
 
-하이브리드 네트워크를 만드는 대신 데이터를 Azure Storage(File 또는 Blob Storage일 가능성이 큼?WT.mc_id=gridbank-docs-dastarr)에 업로드하고 Batch를 통해 스토리지에서 데이터 파일을 읽을 수 있습니다. 이렇게 하려면 보안(SSL?WT.mc_id=gridbank-docs-dastarr) 연결을 사용하여 Azure에 연결하고, 문서를 Azure Storage에 저장한 다음, [Batch 서비스 REST API](/rest/api/batchservice/?WT.mc_id=gridbank-docs-dastarr) 또는 목적에 맞는 애플리케이션이 포함된 SDK를 통해 위험 그리드 컴퓨팅 작업을 관리하고, Batch 실행을 오케스트레이션합니다.
+하이브리드 네트워크를 만드는 대신 데이터를 Azure Storage(File 또는 Blob Storage일 가능성이 큼?WT.mc_id=gridbank-docs-dastarr)에 업로드하고 Batch를 통해 스토리지에서 데이터 파일을 읽을 수 있습니다. 이렇게 하려면 보안(SSL?WT.mc_id=gridbank-docs-dastarr) 연결을 사용하여 Azure에 연결하고 문서를 Azure Storage에 저장한 다음, [Batch 서비스 REST API](/rest/api/batchservice/?WT.mc_id=gridbank-docs-dastarr) 또는 목적에 맞는 애플리케이션이 포함된 SDK를 통해 위험 그리드 컴퓨팅 작업을 관리하고 Batch 실행을 오케스트레이션합니다.
 
 ### <a name="azure-data-factory"></a>Azure 데이터 팩터리
 
@@ -108,7 +108,7 @@ Azure Batch 처리 모델은 위험 그리드 컴퓨팅과 관련해서 여러 �
 
 위험 그리드 컴퓨팅과 관련해서 주목할 만한 고려 사항은 [Azure VNet 내에서 일괄 처리 프로세스를 실행](/azure/batch/batch-virtual-network?WT.mc_id=gridbank-docs-dastarr)하는 것입니다. 이렇게 하면 풀 컴퓨팅 노드가 다른 컴퓨팅 노드 또는 온-프레미스 네트워크와 안전하게 통신할 수 있습니다. 일괄 처리 컴퓨팅 노드에서 적절한 서비스 계정 및 NSG(네트워크 보안 그룹)를 만들고 사용해야 합니다. [Azure에는 전송 중인 데이터와 Azure Storage에 저장된 데이터의 암호화를 위한 솔루션도 있습니다](/azure/security/blueprints/financial-services-regulated-workloads?WT.mc_id=gridbank-docs-dastarr).
 
-고려해야 할 몇 가지 영역은 다음과 같습니다. AD(Active Directory) 또는 AD에 조인되지 않은 컴퓨팅 노드(Windows Server nodes?WT.mc_id=gridbank-docs-dastarr의 경우), [VM 디스크 암호화](/azure/security/azure-security-disk-encryption?WT.mc_id=gridbank-docs-dastarr), 저장되었거나 전송 중인 컴퓨팅 입력 및 미사용 데이터의 출력 보안, Azure 네트워크 구성, 사용 권한 등입니다. 인증은 비밀 키를 통해 REST API 수준에서 처리할 수도 있습니다.
+고려해야 하는 일부 영역은 AD(Active Directory) 또는 AD에 연결되지 않은 컴퓨팅 노드(Windows Server nodes?WT.mc_id=gridbank-docs-dastarr), [VM 디스크 암호화](/azure/security/azure-security-disk-encryption?WT.mc_id=gridbank-docs-dastarr), 저장되었거나 전송 중인 컴퓨팅 입력 및 미사용 데이터의 출력 보안, Azure 네트워크 구성, 사용 권한 등입니다. 인증은 비밀 키를 통해 REST API 수준에서 처리할 수도 있습니다.
 
 ## <a name="getting-started"></a>시작하기
 

@@ -8,11 +8,11 @@ ms.service: industry
 ms.topic: article
 ms.date: 11/28/2019
 ms.openlocfilehash: c08e6bbb1da47084122dae1ed6a9e1cea0b59473
-ms.sourcegitcommit: db3bee67c1467884af223a48a895715afba8e08c
-ms.translationtype: HT
+ms.sourcegitcommit: 3b175d73a82160c4cacec1ce00c6d804a93c765d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2019
-ms.locfileid: "75005312"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77053405"
 ---
 # <a name="extracting-actionable-insights-from-iot-data"></a>IoT 데이터에서 작업 가능한 인사이트 추출
 
@@ -98,7 +98,7 @@ IoT 데이터는 시계열 데이터로, 시간 경과에 따라 더 유의미�
 ## <a name="ingesting-the-data-stream"></a>데이터 스트림 수집
 
 데이터를 스트림으로 분석하기 위해 기간을 기준으로 데이터에 대한 쿼리를 수행하여 패턴과 관계를 식별할 수 있습니다. Azure 플랫폼에는 높은 처리량으로 데이터를 수집할 수 있는 여러 서비스가 있습니다.
-디바이스 관리, 프로토콜 지원, 확장 가능성, 팀이 선호하는 프로그래밍 모델 등, 프로젝트의 요구 사항에 따라 아래 서비스 중에 선택합니다. 예를 들어, 팀은 경험이 있는 Kafka를 선호하거나, 솔루션에 대한 Kafka 브로커를 필요로 할 수 있습니다. 또는 다른 경우 프로젝트가 [IoT Hub Device Provisioning Service의 TPM 키 증명](/azure/iot-dps/?WT.mc_id=iotinsightssoln-docs-ercenk)을 사용하여 디바이스의 수집 지점 액세스를 보호하기 위해 데이터 수집 시스템이 필요할 수 있습니다.
+아래 서비스 중에서 선택 하는 것은 장치 관리, 프로토콜 지원, 확장성, 팀의 프로그래밍 모델 기본 설정 등 프로젝트의 요구 사항에 따라 달라 집니다. 예를 들어 팀은 자신의 경험으로 인해 Kafka을 사용 하거나 솔루션에 대 한 Kafka broker를 사용 하도록 설정 하는 것이 좋습니다. 또는 다른 경우 프로젝트가 [IoT Hub Device Provisioning Service의 TPM 키 증명](/azure/iot-dps/?WT.mc_id=iotinsightssoln-docs-ercenk)을 사용하여 디바이스의 수집 지점 액세스를 보호하기 위해 데이터 수집 시스템이 필요할 수 있습니다.
 
 - [Azure IoT Hub](/azure/iot-hub/?WT.mc_id=iotinsightssoln-docs-ercenk)는 IoT 애플리케이션과 디바이스 간의 양방향 통신 허브입니다. 디바이스를 제어 및 구성할 수 있게 보안 통신, 메시지 전달, 다른 Azure 서비스와의 상호 작용과 관리 기능을 제공하여 완벽한 IoT 솔루션을 구현하는 확장 가능한 서비스입니다.
 
@@ -216,7 +216,7 @@ Time Series Insights에는 REST 쿼리 API뿐만 아니라 데이터를 시각�
   - [Azure Functions에서 다양한 바인딩 사용](/azure/azure-functions/functions-triggers-bindings?WT.mc_id=iotinsightssoln-docs-ercenk)
 
 - 핫 경로
-  - Event Hubs, Azure Stream Analytics 및 Power BI의 사용을 보여 주는 엔드투엔드 자습서입니다. 단계별 지침은 [자습서: Azure Event Hubs로 전송되는 실시간 이벤트에서 데이터 변칙 시각화](/azure/event-hubs/event-hubs-tutorial-visualize-anomalies?WT.mc_id=iotinsightssoln-docs-ercenk)와 [전화 통화 데이터를 분석하기 위한 Stream Analytics 작업 만들기](/azure/stream-analytics/stream-analytics-manage-job?WT.mc_id=iotinsightssoln-docs-ercenk) 및 Power BI 대시보드에서 결과 시각화를 참조하세요.
+  - Event Hubs, Azure Stream Analytics 및 Power BI의 사용을 보여 주는 엔드투엔드 자습서입니다. [자습서: Azure Event Hubs로 전송되는 실시간 이벤트에서 데이터 변칙 시각화](/azure/event-hubs/event-hubs-tutorial-visualize-anomalies?WT.mc_id=iotinsightssoln-docs-ercenk) 및 [전화 통화 데이터를 분석하기 위한 Stream Analytics 작업 만들기](/azure/stream-analytics/stream-analytics-manage-job?WT.mc_id=iotinsightssoln-docs-ercenk) 및 Power BI 대시보드에서 결과 시각화를 참조하세요.
   -[.NET에 Azure Cosmos DB 사용](/azure/cosmos-db/sql-api-get-started?WT.mc_id=iotinsightssoln-docs-ercenk)
 - 콜드 경로
   - [Azure Data Factory에서 Spark 작업을 사용하여 클라우드의 데이터 변환](/azure/data-factory/tutorial-transform-data-spark-portal?WT.mc_id=iotinsightssoln-docs-ercenk)
@@ -227,9 +227,9 @@ Time Series Insights에는 REST 쿼리 API뿐만 아니라 데이터를 시각�
   - [Time Series Insights Java Script 클라이언트 라이브러리 살펴보기](/azure/time-series-insights/tutorial-explore-js-client-lib?WT.mc_id=iotinsightssoln-docs-ercenk)
   - [TSI 데모](https://insights.timeseries.azure.com/demo) 및 [Power BI 데모](https://microsoft.github.io/PowerBI-JavaScript/demo/v2-demo/index.html)를 참조하세요.
 
-## <a name="appendix-pillars-of-software-quality-posq"></a>부록: 소프트웨어 품질 핵심 요소(PoSQ)
+## <a name="appendix-pillars-of-software-quality-posq"></a>부록: PoSQ(소프트웨어 품질 핵심 요소)
 
-성공적인 클라우드 애플리케이션은 다음과 같은 [소프트웨어 품질 핵심 요소](/azure/architecture/guide/pillars?WT.mc_id=iotinsightssoln-docs-ercenk)를 기반으로 빌드합니다. 확장성, 가용성, 복원력, 관리 및 보안 이 섹션에서는 각 구성 요소에 대해 이러한 기본 요소를 필요에 따라 간략히 설명합니다. 구현 수준에서 대부분 다룬 가용성, 복원력, 관리 및 DevOps에 대해서는 다루지 않습니다. Azure 플랫폼은 API, 도구, 진단 및 로깅을 통해 이를 달성할 수 있는 광범위한 방법을 제공한다는 점을 강조하고자 합니다. 여기서 언급한 기본 요소 외에도 비용 효율성에 대해 설명합니다.
+성공적인 클라우드 애플리케이션은 확장성, 가용성, 복원력, 관리 및 보안이라는 [소프트웨어 품질 핵심 요소](/azure/architecture/guide/pillars?WT.mc_id=iotinsightssoln-docs-ercenk)에 중점을 둡니다. 이 섹션에서는 각 구성 요소에 대해 이러한 기본 요소를 필요에 따라 간략히 설명합니다. 구현 수준에서 대부분 다룬 가용성, 복원력, 관리 및 DevOps에 대해서는 다루지 않습니다. Azure 플랫폼은 API, 도구, 진단 및 로깅을 통해 이를 달성할 수 있는 광범위한 방법을 제공한다는 점을 강조하고자 합니다. 여기서 언급한 기본 요소 외에도 비용 효율성에 대해 설명합니다.
 
 이러한 기본 요소를 간략히 살펴보겠습니다.
 
@@ -261,7 +261,7 @@ Azure Cosmos DB 구현은 올바른 처리량 매개 변수와 적합한 분할 
 
 Cosmos DB 데이터베이스 보안은 데이터에 대한 제어 액세스와 저장 데이터 암호화를 제공합니다. 자세한 내용은 [Azure Cosmos DB 데이터베이스 보안](/azure/cosmos-db/database-security?WT.mc_id=iotinsightssoln-docs-ercenk)을 참조하세요.
 
-**비용 효율성**: Event Hubs의 가격 책정은 SKU(표준 또는 프리미엄), 수신된 수백 만 개의 이벤트, 처리량 단위의 함수입니다. 들어오는 메시지에서 지시하는 데이터 수집 속도를 살펴 최적의 조합을 이룰 수 있습니다.
+**비용 효율성**: Event Hubs의 가격 책정은 SKU(표준 또는 프리미엄), 수백 만 개의 받은 이벤트, 처리량 단위의 함수입니다. 들어오는 메시지에서 지시하는 데이터 수집 속도를 살펴 최적의 조합을 이룰 수 있습니다.
 
 Cosmos DB를 사용할 경우 RU 사용을 통해 저장소의 최적 사용을 관찰하는 것이 좋습니다. Cosmos DB에는 앞서 설명한 것처럼 데이터 보존을 제어하기 위한 기능도 있습니다. 이 기능을 통해 레코드가 데이터베이스에 머무는 기간을 제어하여 데이터베이스 크기를 관리하는 것이 좋습니다.
 

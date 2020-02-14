@@ -7,11 +7,11 @@ ms.topic: article
 ms.service: industry
 description: 이 문서에서는 AI용 Microsoft Azure 청사진에 대한 지침을 제공합니다.
 ms.openlocfilehash: 40919ffde2c2cac11339b40348cba7a5e0e0e16d
-ms.sourcegitcommit: 2714a77488c413f01beb169a18acab45663bcfd7
-ms.translationtype: HT
+ms.sourcegitcommit: 3b175d73a82160c4cacec1ce00c6d804a93c765d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74308513"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77052640"
 ---
 # <a name="implementing-the-azure-blueprint-for-ai"></a>AI용 Azure 청사진 구현
 
@@ -81,7 +81,7 @@ IaaS 모델은 청사진의 PaaS 배포에 중점을 두는 이 문서의 범위
 
 청사진은 기술 직원을 위한 뛰어난 안내와 지침을 제공하며, 완벽하게 작동하는 설치를 만드는 데 도움이 되는 아티팩트도 포함합니다. 이러한 기타 아티팩트는 다음과 같습니다.
 
-1. [Microsoft Threat Modeling Tool](https://www.microsoft.com/download/details.aspx?id=49168&WT.mc_id=ms-docs-dastarr)과 함께 사용하기 위한 [위협 모델](https://servicetrust.microsoft.com/ViewPage/HIPAABlueprint?command=Download&downloadType=Document&downloadId=01828de2-9555-4bac-a2a0-44e9ed2eeeaf&docTab=d7c399a0-2b92-11e8-9910-13dc07d708f7_Data_Analytics&WT.mc_id=ms-docs-dastarr). 이 위협 모델은 솔루션의 구성 요소, 구성 요소 간의 데이터 흐름 및 신뢰 경계를 보여 줍니다. 이 도구는 기본 청사진을 확장하려는 사용자가 위협 모델링에 사용하거나 보안 관점에서 시스템 아키텍처에 대해 알아보는 데 사용할 수 있습니다.
+1. [Microsoft Threat Modeling Tool](https://servicetrust.microsoft.com/ViewPage/HIPAABlueprint?command=Download&downloadType=Document&downloadId=01828de2-9555-4bac-a2a0-44e9ed2eeeaf&docTab=d7c399a0-2b92-11e8-9910-13dc07d708f7_Data_Analytics&WT.mc_id=ms-docs-dastarr)과 함께 사용하기 위한 [위협 모델](https://www.microsoft.com/download/details.aspx?id=49168&WT.mc_id=ms-docs-dastarr). 이 위협 모델은 솔루션의 구성 요소, 구성 요소 간의 데이터 흐름 및 신뢰 경계를 보여 줍니다. 이 도구는 기본 청사진을 확장하려는 사용자가 위협 모델링에 사용하거나 보안 관점에서 시스템 아키텍처에 대해 알아보는 데 사용할 수 있습니다.
 
 2. Excel 통합 문서의 [HITRUST 고객 책임 매트릭스](https://servicetrust.microsoft.com/ViewPage/HIPAABlueprint?command=Download&downloadType=Document&downloadId=eab85244-b9ab-490a-9e2a-611153f7d3af&docTab=d7c399a0-2b92-11e8-9910-13dc07d708f7_Data_Analytics&WT.mc_id=ms-docs-dastarr).  이 매트릭스는 매트릭스의 각 요구 사항에 대해 Microsoft가 제공하는 사항과 고객이 제공해야 하는 사항을 비교해서 보여 줍니다. 이 책임 매트릭스에 대한 자세한 정보는 이 문서의 보안 및 준수 > 청사진 책임 매트릭스 섹션에 포함되어 있습니다.
 

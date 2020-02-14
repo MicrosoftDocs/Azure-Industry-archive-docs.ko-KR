@@ -7,11 +7,11 @@ ms.topic: article
 ms.service: industry
 description: 이 문서에서는 전자상거래 인프라를 온-프레미스에서 Azure로 마이그레이션하는 단계에 대해 설명합니다.
 ms.openlocfilehash: b43ea305e11ac32da58e4d0521d79f90d5c23d85
-ms.sourcegitcommit: 2714a77488c413f01beb169a18acab45663bcfd7
-ms.translationtype: HT
+ms.sourcegitcommit: 3b175d73a82160c4cacec1ce00c6d804a93c765d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74308469"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77053150"
 ---
 # <a name="visual-search-overview"></a>Visual Search 개요
 
@@ -64,7 +64,7 @@ Bing은 다음과 같은 기능도 제공합니다.
 
  ![](./assets/visual-search-use-case-overview/visual-search-pipeline.png)
 
-*그림 1: Visual Search 파이프라인 예제*
+그림 1: Visual Search 파이프라인 예제
 
 ### <a name="sourcing-the-pictures"></a>그림 소싱
 
@@ -72,7 +72,7 @@ Bing은 다음과 같은 기능도 제공합니다.
 
  ![](./assets/visual-search-use-case-overview/deep-fashion-dataset.png)
 
-*그림 2: Deep Fashion 데이터 세트 예제*
+그림 2: Deep Fashion 데이터 세트 예제
 
 ### <a name="filtering-the-images"></a>이미지 필터링
 
@@ -100,7 +100,7 @@ Bing은 다음과 같은 기능도 제공합니다.
 
  ![](./assets/visual-search-use-case-overview/cosmosdb-data-model.png)
 
-*그림 3: CosmosDB 계층적 리소스 모델*
+그림 3: CosmosDB 계층적 리소스 모델
 
 Cosmos DB의 전 세계 배포를 활용하려는 경우 문서 및 첨부 파일을 복제하지만 연결된 파일은 복제하지 않는다는 것에 유의하세요. 연결된 파일에는 콘텐츠 배포 네트워크를 사용하는 것이 좋습니다.
 
@@ -122,7 +122,7 @@ Cosmos DB의 전 세계 배포를 활용하려는 경우 문서 및 첨부 파�
 
  ![](./assets/visual-search-use-case-overview/resnet-modifications.png)
 
-*그림 4: Visual Search용 ResNet에 대한 수정 사항 - F. Yang et al., 2017*
+그림 4: Visual Search용 ResNet에 대한 수정 사항 - F. Yang et al., 2017
 
 미리 학습된 모델을 선택하든, 사용자 고유의 모델을 개발하든 간에 모델 자체의 피처화 및/또는 학습을 실행할 위치를 결정해야 합니다.
 
@@ -157,13 +157,13 @@ Azure는 VM, Azure Batch, [Batch AI](https://azure.microsoft.com/services/batch-
 ### <a name="develop"></a>개발
 
 - 사용자 지정 서비스를 만들기 시작하려면 [Bing Visual Search API 개요](https://docs.microsoft.com/azure/cognitive-services/bing-visual-search/overview/?WT.mc_id=vsearchgio-article-gmarchet)를 참조하세요.
-- 첫 번째 요청을 만들려면, 빠른 시작: [C#](https://docs.microsoft.com/azure/cognitive-services/bing-visual-search/quickstarts/csharp) | [Java](https://docs.microsoft.com/azure/cognitive-services/bing-visual-search/quickstarts/java) | [node.js](https://docs.microsoft.com/azure/cognitive-services/bing-visual-search/quickstarts/nodejs) | [Python](https://docs.microsoft.com/azure/cognitive-services/bing-visual-search/quickstarts/python)을 참조하세요.
+- 첫 번째 요청을 만들려면 [C#](https://docs.microsoft.com/azure/cognitive-services/bing-visual-search/quickstarts/csharp) | [Java](https://docs.microsoft.com/azure/cognitive-services/bing-visual-search/quickstarts/java) | [node.js](https://docs.microsoft.com/azure/cognitive-services/bing-visual-search/quickstarts/nodejs) | [Python](https://docs.microsoft.com/azure/cognitive-services/bing-visual-search/quickstarts/python) 빠른 시작을 참조하세요.
 - [Visual Search API 참조](https://aka.ms/bingvisualsearchreferencedoc)를 숙지합니다.
 
-### <a name="background"></a>백그라운드
+### <a name="background"></a>배경
 
-- [딥 러닝 이미지 분할](https://www.microsoft.com/developerblog/2018/04/18/deep-learning-image-segmentation-for-ecommerce-catalogue-visual-search/?WT.mc_id=vsearchgio-article-gmarchet): Microsoft 문서에서는 이미지를 배경에서 분리하는 프로세스를 설명합니다.
-- [Ebay의 Visual Search](https://arxiv.org/abs/1706.03154): Cornell 대학 연구
+- [Deep Learning Image Segmentation](https://www.microsoft.com/developerblog/2018/04/18/deep-learning-image-segmentation-for-ecommerce-catalogue-visual-search/?WT.mc_id=vsearchgio-article-gmarchet)(딥 러닝 이미지 분할): Microsoft 문서에서는 이미지를 배경에서 분리하는 프로세스를 설명합니다.
+- [Visual Search at Ebay](https://arxiv.org/abs/1706.03154)(Ebay의 Visual Search): Cornell University 연구
 - [Visual Discovery at Pinterest](https://arxiv.org/abs/1702.04680)(Pinterest의 Visual Discovery): Cornell University 연구
 - [Semantic Hashing](https://www.cs.utoronto.ca/~rsalakhu/papers/semantic_final.pdf)(의미 체계 해싱): University of Toronto 연구
 

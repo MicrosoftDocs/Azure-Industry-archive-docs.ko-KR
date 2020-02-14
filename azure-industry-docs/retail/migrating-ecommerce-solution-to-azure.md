@@ -7,11 +7,11 @@ ms.topic: article
 ms.service: industry
 description: 이 문서에서는 전자상거래 인프라를 온-프레미스에서 Azure로 마이그레이션하는 단계에 대해 설명합니다.
 ms.openlocfilehash: e918f1157dc2bc42a6c4d0decfef95a8daa7ccf0
-ms.sourcegitcommit: b8f9ccc4e4453d6912b05cdd6cf04276e13d7244
-ms.translationtype: HT
+ms.sourcegitcommit: 3b175d73a82160c4cacec1ce00c6d804a93c765d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74263353"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77054187"
 ---
 # <a name="migrating-your-e-commerce-solution-to-azure-overview"></a>Azure로 전자상거래 솔루션 마이그레이션 개요
 
@@ -41,7 +41,7 @@ ms.locfileid: "74263353"
 
 Azure에서 다시 호스트하려면 다음 세 단계를 거쳐야 합니다.
 
-- **분석**: 애플리케이션, 워크로드, 네트워킹, 보안 등의 온-프레미스 리소스를 확인하고 인벤토리합니다. 이 단계가 끝나면 기존 시스템의 완벽한 문서가 작성됩니다.
+- **분석**: 애플리케이션, 워크로드, 네트워킹, 보안 등의 온-프레미스 리소스를 확인하고 인벤토리를 작성합니다. 이 단계가 끝나면 기존 시스템의 완벽한 문서가 작성됩니다.
 - **마이그레이션**: 각 하위 시스템을 온-프레미스에서 Azure로 이동합니다. 이 단계에서는 Azure를 데이터 센터의 확장으로 사용하고 애플리케이션이 계속 통신합니다.
 - **최적화**: 시스템이 Azure로 이동함에 따라 크기가 제대로 조정되었는지 확인합니다. 환경에서 일부 VM에 너무 많은 리소스가 할당되었다고 표시되는 경우 VM 유형을 CPU, 메모리 및 로컬 스토리지가 더 적절하게 조합된 VM 유형으로 변경합니다.
 
@@ -94,11 +94,11 @@ Azure는 환경을 최적화하는 도구도 제공합니다. [Azure Advisor](/a
 
 컨테이너는 애플리케이션을 번들하는 방법을 제공합니다. 컨테이너가 운영 체제를 가상화하는 방법 때문에 여러 컨테이너를 단일 VM으로 압축할 수 있습니다. 코드를 전혀 또는 거의 변경하지 않고 애플리케이션을 컨테이너로 이동할 수 있습니다. 구성은 변경해야 할 수도 있습니다. 또한 이러한 노력은 애플리케이션을 컨테이너에 번들하는 스크립트 작성까지 이어집니다. 개발 팀은 이러한 스크립트를 작성하고 테스트하는 데 리팩터링 시간을 할애합니다. Azure는 AKS([Azure Kubernetes Service](/azure/aks/?WT.mc_id=retailecomm-docs-scseely)) 및 컨테이너 이미지 관리에 사용할 수 있는 관련 [AAzure Container Registry](https://azure.microsoft.com/services/container-registry/?WT.mc_id=retailecomm-docs-scseely)를 통해 컨테이너 처리를 지원합니다.
 
-앱 서비스의 경우 다양한 Azure 서비스를 활용할 수 있습니다. 예를 들어 기존 인프라는 메시지를 [RabbitMQ](https://www.rabbitmq.com/)와 같은 큐에 배치하여 고객 주문을 처리할 수 있습니다. 예를 들어 한 메시지는 고객에게 비용을 청구하기 위한 것이고, 두 번째 메시지는 주문을 배송하기 위한 것입니다. 다시 호스트할 때 RabbitMQ를 별도의 VM에 배치합니다. 리팩터링 중에 [Service Bus](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions?WT.mc_id=retailecomm-docs-scseely) 큐 또는 토픽을 솔루션에 추가하고 RabbitMQ 코드를 다시 작성한 다음, 큐 기능을 제공한 VM 사용을 중지합니다. 이렇게 변경하면 VM 집합이 상시 메시지 큐 서비스로 대체되어 비용이 절감됩니다. 기타 앱 서비스는 Azure Portal에서 확인할 수 있습니다.
+앱 서비스의 경우 다양한 Azure 서비스를 활용할 수 있습니다. 예를 들어 기존 인프라는 메시지를 [RabbitMQ](https://www.rabbitmq.com/)와 같은 큐에 배치하여 고객 주문을 처리할 수 있습니다. 예를 들어 고객에 게 요금을 부과 하는 한 가지 메시지는 주문을 배송 하는 것입니다. 재호스팅 때 RabbitMQ를 별도의 VM에 배치 합니다. 리팩터링 중에 [Service Bus](/azure/service-bus-messaging/service-bus-queues-topics-subscriptions?WT.mc_id=retailecomm-docs-scseely) 큐 또는 토픽을 솔루션에 추가하고 RabbitMQ 코드를 다시 작성한 다음, 큐 기능을 제공한 VM 사용을 중지합니다. 이렇게 변경하면 VM 집합이 상시 메시지 큐 서비스로 대체되어 비용이 절감됩니다. 기타 앱 서비스는 Azure Portal에서 확인할 수 있습니다.
 
 데이터베이스의 경우 VM에서 서비스로 데이터베이스를 이동할 수 있습니다. Azure는 [Azure SQL Database](/azure/sql-database/sql-database-cloud-migrate?WT.mc_id=retailecomm-docs-scseely) 및 [Azure SQL Database Managed Instance](/azure/sql-database/sql-database-managed-instance?WT.mc_id=retailecomm-docs-scseely)를 사용하여 SQL Server 워크로드를 지원합니다. [데이터 마이그레이션 서비스](https://azure.microsoft.com/services/database-migration/?WT.mc_id=retailecomm-docs-scseely)는 데이터베이스를 평가하고 마이그레이션 전에 수행되어야 하는 작업을 알려 준 다음, 데이터베이스를 VM에서 서비스로 이동합니다. Azure는 [MySQL](https://azure.microsoft.com/services/mysql/?WT.mc_id=retailecomm-docs-scseely), [PostgreSQL](https://azure.microsoft.com/services/postgresql/?WT.mc_id=retailecomm-docs-scseely) 및 [기타 데이터베이스](https://azure.microsoft.com/services/#databases?WT.mc_id=retailecomm-docs-scseely) 엔진 서비스도 지원합니다.
 
-## <a name="rebuild"></a>다시 빌드
+## <a name="rebuild"></a>다시 작성
 
 지금까지는 전자상거래 시스템에 대한 변경을 최소화하려고 했습니다. 작동하는 시스템을 그대로 두었습니다. 이제 실제로 클라우드를 활용하는 방법을 알아보겠습니다. 이 단계에서는 PaaS 또는 SaaS 서비스와 아키텍처를 적극적으로 채택하여 기존 애플리케이션을 수정합니다. 이 프로세스에는 새 기능을 추가하거나 클라우드용으로 애플리케이션 아키텍처를 변경하기 위한 대규모 수정 작업이 수반됩니다.  _관리되는 API_는 클라우드 시스템을 활용하는 새로운 개념입니다. 서비스 간 통신을 위한 API를 만들어 시스템을 보다 쉽게 업데이트할 수 있습니다.  두 번째 혜택은 보유한 데이터에 대한 인사이트를 얻을 수 있는 기능입니다. 이렇게 하려면 _마이크로 서비스 + API_ 아키텍처로 이동하고 기계 학습 및 기타 도구를 사용하여 데이터를 분석합니다.
 
@@ -120,7 +120,7 @@ Azure는 환경을 최적화하는 도구도 제공합니다. [Azure Advisor](/a
 
 많은 개발 팀은 기술 부채를 처리하고 용량을 보다 효율적으로 이용하기 위해 다시 호스트와 리팩터링을 동시에 수행하려고 합니다. 다음 단계로 이동하기 전에 다시 호스트할 경우의 혜택이 있습니다.  새 환경에 배포 시의 문제를 더 쉽게 진단하고 해결할 수 있습니다. 따라서 개발 및 지원 팀이 Azure를 새 환경으로 사용하여 확장할 수 있는 시간이 제공됩니다. 시스템을 리팩터링하고 다시 빌드하기 시작할 때는 안정적으로 작동하는 애플리케이션에서 빌드하게 됩니다. 이 경우 대상이 지정된 더 작은 변경과 보다 빈번한 업데이트가 가능합니다.
 
-클라우드로 마이그레이션하는 방법에 대한 보다 일반적인 백서를 개시했습니다. [클라우드 마이그레이션 기본 정보](https://azure.microsoft.com/resources/cloud-migration-essentials-e-book/?_lrsc=9618a836-9f81-4087-901f-51058783c3a8&WT.mc_id=retailecomm-docs-scseely). 마이그레이션을 계획할 때 이 백서를 읽어보는 것이 좋습니다.
+클라우드로 마이그레이션하는 방법에 대한 보다 일반적인 백서인 [Cloud Migration Essentials](https://azure.microsoft.com/resources/cloud-migration-essentials-e-book/?_lrsc=9618a836-9f81-4087-901f-51058783c3a8&WT.mc_id=retailecomm-docs-scseely)(클라우드 마이그레이션 필수 사항)가 게시되었습니다. 마이그레이션을 계획할 때 이 백서를 읽어보는 것이 좋습니다.
 
 ## <a name="technologies-presented"></a>제공되는 기술
 

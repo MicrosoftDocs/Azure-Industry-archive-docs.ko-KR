@@ -7,11 +7,11 @@ ms.topic: article
 ms.service: industry
 description: 이 문서에서는 AI용 Microsoft Azure 청사진을 소개합니다.
 ms.openlocfilehash: fb4dbce8b0cf1d39fc03708303267a0bf2906d18
-ms.sourcegitcommit: b8f9ccc4e4453d6912b05cdd6cf04276e13d7244
-ms.translationtype: HT
+ms.sourcegitcommit: 3b175d73a82160c4cacec1ce00c6d804a93c765d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74263376"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77053558"
 ---
 # <a name="implementing-the-azure-blueprint-for-ai"></a>AI용 Azure 청사진 구현
 

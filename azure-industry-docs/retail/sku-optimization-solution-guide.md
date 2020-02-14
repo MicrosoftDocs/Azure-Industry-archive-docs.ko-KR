@@ -7,11 +7,11 @@ ms.topic: article
 ms.service: industry
 description: 소매 산업 분류 최적화. AI 및 ML의 인사이트를 통한 SKU 최적화.
 ms.openlocfilehash: 22411776e830bb3c71f8c1277b30ec4331a3ef17
-ms.sourcegitcommit: 2714a77488c413f01beb169a18acab45663bcfd7
-ms.translationtype: HT
+ms.sourcegitcommit: 3b175d73a82160c4cacec1ce00c6d804a93c765d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74308494"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77054374"
 ---
 # <a name="sku-optimization-for-consumer-brands-solution-guide"></a>소비자 브랜드에 대한 SKU 최적화 솔루션 가이드
 
@@ -43,7 +43,7 @@ SKU 분류 솔루션은 판매 데이터를 의미 있는 상세 비교로 분�
 
 ## <a name="descriptive-analytics"></a>설명 분석
 
-설명 모델은 데이터 요소를 집계하고 제품 판매에 영향을 줄 수 있는 요소 간 관계를 탐색합니다. 위치, 날씨, 인구 조사 데이터 등의 일부 외부 데이터 요소로 정보를 보강할 수 있습니다. 시각화는 데이터를 해석하여 인사이트를 파생하도록 도와줍니다. 그러나 이러한 방식에서는 이전 판매 주기에서 발생한 사항이나 현재 기간에 발생하는 사항(데이터를 새로 고치는 빈도에 따라)을 파악하는 것으로 제한됩니다.
+설명 모델은 데이터 요소를 집계하고 제품 판매에 영향을 줄 수 있는 요소 간 관계를 탐색합니다. 이 정보는 위치, 날씨, 인구 조사 데이터 등과 같은 일부 외부 데이터 요소로 확대 될 수 있습니다. 시각화를 통해 사용자는 데이터를 해석 하 여 통찰력을 얻을 수 있습니다. 그러나 이러한 방식에서는 이전 판매 주기에서 발생한 사항이나 현재 기간에 발생하는 사항(데이터를 새로 고치는 빈도에 따라)을 파악하는 것으로 제한됩니다.
 
 이 경우 기존의 데이터 웨어하우징 및 보고 접근 방식으로도 일정 기간 동안 성과가 가장 높은 SKU 및 성과가 가장 낮은 SKU 등을 파악하는 데 충분합니다.
 
@@ -63,7 +63,7 @@ SKU 분류 솔루션은 판매 데이터를 의미 있는 상세 비교로 분�
 
 **트랜잭션 데이터**는 재무 목적을 위해 정기적으로 수집됩니다. 
 
-**분류 데이터**에는 SKU와 관련된 모든 항목이 포함됩니다. 원하는 항목의 예제는 다음과 같습니다. 
+**분류 데이터**에는 SKU와 관련될 수 있는 다음과 같은 모든 사항이 포함됩니다. 
 
 - SKU 수
 - SKU 설명
@@ -278,11 +278,11 @@ GDPR에 대한 자세한 내용은 [준수](https://www.microsoft.com/trustcente
 
 - [Azure Batch](https://azure.microsoft.com/services/batch/?WT.mc_id=invopt-article-gmarchet)
 - [Azure Active Directory](https://azure.microsoft.com/services/active-directory/?&OCID=AID719825_SEM_w1MNAVjn&lnkd=Google_Azure_Brand&gclid=CjwKCAjw5ZPcBRBkEiwA-avvk4bGtyQo11KBY-u2skor1SydsSl1vrYUmhyGhhwyJhDlAYpnMmIcRRoCTfsQAvD_BwE&dclid=CMn6lvfRkd0CFRwBrQYdtIoJOA?WT.mc_id=invopt-article-gmarchet)
-- [Azure 데이터 팩터리](https://docs.microsoft.com/azure/data-factory/introduction?WT.mc_id=invopt-article-gmarchet)
+- [Azure Data Factory](https://docs.microsoft.com/azure/data-factory/introduction?WT.mc_id=invopt-article-gmarchet)
 - [Azure Integration Runtime](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime?WT.mc_id=invopt-article-gmarchet)
 - [HDInsight](https://azure.microsoft.com/services/hdinsight/?WT.mc_id=invopt-article-gmarchet)
 - [Databricks](https://azure.microsoft.com/services/databricks/?WT.mc_id=invopt-article-gmarchet)
-- [Azure SQL Data Warehouse](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is?WT.mc_id=invopt-article-gmarchet)
+- [Azure SQL 데이터 웨어하우스](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-overview-what-is?WT.mc_id=invopt-article-gmarchet)
 - [Azure ML Studio](https://studio.azureml.net/?WT.mc_id=invopt-article-gmarchet)
 - [Microsoft ML Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server?WT.mc_id=invopt-article-gmarchet)
 - [Azure Data Science VM](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/?WT.mc_id=invopt-article-gmarchet)

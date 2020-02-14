@@ -7,11 +7,11 @@ ms.topic: article
 ms.service: industry
 description: 금융의 위험 그리드 컴퓨팅용 Azure Batch를 구현하는 기술적 측면을 소개합니다.
 ms.openlocfilehash: 542fb820870048ac2ec2cb67c2bbf13988588ea1
-ms.sourcegitcommit: f030566b177715794d2ad857b150317e72d04d64
-ms.translationtype: HT
+ms.sourcegitcommit: 3b175d73a82160c4cacec1ce00c6d804a93c765d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74234669"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77053184"
 ---
 # <a name="risk-grid-computing-in-banking-solution-guide"></a>금융의 위험 그리드 컴퓨팅 솔루션 가이드
 
@@ -141,7 +141,7 @@ $TargetDedicatedNodes=min(maxNumberofVMs, pendingTaskSamples);
 또한 자동 크기 조정은 Enable-AzureBatchAutoScale PowerShell cmdlet을 통해 사용하도록 설정할 수도 있습니다. Enable-AzureBatchAutoScale cmdlet을 사용하면 지정된 풀을 자동으로 크기 조정할 수 있습니다. 예제는 다음과 같습니다.
 
 1. 첫 번째 명령은 수식을 정의한 다음, `$Formula` 변수에 저장합니다.
-2. 두 번째 명령은 `$Formula`의 수식을 사용하여 이름이 `RiskGridPool`인 풀에서 자동 크기 조정을 사용하도록 설정합니다.
+2. 두 번째 명령은 `RiskGridPool`의 수식을 사용하여 이름이 `$Formula`인 풀에서 자동 크기 조정을 사용하도록 설정합니다.
 
 ```console
 C:\> $Formula = ‘startingNumberOfVMs = 1;
@@ -182,7 +182,7 @@ C:\> Enable-AzureBatchAutoScale -Id "RiskGridPool" -AutoScaleFormula $Formula -B
 
 Batch 진단 로깅은 문제 해결을 지원하고 Batch 실행을 최적화하는 상당한 양의 데이터를 제공합니다. 작업 및 태스크, 코어 수, 총 노드 수 및 많은 기타 메트릭에 대한 시작 및 종료 시간입니다.
 
-Batch 로깅은 생성된 풀 생성, 작업 실행, 태스크 실행 등, Batch 실행으로 생성된 이벤트를 저장하고 내보낸 로그를 위한 스토리지 대상이 필요합니다. Azure Storage 계정에 진단 로그를 저장하는 것 외에도 [Azure Event Hub](/azure/event-hubs/event-hubs-what-is-event-hubs?WT.mc_id=gridbanksg-docs-dastarr)에 Batch 서비스 로그 이벤트를 스트림하고 [Azure Log Analytics](/azure/log-analytics/log-analytics-overview?WT.mc_id=gridbanksg-docs-dastarr)로 보낼 수 있습니다.
+일괄 처리 로깅은 풀 만들기, 작업 실행, 작업 실행 등의 일괄 처리 실행으로 생성 된 이벤트를 저장 하 여 내보낸 로그의 저장소 대상이 필요 합니다. Azure Storage 계정에 진단 로그 이벤트를 저장 하는 것 외에도 Batch 서비스 로그 이벤트를 [Azure 이벤트 허브](/azure/event-hubs/event-hubs-what-is-event-hubs?WT.mc_id=gridbanksg-docs-dastarr)로 스트리밍하 고 [azure Log Analytics](/azure/log-analytics/log-analytics-overview?WT.mc_id=gridbanksg-docs-dastarr)로 보낼 수 있습니다.
 
 이러한 데이터를 사용하여 코어 계산 및 헤드 노드 애플리케이션을 최적화할 수 있습니다. 이를 통해 작업자 VM이 더 이상 필요하지 않을 때 Batch 실행이 완료될 때까지 기다리지 않고 더 빨리 해제하는 등, 비용을 절감할 수 있습니다.
 

@@ -7,11 +7,11 @@ ms.topic: article
 ms.service: industry
 description: R 언어로 작성된 권장 앱을 다시 사용하고 최적화하는 방법입니다. Azure VM에서 Machine Learning Server를 사용합니다.
 ms.openlocfilehash: c5c35de681abc52641952f8bc9e95095b9d99d97
-ms.sourcegitcommit: b8f9ccc4e4453d6912b05cdd6cf04276e13d7244
-ms.translationtype: HT
+ms.sourcegitcommit: 3b175d73a82160c4cacec1ce00c6d804a93c765d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74263496"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77054221"
 ---
 # <a name="optimize-and-reuse-an-existing-recommendation-system"></a>기존 권장 시스템 최적화 및 재사용  
 
@@ -19,8 +19,8 @@ ms.locfileid: "74263496"
 
 ## <a name="recommendation-systems-and-r"></a>권장 시스템 및 R
 
-소매업체의 경우 소비자의 선호도와 구매 이력을 이해하는 것은 경쟁적 우위 요소입니다. 소매업체는 수년간 기계 학습과 함께 이러한 데이터를 사용하여 소비자와 관련된 제품을 식별하고 개인 설정된 쇼핑 환경을 제공해 왔습니다. 이 방법을 **제품 권장 사항**이라고 하며, 소매업체에게 상당한 수익 흐름을 창출합니다. 권장 시스템은 다음과 같은 질문에 답변하는 데 도움이 됩니다. *이 사용자가 다음에 볼 영화는 무엇인가요? 이 고객은 어떤 추가 서비스에 관심을 가질까요? 이 고객은 어디에서 휴가를 보내려고 할까요?*
-최근 고객이 다음 사항에 대해 알고 싶어합니다. *소비자(구독자)가 계약을 갱신하나요?* 고객은 구독자가 계약을 갱신할 확률을 예측하는 기존 권장 모델을 가지고 있었습니다. 예측이 생성되면 추가 처리가 적용되어 응답을 예, 아니요 또는 나중에 결정으로 분류했습니다. 그런 다음, 모델 응답은 호출 센터 비즈니스 프로세스에 통합되었습니다. 이 프로세스를 통해 서비스 에이전트는 사용자에게 개인화된 권장 사항을 전달할 수 있었습니다.  
+소매업체의 경우 소비자의 선호도와 구매 이력을 이해하는 것은 경쟁적 우위 요소입니다. 소매업체는 수년간 기계 학습과 함께 이러한 데이터를 사용하여 소비자와 관련된 제품을 식별하고 개인 설정된 쇼핑 환경을 제공해 왔습니다. 이 방법을 **제품 권장 사항**이라고 하며, 소매업체에게 상당한 수익 흐름을 창출합니다. 권장 사항 시스템은 다음과 같은 질문 *에 대답 하는 데 도움이 됩니다 .이 사람이 어떤 영화를 시청 하나요? 이 고객이 관심을 가질 만한 추가 서비스는 무엇 인가요? 이 고객이 휴가를 원하는 위치는 어디 인가요?*
+최근에 고객은 *소비자(구독자)가 계약을 갱신할까요?* 라는 질문에 대한 답을 알려고 했습니다. 고객은 구독자가 계약을 갱신할 확률을 예측하는 기존 권장 모델을 가지고 있었습니다. 예측이 생성되면 추가 처리가 적용되어 응답을 예, 아니요 또는 나중에 결정으로 분류했습니다. 그런 다음, 모델 응답은 호출 센터 비즈니스 프로세스에 통합되었습니다. 이 프로세스를 통해 서비스 에이전트는 사용자에게 개인화된 권장 사항을 전달할 수 있었습니다.  
 이 고객의 초기 분석 제품 중 대다수는 권장 시스템의 핵심에 있는 기계 학습 모델을 포함하여 [R 프로그래밍 언어](https://docs.microsoft.com/machine-learning-server/rebranding-microsoft-r-server)로 구축되었습니다. 구독자 기반이 커짐에 따라 데이터와 컴퓨팅 요구 사항도 증가합니다. 따라서 권장 워크로드가 이제는 매우 느리고 처리하기가 번거롭습니다. 이제 Python은 점차적으로 분석 제품 전략의 일부가 되었습니다. 그러나 가까운 시일 내에 R 투자를 유지하고 더 효율적인 개발 및 배포 프로세스를 찾아야 합니다. 과제는 Azure의 기능을 사용하여 기존 방식을 최적화하는 것이었습니다. 권장 워크로드에 개념 증명 기술 스택을 제공하고 유효성을 검사하는 작업에 착수했습니다. 여기에는 비슷한 프로젝트에 사용할 수 있는 일반적인 방법이 요약되어 있습니다.  
 
 ## <a name="design-goals"></a>설계 목표
@@ -114,7 +114,7 @@ R 스크립트를 호출하고 웹 사이트를 보호하기 위한 웹 인터�
 
 ### <a name="operations-vm-mls-930"></a>운영 VM(MLS 9.3.0)
 
-운영 VM은 모델 웹 서비스 및 엔드포인트를 호스팅하고, Swagger 파일을 저장하며, 분류 모델의 직렬화된 버전을 저장했습니다. 구성은 MLS 개발 서버와 매우 비슷합니다. 그러나 이는 REST 엔드포인트를 제공하는 데 필요한 웹 서비스가 설치되어 있음을 의미하는 운영화에 대해 구성됩니다. 운영 VM을 배포하기 위해 빠르게 배포할 수 있는 ARM 템플릿이 있습니다. 다음을 참조하세요. [ARM 템플릿을 사용하여 분석을 운영하도록 Microsoft Machine Learning Server 9.3 구성](https://blogs.msdn.microsoft.com/mlserver/2018/02/27/configuring-microsoft-machine-learning-server-9-3-to-operationalize-analytics-using-arm-templates/). 이 프로젝트의 경우 이 [ARM 템플릿](https://github.com/Microsoft/microsoft-r/tree/master/mlserver-arm-templates/one-box-configuration/linux)을 사용하여 *One-Box* 구성이 배포되었습니다.  
+운영 VM은 모델 웹 서비스 및 엔드포인트를 호스팅하고, Swagger 파일을 저장하며, 분류 모델의 직렬화된 버전을 저장했습니다. 구성은 MLS 개발 서버와 매우 비슷합니다. 그러나 이는 REST 엔드포인트를 제공하는 데 필요한 웹 서비스가 설치되어 있음을 의미하는 운영화에 대해 구성됩니다. 운영 VM을 배포하기 위해 빠르게 배포할 수 있는 ARM 템플릿이 있습니다. 자세한 내용은 [ARM 템플릿을 사용하여 분석을 운영하도록 Microsoft Machine Learning Server 9.3 구성](https://blogs.msdn.microsoft.com/mlserver/2018/02/27/configuring-microsoft-machine-learning-server-9-3-to-operationalize-analytics-using-arm-templates/)을 참조하세요. 이 프로젝트의 경우 이 *ARM 템플릿*을 사용하여 [One-Box](https://github.com/Microsoft/microsoft-r/tree/master/mlserver-arm-templates/one-box-configuration/linux) 구성이 배포되었습니다.  
 이를 통해 모델 파이프라인을 지원하는 서버 구성 요소가 가동되어 실행되었습니다.
 
 ## <a name="model-implementation"></a>모델 구현
@@ -164,7 +164,7 @@ rxGetInfo (input_data, getVarInfo = TRUE)
 
 아래 표에는 결과가 요약되어 있습니다.
 
-| 알고리즘 | 설명 | 결과 | 메모 |
+| 알고리즘 | Description | 결과 | 메모 |
 | :--------- | :------------ | :--------- | :--------------- |
 | [rxFastTrees](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfasttrees) | FastRank의 다중 스레드 버전을 구현하는 향상된 의사 결정 트리의 병렬 구현입니다. | 성능이 정확하고 가장 빠릅니다. | 불균형 데이터에 대한 특별한 기능이 없습니다. 사전 처리된 데이터를 입력으로 제공해야 합니다. |
 | [rxFastForest](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxfastforest) | 임의 포리스트의 병렬 구현이며, rxFastTrees를 사용하여 의사 결정 트리의 앙상블 학습자를 작성합니다. | 사전 처리된 데이터를 사용하여 원래 모델보다 더 정확합니다. 메모리 집약도가 낮고, rxDForest보다 빠릅니다. |불균형 데이터에 대한 특별한 기능이 없습니다. 사전 처리된 데이터를 입력으로 제공합니다. |
@@ -195,7 +195,7 @@ rxGetInfo (input_data, getVarInfo = TRUE)
 }
  ````
 
-모델이 배포되면 직렬화되어 운영 서버에 저장되며, *표준* 또는 *실시간* 모드에서 웹 서비스를 통해 사용될 수 있습니다. 웹 서비스를 표준 모드로 호출할 때마다 R 및 필요한 모든 라이브러리는 각 호출에 따라 로드 및 언로드됩니다. 이와 반대로 *실시간* 모드에서는 R 및 라이브러리가 한 번만 로드되고 후속 웹 서비스 호출에서 다시 사용됩니다. 웹 서비스 호출로 인한 대부분의 오버헤드는 R과 라이브러리를 로드하는 것이므로, 실시간 모드는 모델 점수 매기기에 훨씬 짧은 대기 시간을 제공하며 응답 시간은 10밀리초 미만일 수 있습니다. 표준 및 실시간 옵션 모두에 대해서는 [여기](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)의 설명서 및 참조 예제를 참조하세요. 실시간 모드는 단일 예측에 매우 적합하지만, 점수 매기기에 대한 입력 데이터 프레임을 전달할 수도 있습니다. 이 내용은 [mrsdeploy를 사용한 일괄 처리를 통한 비동기 웹 서비스 사용](https://docs.microsoft.com/machine-learning-server/operationalize/how-to-consume-web-service-asynchronously-batch) 참고 자료에 설명되어 있습니다.
+모델이 배포되면 직렬화되어 운영 서버에 저장되며, *표준* 또는 *실시간* 모드에서 웹 서비스를 통해 사용될 수 있습니다. 웹 서비스를 표준 모드로 호출할 때마다 R 및 필요한 모든 라이브러리는 각 호출에 따라 로드 및 언로드됩니다. 이와 반대로 *실시간* 모드에서는 R 및 라이브러리가 한 번만 로드되고 후속 웹 서비스 호출에서 다시 사용됩니다. 웹 서비스 호출로 인한 대부분의 오버헤드는 R과 라이브러리를 로드하는 것이므로, 실시간 모드는 모델 점수 매기기에 훨씬 짧은 대기 시간을 제공하며 응답 시간은 10밀리초 미만일 수 있습니다. 표준 및 실시간 옵션 모두에 대해서는 [여기](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)의 설명서 및 참조 예제를 참조하세요. 실시간 모드는 단일 예측에 매우 적합하지만, 점수 매기기에 대한 입력 데이터 프레임을 전달할 수도 있습니다. 이와 관련하여 [mrsdeploy를 사용한 일괄 처리를 통한 비동기 웹 서비스 사용](https://docs.microsoft.com/machine-learning-server/operationalize/how-to-consume-web-service-asynchronously-batch) 참고 자료에서 설명하고 있습니다.
 
 ## <a name="conclusion"></a>결론
 
@@ -209,4 +209,4 @@ Microsoft Machine Learning Server에 기본적으로 제공된 MicrosoftML 및 R
 
 ## <a name="references"></a>참조
 
-소매 비즈니스를 위한 다른 예측 솔루션을 구축하는 데 관심이 있는 경우 [Azure AI Gallery](https://gallery.azure.ai/)의 [소매 섹션](https://gallery.azure.ai/industries/retail)을 방문하세요.  
+소매 비즈니스를 위한 다른 예측 솔루션을 구축하는 데 관심이 있는 경우 [Azure AI Gallery](https://gallery.azure.ai/industries/retail)의 [소매 섹션](https://gallery.azure.ai/)을 방문하세요.  

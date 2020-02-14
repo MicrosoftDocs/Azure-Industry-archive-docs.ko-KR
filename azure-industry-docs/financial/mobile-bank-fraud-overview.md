@@ -7,11 +7,11 @@ ms.topic: article
 ms.service: industry
 description: 2초 내에 사기성 트랜잭션을 감지하는 방법을 설명합니다.
 ms.openlocfilehash: 17cc8cbcfe260b0925d50223e8c9d57319d19466
-ms.sourcegitcommit: f030566b177715794d2ad857b150317e72d04d64
-ms.translationtype: HT
+ms.sourcegitcommit: 3b175d73a82160c4cacec1ce00c6d804a93c765d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/20/2019
-ms.locfileid: "74234633"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77053048"
 ---
 # <a name="mobile-bank-fraud"></a>모바일 은행 사기
 

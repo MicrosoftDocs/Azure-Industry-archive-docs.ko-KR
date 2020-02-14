@@ -7,11 +7,11 @@ ms.topic: article
 ms.service: industry
 description: 소매점에는 사용되지 않은 데이터의 대규모 데이터 저장소가 있으며, 여기서 귀중한 인사이트를 얻을 수 있습니다. 이 문서에서는 Microsoft Azure를 통해 해당 데이터를 효율적으로 사용하는 방법을 설명합니다.
 ms.openlocfilehash: 198e0f609889eee86e005c5ee56090006ae2a413
-ms.sourcegitcommit: b8f9ccc4e4453d6912b05cdd6cf04276e13d7244
-ms.translationtype: HT
+ms.sourcegitcommit: 3b175d73a82160c4cacec1ce00c6d804a93c765d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74263510"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77054119"
 ---
 # <a name="data-management-in-retail-overview"></a>소매의 데이터 관리 개요
 
@@ -106,7 +106,7 @@ Azure Data Lake 서비스를 통해 일괄 처리 및 대화형 쿼리와 [Data 
 
 모델이 학습되고 데이터 분석 프로세스를 실행한 후 기계 학습 분석에서 파생된 데이터를 데이터 웨어하우스 또는 정규화된 스토리지 데이터베이스에 분석 데이터로 저장할 수 있습니다. Microsoft는 데이터 웨어하우스의 데이터에 대한 자세한 분석을 위해 완벽한 기능을 갖춘 데이터 분석 도구인 [Power BI](/power-bi/?WT.mc_id=retaildm-docs-dastarr)를 제공합니다.
 
-## <a name="action"></a>조치
+## <a name="action"></a>작업
 
 소매의 데이터는 끊임없이 이동하므로, 데이터를 처리하는 시스템이 적시에 처리해야 합니다. 예를 들어 전자상거래 쇼퍼 데이터는 빠르게 처리해야 합니다. 구매자의 카트에 있는 항목을 사용하여 체크 아웃 중에 추가 서비스 또는 추가 기능 항목을 제공할 수 있기 때문입니다. 이러한 형태의 데이터 처리 및 분석은 거의 즉시 수행되어야 하며, 일반적으로 “마이크로 일괄 처리” 트랜잭션을 수행하는 시스템에서 처리합니다. 즉, 데이터가 이미 처리된 데이터에 대한 액세스 권한이 있는 시스템에서 분석되고 모델을 통해 실행됩니다.
 

@@ -7,11 +7,11 @@ ms.topic: article
 ms.service: industry
 description: Azure에서 제조 산업 고객을 위한 예측 유지 관리를 개발하는 방법에 대한 솔루션을 설명합니다.
 ms.openlocfilehash: c32893d534279cda35f7c6a142869d2983eaca67
-ms.sourcegitcommit: 2714a77488c413f01beb169a18acab45663bcfd7
-ms.translationtype: HT
+ms.sourcegitcommit: 3b175d73a82160c4cacec1ce00c6d804a93c765d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74308486"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77053847"
 ---
 # <a name="predictive-maintenance-in-manufacturing-solution-guide"></a>제조 솔루션의 예측 유지 관리 가이드
 
@@ -70,8 +70,8 @@ Microsoft는 데이터를 준비하고 기계 학습 모델을 학습하는 방�
   - **이진 분류:** 데이터를 사용하여 항목 또는 데이터 행의 범주, 형식 또는 클래스를 두 클래스 중 하나의 멤버로 결정하는 기계 학습 방법입니다. 여러 유형의 분류 알고리즘이 있으며, Microsoft는 [Machine Learning Studio 모듈](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/machine-learning-initialize-model-classification?WT.mc_id=pdmsolution-docs-ercenk)로 사용할 수 있는 알고리즘 세트를 게시했습니다.
 - _자산의 잔여 수명은 얼마인가요?_ 대답: X시간
   - **회귀:** 다른 변수 세트로 지정된 변수의 값을 예측하는 기계 학습 알고리즘의 클래스입니다. Machine Learning Studio에는 회귀 알고리즘 세트가 [모듈](https://docs.microsoft.com/azure/machine-learning/studio-module-reference/machine-learning-initialize-model-regression?WT.mc_id=pdmsolution-docs-ercenk)로 포함되어 있습니다.
-    - **LSTM(Long Short Term Memory):** [LSTM](https://colah.github.io/posts/2015-08-Understanding-LSTMs/?WT.mc_id=pdmsolution-docs-ercenk) 네트워크는 DNN(딥 신경망)의 한 유형입니다. DNN의 영감은 뇌의 개별 뉴런에 대한 동작을 모델링하는 것에서 비롯됩니다. Microsoft는 예측 유지 관리에 LSTM을 사용하는 방법을 설명하는 [단계별 가이드](https://docs.microsoft.com/azure/machine-learning/desktop-workbench/scenario-deep-learning-for-predictive-maintenance?WT.mc_id=pdmsolution-docs-ercenk)를 게시했습니다.
-- _어떤 자산에 가장 긴급하게 서비스를 제공해야 하나요?_ 대답: 자산 X
+    - **LSTM (Long Short Term Memory):** [LSTM](https://colah.github.io/posts/2015-08-Understanding-LSTMs/?WT.mc_id=pdmsolution-docs-ercenk) 네트워크는 DNN (심층 신경망)의 한 유형입니다. DNN의 영감은 뇌의 개별 뉴런에 대한 동작을 모델링하는 것에서 비롯됩니다. Microsoft는 예측 유지 관리에 LSTM을 사용하는 방법을 설명하는 [단계별 가이드](https://docs.microsoft.com/azure/machine-learning/desktop-workbench/scenario-deep-learning-for-predictive-maintenance?WT.mc_id=pdmsolution-docs-ercenk)를 게시했습니다.
+- _어떤 자산에 가장 긴급하게 서비스를 제공해야 하나요?_ 대답: X 자산
   - **다중 클래스 분류:** 데이터를 사용하여 항목 또는 데이터 행의 범주, 형식 또는 클래스를 셋 이상의 클래스의 멤버로 결정하는 기계 학습 방법입니다.
 
 다시 말해, 데이터를 가져오는 것은 여러 채널을 활용하고, 대량으로 초기화한 다음, 스트리밍 데이터를 계속 받아서 오류를 예측하고, 모델의 후속 작성에도 사용할 수 있다는 것을 의미할 수 있습니다.
@@ -106,7 +106,7 @@ ML 모드를 학습하는 경우 Microsoft Azure에서 다양한 옵션을 제�
 
 사용할 도구를 결정하는 것은 작업의 복잡성, 팀의 경험 및 데이터의 크기에 따라 달라집니다.
 
-클라우드 솔루션의 비용 수식에는 추가 엔지니어링, 관리, 데이터 전송 등과 같은 클라우드 서비스 비용 외에도 많은 변수가 포함됩니다. 비용을 평가할 때는 이러한 변수를 사용하고, 합리적으로 결정합니다. 서비스는 총 비용 수식만 구성하지 않습니다.
+클라우드 솔루션의 비용 공식은 추가 엔지니어링, 관리, 데이터 전송 등의 클라우드 서비스 비용 외에도 다양 한 변수를 포함 합니다. 비용을 평가 하 고 의사 결정을 내릴 때 이러한 변수를 사용 합니다. 서비스는 총 비용 수식만 구성하지 않습니다.
 
 데이터를 분석하고 모델을 게시하는 프로세스를 설계하는 것은 세부적인 주제이며 사용되는 기술에 따라 달라집니다. 이러한 주제는 이 문서의 범위를 벗어납니다. 모델 생성에 사용할 수 있는 프로세스 및 Azure 서비스를 설명하는 일련의 문서를 이용할 수 있습니다. 또한 Microsoft는 데이터 과학자 팀에서 데이터 수명 주기 동안 효과적으로 공동 작업할 수 있는 솔루션을 구축하기 위한 체계적인 방법을 제공합니다.
 
@@ -201,9 +201,9 @@ Azure IoT 솔루션 아키텍처에 대한 자세한 내용은 [온라인으로 
 
 ### <a name="data-security-and-isolation"></a>데이터 보안 및 격리
 
-서비스를 제공하는 당사자는 고객의 기밀 정보를 식별하고, 적절하게 보호하거나 스크럽해야 합니다. Microsoft Azure는 사용되는 스토리지 서비스에 따라 데이터를 암호화하는 기능을 제공합니다.
+서비스를 제공 하는 당사자는 고객의 기밀 정보가 식별 되어 적절 하 게 안전 하거나 삭제 확인 해야 합니다. Microsoft Azure는 사용 된 저장소 서비스에 따라 데이터를 암호화 하는 기능을 제공 합니다.
 
-또한 디바이스에서 데이터를 생성하고 제출하는 방법은 디바이스별 인증서, 디바이스별 사용/사용 안 함, TLS 보안, X.509 지원, IP 허용/차단 목록 및 공유 액세스 정책과 같이 잘 알려진 방법을 사용하여 보호해야 합니다. 서비스를 제공하는 당사자는 고객의 기밀 정보를 식별하고, 적절하게 보호하거나 스크럽해야 합니다. [Azure Data Lake Store](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-encryption?WT.mc_id=pdmsolution-docs-ercenk), [Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-service-encryption?WT.mc_id=pdmsolution-docs-ercenk), [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/database-encryption-at-rest?WT.mc_id=pdmsolution-docs-ercenk) 및 [Azure SQL Database](https://docs.microsoft.com/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql?WT.mc_id=pdmsolution-docs-ercenk)는 저장 데이터를 암호화하는 데 사용할 수 있는 서비스의 예입니다. 솔루션 공급자는 동일한 리소스(예: 데이터베이스) 내 또는 여러 리소스 내에서 데이터를 분할하는 방법도 고려해야 합니다. 
+또한 디바이스에서 데이터를 생성하고 제출하는 방법은 디바이스별 인증서, 디바이스별 사용/사용 안 함, TLS 보안, X.509 지원, IP 허용/차단 목록 및 공유 액세스 정책과 같이 잘 알려진 방법을 사용하여 보호해야 합니다. 서비스를 제공 하는 당사자는 고객의 기밀 정보가 식별 되어 적절 하 게 안전 하거나 삭제 수 있는지 확인 해야 합니다. [Azure Data Lake Store](https://docs.microsoft.com/azure/data-lake-store/data-lake-store-encryption?WT.mc_id=pdmsolution-docs-ercenk), [Azure Storage](https://docs.microsoft.com/azure/storage/common/storage-service-encryption?WT.mc_id=pdmsolution-docs-ercenk), [Azure Cosmos DB](https://docs.microsoft.com/azure/cosmos-db/database-encryption-at-rest?WT.mc_id=pdmsolution-docs-ercenk)및 [Azure SQL Database](https://docs.microsoft.com/sql/relational-databases/security/encryption/transparent-data-encryption-azure-sql?WT.mc_id=pdmsolution-docs-ercenk) 는 미사용 데이터를 암호화 하는 데 사용할 수 있는 서비스의 예입니다. 솔루션 공급자는 동일한 리소스(예: 데이터베이스) 내 또는 여러 리소스 내에서 데이터를 분할하는 방법도 고려해야 합니다. 
 
 ### <a name="geographical-considerations"></a>지리적 고려 사항
 
@@ -245,8 +245,8 @@ ML 모델을 작성하려면 탄력적으로 크기를 조정할 수 있는 컴�
 
 2. [IoT 사용 예측 유지 관리를 통한 장비 안정성 향상](https://www.microsoft.com/internet-of-things/predictive-maintenance?WT.mc_id=pdmsolution-docs-ercenk)
 
-3. [사물 인터넷에서 값 캡처: 예측 유지 관리 프로젝트에 접근하는 방법](https://download.microsoft.com/download/0/7/D/07D394CE-185D-4B96-AC3C-9B61179F7080/Capture_value_from_the_Internet%20of%20Things_with_Predictive_Maintenance.PDF?WT.mc_id=pdmsolution-docs-ercenk)
+3. [사물 인터넷에서 가치 획득: 예측 유지 관리 프로젝트에 대한 접근 방식](https://download.microsoft.com/download/0/7/D/07D394CE-185D-4B96-AC3C-9B61179F7080/Capture_value_from_the_Internet%20of%20Things_with_Predictive_Maintenance.PDF?WT.mc_id=pdmsolution-docs-ercenk)
 
-4. [파트너 큐브 뷰: 현장의 예측 유지 관리](https://blogs.microsoft.com/iot/2017/03/21/partner-perspectives-predictive-maintenance-on-the-frontlines/?WT.mc_id=pdmsolution-docs-ercenk)
+4. [파트너 관점: 현장의 예측 유지 관리](https://blogs.microsoft.com/iot/2017/03/21/partner-perspectives-predictive-maintenance-on-the-frontlines/?WT.mc_id=pdmsolution-docs-ercenk)
 
 5. [상품화에서 서비스화까지: 현장 서비스의 새로운 시대에서 경쟁할 수 있도록 IoT를 사용하여 비즈니스 전환](https://blogs.microsoft.com/iot/2016/11/07/from-commodization-to-servitization-transforming-your-business-to-compete-in-the-new-age-of-field-service-with-iot/?WT.mc_id=pdmsolution-docs-ercenk)

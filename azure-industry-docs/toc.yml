@@ -57,7 +57,7 @@
           href: retail/retail-data-management-overview.md
         - name: Azure로 전자상거래 솔루션 마이그레이션 개요
           href: retail/migrating-ecommerce-solution-to-azure.md
-        - name: 기존 추천 시스템 최적화 및 재사용
+        - name: 기존 권장 시스템 최적화 및 재사용
           href: retail/recommendation-engine-optimization.md
         - name: PCI DSS 규격 결제 처리
           href: /azure/security/blueprints/payment-processing-blueprint

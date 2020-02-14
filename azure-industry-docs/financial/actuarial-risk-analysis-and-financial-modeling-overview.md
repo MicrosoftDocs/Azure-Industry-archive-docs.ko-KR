@@ -7,11 +7,11 @@ ms.topic: article
 ms.service: industry
 description: 이 개요에서는 보험 통계 개발자가 기존 솔루션과 지원 인프라를 Azure로 이동할 수 있는 방법을 소개합니다.
 ms.openlocfilehash: cb571d996ab34da9157e9e211f354d7ce3d5f720
-ms.sourcegitcommit: b8f9ccc4e4453d6912b05cdd6cf04276e13d7244
-ms.translationtype: HT
+ms.sourcegitcommit: 3b175d73a82160c4cacec1ce00c6d804a93c765d
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/21/2019
-ms.locfileid: "74263379"
+ms.lasthandoff: 02/06/2020
+ms.locfileid: "77052351"
 ---
 # <a name="actuarial-risk-analysis-and-financial-modeling"></a>보험 위험 분석 및 재무 모델링
 
